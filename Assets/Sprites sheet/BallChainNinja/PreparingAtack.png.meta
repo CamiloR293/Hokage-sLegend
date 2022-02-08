@@ -1,0 +1,612 @@
+fileFormatVersion: 2
+guid: 1cd5bc68baaec8f42b98ce4f1a8c940e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3542534147374795875
+    second: PreparingAtack_0
+  - first:
+      213: 1716165627880892280
+    second: PreparingAtack_1
+  - first:
+      213: 4873676171135478605
+    second: PreparingAtack_2
+  - first:
+      213: 7482885480518743869
+    second: PreparingAtack_3
+  - first:
+      213: 7350538203194464693
+    second: PreparingAtack_4
+  - first:
+      213: 5877138104592191240
+    second: PreparingAtack_5
+  - first:
+      213: -3652602687593774079
+    second: PreparingAtack_6
+  - first:
+      213: 581099400556057164
+    second: PreparingAtack_7
+  - first:
+      213: 3330562566429748022
+    second: PreparingAtack_8
+  - first:
+      213: 9067184350340170068
+    second: PreparingAtack_9
+  - first:
+      213: -8187803948671889676
+    second: PreparingAtack_10
+  - first:
+      213: -2348983104635924257
+    second: PreparingAtack_14
+  - first:
+      213: -7041089962527857424
+    second: PreparingAtack_17
+  - first:
+      213: -4490559299928876636
+    second: PreparingAtack_19
+  - first:
+      213: 4071763886715443234
+    second: PreparingAtack_21
+  - first:
+      213: 7697580455898290788
+    second: PreparingAtack_23
+  - first:
+      213: 8291717648028366670
+    second: PreparingAtack_24
+  - first:
+      213: 2967564245849938510
+    second: PreparingAtack_26
+  - first:
+      213: -7535585707809441693
+    second: PreparingAtack_28
+  - first:
+      213: -1533672580858044075
+    second: PreparingAtack_29
+  - first:
+      213: 799454471160541673
+    second: PreparingAtack_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PreparingAtack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 87
+        width: 40
+        height: 60
+      alignment: 9
+      pivot: {x: 0.4503268, y: 0.5169106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d93b80d46f366dec0800000000000000
+      internalID: -3542534147374795875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 87
+        width: 45
+        height: 60
+      alignment: 9
+      pivot: {x: 0.40069428, y: 0.5169106}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8776391cb8b01d710800000000000000
+      internalID: 1716165627880892280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_2
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 87
+        width: 46
+        height: 59
+      alignment: 9
+      pivot: {x: 0.36892766, y: 0.52532196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4be0d2e7a6c2a340800000000000000
+      internalID: 4873676171135478605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 87
+        width: 46
+        height: 59
+      alignment: 9
+      pivot: {x: 0.36890975, y: 0.5247084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d377f31d2bc88d760800000000000000
+      internalID: 7482885480518743869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_4
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 87
+        width: 44
+        height: 60
+      alignment: 9
+      pivot: {x: 0.40855685, y: 0.5161513}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9185d0d8b520660800000000000000
+      internalID: 7350538203194464693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_5
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 87
+        width: 37
+        height: 60
+      alignment: 9
+      pivot: {x: 0.48686177, y: 0.51687837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f412cb7f9cf8150800000000000000
+      internalID: 5877138104592191240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 87
+        width: 42
+        height: 62
+      alignment: 9
+      pivot: {x: 0.4042896, y: 0.5003229}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104065c35395f4dc0800000000000000
+      internalID: -3652602687593774079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 87
+        width: 42
+        height: 62
+      alignment: 9
+      pivot: {x: 0.4040498, y: 0.50000024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c42165573da701800800000000000000
+      internalID: 581099400556057164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_8
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 87
+        width: 44
+        height: 59
+      alignment: 9
+      pivot: {x: 0.38574913, y: 0.5254533}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63b22421209883e20800000000000000
+      internalID: 3330562566429748022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_9
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 87
+        width: 53
+        height: 58
+      alignment: 9
+      pivot: {x: 0.47021484, y: 0.5342015}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 451c10b602c15dd70800000000000000
+      internalID: 9067184350340170068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_10
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 87
+        width: 62
+        height: 58
+      alignment: 9
+      pivot: {x: 0.33014604, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fe0fd480b31f5e80800000000000000
+      internalID: -8187803948671889676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_14
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 0
+        width: 38
+        height: 70
+      alignment: 9
+      pivot: {x: 0.5795649, y: 0.4501649}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd018c0df4cb66fd0800000000000000
+      internalID: -2348983104635924257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 71
+        height: 58
+      alignment: 9
+      pivot: {x: 0.28585827, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f465fffbf5094e90800000000000000
+      internalID: -7041089962527857424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 61
+        height: 58
+      alignment: 9
+      pivot: {x: 0.32243773, y: 0.50000006}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a999e4db145ea1c0800000000000000
+      internalID: -4490559299928876636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_21
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 0
+        width: 59
+        height: 58
+      alignment: 9
+      pivot: {x: 0.49024653, y: 0.5404035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22810fc8eafc18830800000000000000
+      internalID: 4071763886715443234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_23
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 0
+        width: 42
+        height: 58
+      alignment: 9
+      pivot: {x: 0.684833, y: 0.5337732}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46a9ecf14ac43da60800000000000000
+      internalID: 7697580455898290788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_24
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 0
+        width: 50
+        height: 58
+      alignment: 9
+      pivot: {x: 0.73633975, y: 0.5341556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47719cf449121370800000000000000
+      internalID: 8291717648028366670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_26
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 71
+        height: 57
+      alignment: 9
+      pivot: {x: 0.8159003, y: 0.54393405}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a190275f7ee2920800000000000000
+      internalID: 2967564245849938510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_28
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 0
+        width: 61
+        height: 64
+      alignment: 9
+      pivot: {x: 0.7869923, y: 0.4848393}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368f18759b83c6790800000000000000
+      internalID: -7535585707809441693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_29
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 0
+        width: 48
+        height: 75
+      alignment: 9
+      pivot: {x: 0.5630786, y: 0.41387787}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5512338d9ec47bae0800000000000000
+      internalID: -1533672580858044075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PreparingAtack_30
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 0
+        width: 63
+        height: 76
+      alignment: 9
+      pivot: {x: 0.43, y: 0.407}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e13f971b9b381b00800000000000000
+      internalID: 799454471160541673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

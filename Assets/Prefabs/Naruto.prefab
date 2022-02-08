@@ -265,8 +265,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage_: 0
-  CurrentHealth: 0
-  MaxHealth: 10
+  MaxHealth: 100
+  MinHealth: 100
+  Bar: {fileID: 0}
+  Death: 0
   KnockBack: 0
 --- !u!95 &5423323777060789113
 Animator:

@@ -1,0 +1,534 @@
+fileFormatVersion: 2
+guid: f95be4ed4e1cff8429f7ad234782b2de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7295854953684073250
+    second: Gaara Attack Y_0
+  - first:
+      213: 3432466028285782043
+    second: Gaara Attack Y_1
+  - first:
+      213: 6408398121400357740
+    second: Gaara Attack Y_2
+  - first:
+      213: -2691665494896633726
+    second: Gaara Attack Y_3
+  - first:
+      213: -642001593626869911
+    second: Gaara Attack Y_4
+  - first:
+      213: 7389288532734338482
+    second: Gaara Attack Y_5
+  - first:
+      213: 8854354186516297770
+    second: Gaara Attack Y_6
+  - first:
+      213: 7849243929890169071
+    second: Gaara Attack Y_7
+  - first:
+      213: 5312220826836320924
+    second: Gaara Attack Y_8
+  - first:
+      213: -8871066697302537624
+    second: Gaara Attack Y_9
+  - first:
+      213: 6192581640692089443
+    second: Gaara Attack Y_10
+  - first:
+      213: -4253079215605478224
+    second: Gaara Attack Y_11
+  - first:
+      213: -4636550964126935146
+    second: Gaara Attack Y_12
+  - first:
+      213: -7240399026943261963
+    second: Gaara Attack Y_13
+  - first:
+      213: 2233996843382067525
+    second: Gaara Attack Y_14
+  - first:
+      213: -6287876928031310447
+    second: Gaara Attack Y_15
+  - first:
+      213: -6811065327021979404
+    second: Gaara Attack Y_16
+  - first:
+      213: -2166682359603164326
+    second: Gaara Attack Y_17
+  - first:
+      213: -3744080165958784529
+    second: Gaara Attack Y_18
+  - first:
+      213: -2187838369092591211
+    second: Gaara Attack Y_19
+  - first:
+      213: 1383243907131560316
+    second: Gaara Attack Y_20
+  - first:
+      213: -1930895618368016763
+    second: Gaara Attack Y_21
+  - first:
+      213: -4562959504128016366
+    second: Gaara Attack Y_22
+  - first:
+      213: -7651395815359738355
+    second: Gaara Attack Y_23
+  - first:
+      213: -4879057819951154128
+    second: Gaara Attack Y_24
+  - first:
+      213: 2797411983063172156
+    second: Gaara Attack Y_25
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Gaara Attack Y_0
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 15
+        width: 39
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22bfc1fdc65104560800000000000000
+      internalID: 7295854953684073250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_1
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 16
+        width: 91
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b18e19faaa192af20800000000000000
+      internalID: 3432466028285782043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_2
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 16
+        width: 44
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63595563243fe850800000000000000
+      internalID: 6408398121400357740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 16
+        width: 85
+        height: 63
+      alignment: 9
+      pivot: {x: 0.1929779, y: 0.37986118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28892825e7845aad0800000000000000
+      internalID: -2691665494896633726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_4
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 16
+        width: 81
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96fb2aab3f62717f0800000000000000
+      internalID: -642001593626869911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_5
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 15
+        width: 83
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b56f7835c60c8660800000000000000
+      internalID: 7389288532734338482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_6
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 16
+        width: 59
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28fbc2683cf0ea70800000000000000
+      internalID: 8854354186516297770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_7
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 16
+        width: 61
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0ae7464cd1eec60800000000000000
+      internalID: 7849243929890169071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_8
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 17
+        width: 52
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c92c20852bcc8b940800000000000000
+      internalID: 5312220826836320924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_9
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 16
+        width: 48
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86a0c78f6d3a3e480800000000000000
+      internalID: -8871066697302537624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_10
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 16
+        width: 38
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362ce08413870f550800000000000000
+      internalID: 6192581640692089443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_11
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 16
+        width: 40
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bc0d38bcf60af4c0800000000000000
+      internalID: -4253079215605478224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_12
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 16
+        width: 50
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6971830b679a7afb0800000000000000
+      internalID: -4636550964126935146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_13
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 16
+        width: 55
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f286fe327fe48b90800000000000000
+      internalID: -7240399026943261963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_14
+      rect:
+        serializedVersion: 2
+        x: 997
+        y: 16
+        width: 41
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 541d127fa40c00f10800000000000000
+      internalID: 2233996843382067525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Gaara Attack Y_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1
+        height: 1
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19db151af39fcb8a0800000000000000
+      internalID: -6287876928031310447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,888 @@
+fileFormatVersion: 2
+guid: 6a7257f2de6878d45804f0a18b99cd9f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8703026442393449120
+    second: piso pasto_0
+  - first:
+      213: -7457131837334159481
+    second: piso pasto_1
+  - first:
+      213: -5701300421401572518
+    second: piso pasto_2
+  - first:
+      213: -8100662659783591764
+    second: piso pasto_3
+  - first:
+      213: 5718457740453048466
+    second: piso pasto_4
+  - first:
+      213: 5862737513660728903
+    second: piso pasto_5
+  - first:
+      213: 890603020218409589
+    second: piso pasto_6
+  - first:
+      213: 4077507761775837433
+    second: piso pasto_7
+  - first:
+      213: 8200008782911189441
+    second: piso pasto_8
+  - first:
+      213: -8793699959596480247
+    second: piso pasto_9
+  - first:
+      213: 7720260494370287467
+    second: piso pasto_10
+  - first:
+      213: 2503308458494315294
+    second: piso pasto_11
+  - first:
+      213: -3118860674774816748
+    second: piso pasto_12
+  - first:
+      213: -3134557803030046387
+    second: piso pasto_13
+  - first:
+      213: -614550036886855721
+    second: piso pasto_14
+  - first:
+      213: 3073768842457873682
+    second: piso pasto_15
+  - first:
+      213: -2764386247194762619
+    second: piso pasto_16
+  - first:
+      213: 2270642285654827579
+    second: piso pasto_17
+  - first:
+      213: 6667268099095430036
+    second: piso pasto_18
+  - first:
+      213: -2037484508615984887
+    second: piso pasto_19
+  - first:
+      213: 2962079861324963682
+    second: piso pasto_20
+  - first:
+      213: -8167794018804037644
+    second: piso pasto_21
+  - first:
+      213: 3852026594213151359
+    second: piso pasto_22
+  - first:
+      213: 4541533933266807956
+    second: piso pasto_23
+  - first:
+      213: -5529507455735259246
+    second: piso pasto_24
+  - first:
+      213: -7743976220811501274
+    second: piso pasto_25
+  - first:
+      213: 2039192134024043173
+    second: piso pasto_26
+  - first:
+      213: 6808495683040301208
+    second: piso pasto_27
+  - first:
+      213: -959946310890792718
+    second: piso pasto_28
+  - first:
+      213: 2574882980459327480
+    second: piso pasto_29
+  - first:
+      213: 882555833494325255
+    second: piso pasto_30
+  - first:
+      213: -4964286674858770862
+    second: piso pasto_31
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: piso pasto_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 220
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a271b1507c57c870800000000000000
+      internalID: 8703026442393449120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 210
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78ff0708a12f28890800000000000000
+      internalID: -7457131837334159481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_2
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 220
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b03983979e0e0b0800000000000000
+      internalID: -5701300421401572518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_3
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 220
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca8f356ea3aa49f80800000000000000
+      internalID: -8100662659783591764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_4
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 220
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29079ca640b0c5f40800000000000000
+      internalID: 5718457740453048466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_5
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 210
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 746ca11e4b0ac5150800000000000000
+      internalID: 5862737513660728903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_6
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 220
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57222007abe0c5c00800000000000000
+      internalID: 890603020218409589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_7
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 220
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f00c8da4b7369830800000000000000
+      internalID: 4077507761775837433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_8
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c13184ea884cc170800000000000000
+      internalID: 8200008782911189441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_9
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90982ee4a7086f580800000000000000
+      internalID: -8793699959596480247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_10
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f2c641400e32b60800000000000000
+      internalID: 7720260494370287467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_11
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1bc8c7a7c98db220800000000000000
+      internalID: 2503308458494315294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_12
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 418ac10adb497b4d0800000000000000
+      internalID: -3118860674774816748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_13
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4917762940df74d0800000000000000
+      internalID: -3134557803030046387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_14
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dfd7aa5ffda877f0800000000000000
+      internalID: -614550036886855721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_15
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 144
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d7d580a7838aa20800000000000000
+      internalID: 3073768842457873682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5822bf1ca5de2a9d0800000000000000
+      internalID: -2764386247194762619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_17
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b32ef60e021f28f10800000000000000
+      internalID: 2270642285654827579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_18
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49380ece205e68c50800000000000000
+      internalID: 6667268099095430036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_19
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909359c62a669b3e0800000000000000
+      internalID: -2037484508615984887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_20
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26fdc9aa0fb6b1920800000000000000
+      internalID: 2962079861324963682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_21
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f700ae5d9a26ae80800000000000000
+      internalID: -8167794018804037644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_22
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72ce6d47c5257530800000000000000
+      internalID: 3852026594213151359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_23
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 64
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c20cbdc05c60f30800000000000000
+      internalID: 4541533933266807956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_24
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29f960ef34e3343b0800000000000000
+      internalID: -5529507455735259246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_25
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 5
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 621657118aed78490800000000000000
+      internalID: -7743976220811501274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_26
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 5
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa1649117aac4c10800000000000000
+      internalID: 2039192134024043173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_27
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 5
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 890d56230c2ac7e50800000000000000
+      internalID: 6808495683040301208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_28
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 0
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f858ef8ae59da2f0800000000000000
+      internalID: -959946310890792718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_29
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 5
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff2a7cad62dbb320800000000000000
+      internalID: 2574882980459327480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_30
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 5
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708c0e5cad77f3c00800000000000000
+      internalID: 882555833494325255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: piso pasto_31
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 5
+        width: 52
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25e76d5329f4b1bb0800000000000000
+      internalID: -4964286674858770862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

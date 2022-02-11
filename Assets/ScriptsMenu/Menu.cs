@@ -20,12 +20,12 @@ public class Menu : MonoBehaviour
 
     public void ScenePlay(){
      
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(1);
     }
 
     public void SceneOption(){
          
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(5);
       
     }
 

@@ -20,10 +20,7 @@ public class Boss : MonoBehaviour
 
     private bool Rigth = true;
 
-   
-
  
-
     [Header("Attack")]
 
     [SerializeField] private Transform ControllerAttack;
@@ -48,7 +45,7 @@ public class Boss : MonoBehaviour
     {
         float Distance = Vector2.Distance(transform.position, Player.position);
         animator.SetFloat("Distance", Distance);
-        if(Distance < 1 )
+        if(Distance < 4 )
         {
         HealtH.SetActive(true);
         }
@@ -97,10 +94,10 @@ public class Boss : MonoBehaviour
         Collider2D[] Objects = Physics2D.OverlapCircleAll(ControllerAttack.position, RangeAttack);
         foreach (Collider2D colision in Objects)
         {
-            if (colision.CompareTag("Player"))
+            if (colision.CompareTag("Player") )
             {
                 //DAÑO AL JUGADOR
-                colision.GetComponent<Player>().Damage(AttackDamage); ;
+                colision.GetComponent<KnockBackHit>(); ;
                 HitSound.Play();
                 //.Damage(AttackDamage);
             }

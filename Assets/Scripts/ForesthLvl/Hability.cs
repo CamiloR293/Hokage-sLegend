@@ -8,6 +8,8 @@ public class Hability : MonoBehaviour
 
     [SerializeField] private Vector2 BoxDimesion;
 
+    private float lastShoot;
+
     [SerializeField] private float AttackDamage;
 
     [SerializeField] private Transform Position;
@@ -28,10 +30,11 @@ public class Hability : MonoBehaviour
         Collider2D[] Objects = Physics2D.OverlapBoxAll(Position.position, BoxDimesion, 0f);
         foreach (Collider2D colision in Objects)
         {
-            if (colision.CompareTag("Player"))
+            if (colision.CompareTag("Player") && Time.time > lastShoot + 5f)
             {
-                colision.GetComponent<Player>().Damage(AttackDamage);
+                colision.GetComponent<KnockBackHit>();
                 //.DealDamage(AttackDamage);
+                lastShoot = Time.time;
             }
         }
 

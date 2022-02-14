@@ -16,12 +16,12 @@ public class KnockBackHit : MonoBehaviour
 
                 if (transform.position.x > collision.transform.position.x)
                 {
-                    collision.GetComponent<NarutoMovement>().HealthController.KnockBack = -3;
+                    collision.GetComponent<NarutoMovement>().HealthController.KnockBack = -4;
                     collision.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
                 else
                 {
-                    collision.GetComponent<NarutoMovement>().HealthController.KnockBack = 3;
+                    collision.GetComponent<NarutoMovement>().HealthController.KnockBack = 4;
                     collision.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
 

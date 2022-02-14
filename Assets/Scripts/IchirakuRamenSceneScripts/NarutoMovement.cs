@@ -17,7 +17,7 @@ public class NarutoMovement : MonoBehaviour
     private bool isCrouch;
     private int Combo;
     public bool Attacking;
-    
+    public bool KnockBackHit;
 
     [Header("Components")]
     private Rigidbody2D Rigidbody2D; 
@@ -174,6 +174,11 @@ public class NarutoMovement : MonoBehaviour
         HealthController.Bar.fillAmount = HealthController.MinHealth / HealthController.MaxHealth;
     }
 
+    public void Punch3()
+    {
+        KnockBackHit = true;
+    }
+    
 
     //Bloqueo de movimiento
     public void LockAnimation()
@@ -185,6 +190,7 @@ public class NarutoMovement : MonoBehaviour
     public void UnlockAnimation()
     {
         Animator.SetBool("Animating_Something", false);
+        KnockBackHit =false;
     }
     //Fin bloqueo de movimineto
     private void Throw()

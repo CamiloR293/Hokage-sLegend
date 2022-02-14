@@ -7,7 +7,7 @@ public class Special : StateMachineBehaviour
 
     [SerializeField] private GameObject ByujiDama;
 
-     public Transform LauncPoint;
+     public Transform Boss;
 
 
     private Boss gaara;
@@ -23,7 +23,7 @@ public class Special : StateMachineBehaviour
 
         gaara.SearchPlayer();
    
-      Instantiate(ByujiDama, LauncPoint.position, LauncPoint.rotation);
+      Instantiate(ByujiDama, Boss.position, Boss.rotation);
 
        
 

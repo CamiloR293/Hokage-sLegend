@@ -10,7 +10,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 2.5
+    m_EventTreshold: 3.5
   - m_ConditionMode: 6
     m_ConditionEvent: Number
     m_EventTreshold: 0
@@ -60,10 +60,7 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 4
-    m_ConditionEvent: Distance
-    m_EventTreshold: 0.65
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4851690199216726365}
   m_Solo: 0
@@ -298,7 +295,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 2
+    m_EventTreshold: 3
   - m_ConditionMode: 6
     m_ConditionEvent: Number
     m_EventTreshold: 1
@@ -517,7 +514,7 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 0.8
+    m_EventTreshold: 0.65
   - m_ConditionMode: 6
     m_ConditionEvent: Random
     m_EventTreshold: 3
@@ -570,7 +567,7 @@ AnimatorStateTransition:
     m_EventTreshold: 2
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 0.8
+    m_EventTreshold: 0.65
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1919648679461876769}
   m_Solo: 0

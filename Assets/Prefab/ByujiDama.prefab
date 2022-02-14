@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 7802315345694427420}
   - component: {fileID: 7802315345694427416}
   - component: {fileID: 7802315345694427417}
+  - component: {fileID: 7867859664524571086}
+  - component: {fileID: -5969857486552646744}
   m_Layer: 0
   m_Name: ByujiDama
   m_TagString: Untagged
@@ -129,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BoxDimesion: {x: 0.25, y: 0.25}
-  AttackDamage: 3
+  AttackDamage: 1
   Position: {fileID: 7802315344921070915}
   Timev: 0.5
 --- !u!82 &7802315345694427416
@@ -247,3 +249,31 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7867859664524571086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7802315345694427421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f4ace143934d748aa67bd85807aae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &-5969857486552646744
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7802315345694427421}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.12

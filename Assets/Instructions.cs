@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.Audio;
-public class Menu : MonoBehaviour
+public class Instructions : MonoBehaviour
 {
     // Start is called before the first frame update
-  
     void Start()
     {
         
@@ -18,20 +16,8 @@ public class Menu : MonoBehaviour
         
     }
 
-    public void ScenePlay(){
+      public void SceneLvl(){
      
-        SceneManager.LoadScene(6);
-    }
-
-    public void SceneOption(){
-         
-        SceneManager.LoadScene(5);
-      
-    }
-
-     public void ScenEXIT(){
-         
-        Application.Quit();
-       
+        SceneManager.LoadScene(1);
     }
 }

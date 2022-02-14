@@ -28,16 +28,12 @@ public class PlayerHealthController : MonoBehaviour
     {
         if (Damage_)
         {
-            transform.Translate(Vector3.right * KnockBack * Time.deltaTime, Space.World);
-            
+            transform.Translate(Vector3.right * KnockBack * Time.deltaTime, Space.World);   
         }
-
     }
 
     public void FinishDamage()
     {
-        
-
         Damage_ = false;
     }
 }

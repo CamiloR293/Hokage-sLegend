@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class Hability : MonoBehaviour
 {
-    
-public float speed = 2;
+   public float speed = 2;
 
 public float time = 0.5f;
 
@@ -38,6 +37,7 @@ private void Update()
 }
 
 
+
  public void Attack()
     {
         
@@ -58,6 +58,15 @@ private void Update()
 
 
 }
+
+
+ 
+
+
+
+
+
+
   /*  [SerializeField] private Vector2 BoxDimesion;
 
     private float lastShoot;

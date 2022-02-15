@@ -23,13 +23,13 @@ public class Special : StateMachineBehaviour
 
         gaara.SearchPlayer();
    
-      Instantiate(ByujiDama, Boss.position, Boss.rotation);
+      //Instantiate(ByujiDama, Boss.position, Quaternion.identity);
 
        
 
-       // Vector2 position = new Vector2(LauncPoint.position.x, LauncPoint.position.y);
+        Vector2 position = new Vector2(Boss.position.x, Boss.position.y);
 
-      // Instantiate(ByujiDama, position, Quaternion.identity);
+       Instantiate(ByujiDama, position, Quaternion.identity);
 
       
     }

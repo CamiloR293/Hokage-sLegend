@@ -37,7 +37,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff489d7f59175664da609fad1e99c0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ByujiDama: {fileID: 3965337502758884135, guid: 1a72f0dd78675ce469dbdfd4744edf0a, type: 3}
+  ByujiDama: {fileID: 5215434223418275381, guid: 88c66167f5d642340a85d45cf1a6a11c, type: 3}
   Boss: {fileID: 8558679395259776366, guid: d0e1e8d2046144f41902ba0f583e7fec, type: 3}
 --- !u!114 &-6528804376083801995
 MonoBehaviour:
@@ -300,7 +300,7 @@ AnimatorStateTransition:
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6314470648838012455}
   m_Solo: 0
-  m_Mute: 0
+  m_Mute: 1
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.25

@@ -7,6 +7,8 @@ public class Special : StateMachineBehaviour
 
     [SerializeField] private GameObject ByujiDama;
 
+     public Transform Boss;
+
 
     private Boss gaara;
 
@@ -20,11 +22,21 @@ public class Special : StateMachineBehaviour
         Player = gaara.Player;
 
         gaara.SearchPlayer();
+   
+      //Instantiate(ByujiDama, Boss.position, Quaternion.identity);
 
-        Vector2 position = new Vector2(Player.position.x, Player.position.y);
+       
 
-        Instantiate(ByujiDama, position, Quaternion.identity);
+        Vector2 position = new Vector2(Boss.position.x, Boss.position.y);
+
+       Instantiate(ByujiDama, position, Quaternion.identity);
+
+      
     }
+
+  
+
+  
 
  
 }

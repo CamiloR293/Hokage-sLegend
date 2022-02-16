@@ -48,7 +48,7 @@ public class NinjaEnemy : MonoBehaviour
         float Distance = Vector2.Distance(transform.position, Player.position);
         animator.SetFloat("Distance", Distance);
     }
-    // Recibir da�o Boss
+    // Recibir daño enemigo
     public void Damage(float damage)
     {
         Health -= damage;

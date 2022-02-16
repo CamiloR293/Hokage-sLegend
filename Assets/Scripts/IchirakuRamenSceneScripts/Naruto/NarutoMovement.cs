@@ -37,7 +37,7 @@ public class NarutoMovement : MonoBehaviour
     void Update()
     {
         Health();
-        if (HealthController.MinHealth > 0)
+        if (HealthController.MinHealth > 0 )
         {
             HealthController.Damage();
             if (!HealthController.Damage_)
@@ -51,13 +51,6 @@ public class NarutoMovement : MonoBehaviour
                     else if (Horizontal > 0.0f) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                 }
                 Animator.SetBool("Crouch", Input.GetKey(KeyCode.S));
-
-                if (Physics2D.Raycast(transform.position, Vector3.down, 0.28f))
-                {
-                    Grounded = true;
-                    JumpAgain = true;
-                }
-                else Grounded = false;
 
                 if (!Animator.GetBool("Animating_Something"))
                 {
@@ -82,18 +75,12 @@ public class NarutoMovement : MonoBehaviour
                     Throw();
                 }
 
-                Animator.SetBool("Jumping", !Grounded);
             }
         }
         else
         {
-            switch (HealthController.Death)
-            {
-                case 0:
-                    Animator.SetTrigger("Death");
-                    HealthController.Death++;
-                    break;
-            }
+            Animator.SetBool("Death", true);
+            Horizontal = 0;
         }
     }
     //End Update
@@ -205,11 +192,33 @@ public class NarutoMovement : MonoBehaviour
 
     }
 
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("Out");
+            Grounded = false;
+            Animator.SetBool("Jumping", true);
+        }
+    }
 
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+        if (collision.gameObject.tag == "Ground")
+        {
+            Debug.Log("In");
+            Grounded = true;
+            JumpAgain = true;
+            Animator.SetBool("Jumping", false);
+        }
+    }
+    
     private void Jump()
     {
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
+
     
+
 }

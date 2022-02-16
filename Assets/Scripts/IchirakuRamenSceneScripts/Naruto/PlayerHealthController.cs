@@ -7,22 +7,10 @@ public class PlayerHealthController : MonoBehaviour
 {
     public bool Damage_;
     public float MaxHealth = 100f;
-    public float MinHealth = 1f;
+    public float MinHealth;
     public Image Bar;
     public int Death = -1;
     public float KnockBack;
-
-    void Start()
-    {
-        
-        
-    }
-
-
-    void Update()
-    {
-
-    }
 
     public void Damage()
     {
@@ -34,6 +22,7 @@ public class PlayerHealthController : MonoBehaviour
 
     public void FinishDamage()
     {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
         Damage_ = false;
     }
 }

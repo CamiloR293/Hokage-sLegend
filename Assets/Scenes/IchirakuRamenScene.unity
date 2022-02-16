@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 371091491}
   m_Layer: 6
   m_Name: Tilemap
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3859,7 +3859,7 @@ GameObject:
   - component: {fileID: 491516568}
   m_Layer: 0
   m_Name: Building1
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4307,7 +4307,7 @@ GameObject:
   - component: {fileID: 763846819}
   m_Layer: 0
   m_Name: Building3
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4582,7 +4582,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!212 &1196713661
@@ -4644,7 +4644,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1196713658}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.027, y: -2.288, z: 0}
+  m_LocalPosition: {x: -0.391, y: -0.902, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 649720300}
@@ -4952,10 +4952,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5423323776975235466, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789112, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: Bar
       value: 
@@ -4966,11 +4962,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.334
+      value: -0.362
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.338
+      value: -2.321
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5004,41 +5000,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5423323777060789118, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: hitDamage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 5423323777060789119, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_Size.x
-      value: 0.1946187
-      objectReference: {fileID: 0}
-    - target: {fileID: 5423323777060789119, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_Size.y
-      value: 0.47477448
-      objectReference: {fileID: 0}
-    - target: {fileID: 5423323777060789119, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5423323777060789119, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.001483202
-      objectReference: {fileID: 0}
-    - target: {fileID: 5423323777060789119, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_Offset.y
-      value: 0.0074780583
-      objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789123, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_Name
       value: Naruto
-      objectReference: {fileID: 0}
-    - target: {fileID: 5423323777606044869, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5423323777643786481, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}

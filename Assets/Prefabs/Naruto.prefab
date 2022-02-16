@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5423323776975235460}
   m_Layer: 7
   m_Name: Punch1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -201,8 +201,9 @@ MonoBehaviour:
   SpeedRunning: 3
   SpeedWalking: 1.5
   JumpForce: 175
-  hitDamage: 0
+  hitDamage: 10
   Attacking: 0
+  KnockBackHit: 0
   Animator: {fileID: 0}
 --- !u!114 &5423323777060789112
 MonoBehaviour:
@@ -253,7 +254,7 @@ GameObject:
   - component: {fileID: 5423323777606044871}
   m_Layer: 7
   m_Name: Punch3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,7 +311,7 @@ GameObject:
   - component: {fileID: 5423323777643786483}
   m_Layer: 7
   m_Name: Punch2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

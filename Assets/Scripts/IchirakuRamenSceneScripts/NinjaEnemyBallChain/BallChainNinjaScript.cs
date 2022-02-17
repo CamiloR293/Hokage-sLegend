@@ -9,16 +9,20 @@ public class BallChainNinjaScript : MonoBehaviour
     public float rangeOfVision;
     public float rangeOfAttack;
     public float Health = 50.0f;
-
+    public Vector2 direccion;
     public Transform player;
-
+    public int KnockBackTranslate;
+    public float UpForce;
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     public GameObject Player;
     private float playerDistance;
     private bool Locked;
     public bool KnockBack;
-    bool Hit;
+    public bool Hit;
+    public bool TranslateBool;
+
+
     void Start()
     {
         Animator = GetComponent<Animator>();
@@ -29,6 +33,12 @@ public class BallChainNinjaScript : MonoBehaviour
     //Start Update
     void Update()
     {
+        Damage();
+        Translate();
+        UpTranslate();
+        HealthEnemy();
+
+
         if (Health > 0)
         {
             playerDistance = Vector2.Distance(player.position, Rigidbody2D.position);
@@ -39,33 +49,28 @@ public class BallChainNinjaScript : MonoBehaviour
 
             if (!Locked)
             {
-                if (player.position.x < Rigidbody2D.position.x) transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-                else transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                if (player.position.x < Rigidbody2D.position.x)
+                {
+                    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                    this.direccion.x = -1;
+                }
+                else
+                {
+                    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                    this.direccion.x = 1;
+                }
             }
+        }
+        else
+        {
+            Rigidbody2D.velocity = new Vector3(0, 0, 0);
         }
     }
     //End Update
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        
-        if (collision.CompareTag("Player"))
-        {
+    
 
-            if (!Player.GetComponent<NarutoMovement>().KnockBackHit) 
-            { 
-                Animator.SetTrigger("Damage");
-                Hit = true;
-            }
-            else
-            {
-                Animator.SetTrigger("KnockBack");
-                Hit = false;
-            }
-            Damage();
-            Health -= Player.GetComponent<NarutoMovement>().hitDamage;
-        }
-    }
+    //Bloqueo al atacar
     public void Lock()
     {
         Locked = true;
@@ -74,28 +79,86 @@ public class BallChainNinjaScript : MonoBehaviour
     {
         Locked = false;
     }
+    //===================
+
+
+
+    public void HealthEnemy()
+    {
+        if (Health <= 0) Animator.SetBool("Death", true);
+    }
 
     public void Damage()
     {
-        int KnockBack = 0;
+        
         if (Health > 0)
         {
-            if (transform.position.x > player.position.x)
+            //if (transform.position.x > player.position.x)
+            //{
+                KnockBackTranslate = -1;
+            //}
+            //else
+            //{
+                //KnockBackTranslate = 1;
+            //}
+        }
+        
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+
+        if (collision.CompareTag("Player"))
+        {
+            Hit = true;
+            if (Player.GetComponent<NarutoMovement>().KnockBackHit)
             {
-                KnockBack = -4;
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                Animator.SetTrigger("KnockBack");
+                UpForce = 0.001f;
             }
             else
             {
-                KnockBack = 4;
-                transform.rotation = Quaternion.Euler(0, 0, 0);
+                Animator.SetTrigger("Damage");
             }
+
+            Health -= Player.GetComponent<NarutoMovement>().hitDamage;
         }
+    }
+
+    public void Translate()
+    {
+        Vector3 direccion = new Vector3(this.direccion.x, 0, 0);
         if (Hit)
         {
-            transform.Translate(Vector3.right * KnockBack * Time.deltaTime, Space.World);
-
+            transform.Translate(direccion * KnockBackTranslate * Time.deltaTime, Space.World);
         }
+    }
+
+    public void TrueTranslate()
+    {
+        TranslateBool = true;
+    }
+
+    public void EndTranslate()
+    {
+        TranslateBool = false;
+    }
+
+    public void UpTranslate()
+    {
+        if(TranslateBool) transform.Translate(Vector3.up * UpForce, Space.World);
+    }
+
+    
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground") Animator.SetBool("Grounded", true);
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground") Animator.SetBool("Grounded", false);
     }
 
     public void FinishDamage()

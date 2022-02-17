@@ -11,6 +11,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
     m_EventTreshold: 3.5
+  - m_ConditionMode: 6
+    m_ConditionEvent: Number
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1135641161314643965}
   m_Solo: 0
@@ -37,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff489d7f59175664da609fad1e99c0bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ByujiDama: {fileID: 5215434223418275381, guid: 88c66167f5d642340a85d45cf1a6a11c, type: 3}
+  ByujiDama: {fileID: 134115540023137296, guid: e015f08c1841d1d4296d1f37876b3069, type: 3}
   Boss: {fileID: 8558679395259776366, guid: d0e1e8d2046144f41902ba0f583e7fec, type: 3}
 --- !u!114 &-6528804376083801995
 MonoBehaviour:
@@ -300,7 +303,7 @@ AnimatorStateTransition:
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 6314470648838012455}
   m_Solo: 0
-  m_Mute: 1
+  m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
   m_TransitionDuration: 0.25
@@ -324,7 +327,7 @@ AnimatorStateTransition:
     m_EventTreshold: 0
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 0.625
+    m_EventTreshold: 0.62
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 4988957817657743799}
   m_Solo: 0
@@ -434,7 +437,7 @@ AnimatorStateTransition:
     m_EventTreshold: 1
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 0.625
+    m_EventTreshold: 0.62
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 142762932095735614}
   m_Solo: 0
@@ -565,7 +568,7 @@ AnimatorStateTransition:
     m_EventTreshold: 2
   - m_ConditionMode: 4
     m_ConditionEvent: Distance
-    m_EventTreshold: 0.65
+    m_EventTreshold: 0.625
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1919648679461876769}
   m_Solo: 0

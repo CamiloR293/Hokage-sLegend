@@ -52,6 +52,7 @@ public class Boss : MonoBehaviour
         else {
             HealtH.SetActive(false);
         }
+       
     }
     // Recibir da�o Boss
     public void Damage(float damage)

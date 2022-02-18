@@ -46,6 +46,9 @@ TagManager:
   - name: NearBackGround
     uniqueID: 2075670127
     locked: 0
+  - name: MappingEnvironment
+    uniqueID: 1434158183
+    locked: 0
   - name: Map
     uniqueID: 1015790939
     locked: 0
@@ -57,4 +60,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 2909149159
+    locked: 0
+  - name: Front
+    uniqueID: 2272860923
     locked: 0

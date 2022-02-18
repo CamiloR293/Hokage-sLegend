@@ -19,6 +19,7 @@ public class NarutoMovement : MonoBehaviour
     private int Combo;
     public bool Attacking;
     public bool KnockBackHit;
+    public float UpForce;
     public int direccion;
     public bool Moving;
     protected bool Flag;
@@ -143,16 +144,17 @@ public class NarutoMovement : MonoBehaviour
     public void ComboCount()
     {
         
-        if(Input.GetKeyDown(KeyCode.K) && !Attacking && !Animator.GetBool("Jumping") && !Animator.GetBool("Flag"))
+        if(Input.GetKeyDown(KeyCode.K) && !Attacking  && !Animator.GetBool("Jumping") && !Animator.GetBool("Flag"))
         {
             Attacking = true;
             Animator.SetTrigger(""+Combo);
         }
 
-        if(Input.GetKeyDown(KeyCode.K) && !Attacking && Animator.GetBool("Jumping") && Animator.GetBool("Flag"))
+
+        if (Input.GetKeyDown(KeyCode.K) && !Attacking && Animator.GetBool("Jumping") && !Animator.GetBool("Flag"))
         {
             Attacking = true;
-            Animator.SetTrigger("AirPunch" + Combo);
+            Animator.SetTrigger("AirPunch"+Combo);
         }
     }
 
@@ -215,6 +217,7 @@ public class NarutoMovement : MonoBehaviour
         KnockBackHit = true;
         Moving = true;
         hitTranslate = 4;
+        UpForce = 0.02f;
         PunchTranslate();
     }
 

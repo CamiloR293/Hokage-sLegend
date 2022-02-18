@@ -61,10 +61,8 @@ public class BallChainNinjaScript : MonoBehaviour
                 }
             }
         }
-        else
-        {
-            Rigidbody2D.velocity = new Vector3(0, 0, 0);
-        }
+        else if (Animator.GetBool("Grounded")) Rigidbody2D.velocity = new Vector3(0, 0, 0);
+        
     }
     //End Update
 
@@ -111,10 +109,11 @@ public class BallChainNinjaScript : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             Hit = true;
+            
             if (Player.GetComponent<NarutoMovement>().KnockBackHit)
             {
                 Animator.SetTrigger("KnockBack");
-                UpForce = 0.001f;
+                UpForce = 0.01f;
             }
             else
             {
@@ -127,9 +126,9 @@ public class BallChainNinjaScript : MonoBehaviour
 
     public void Translate()
     {
-        Vector3 direccion = new Vector3(this.direccion.x, 0, 0);
         if (Hit)
         {
+            Vector3 direccion = new Vector3(this.direccion.x, 0, 0);
             transform.Translate(direccion * KnockBackTranslate * Time.deltaTime, Space.World);
         }
     }
@@ -163,6 +162,7 @@ public class BallChainNinjaScript : MonoBehaviour
 
     public void FinishDamage()
     {
+        
         Hit = false;
     }
 

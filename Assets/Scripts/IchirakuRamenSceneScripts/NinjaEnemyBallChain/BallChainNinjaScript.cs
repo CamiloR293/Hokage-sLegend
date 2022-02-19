@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallChainNinjaScript : MonoBehaviour
 {
-
+    public NarutoMovement Naruto = new NarutoMovement();
 
     public float rangeOfVision;
     public float rangeOfAttack;
@@ -12,7 +12,8 @@ public class BallChainNinjaScript : MonoBehaviour
     public Vector2 direccion;
     public Transform player;
     public int KnockBackTranslate;
-    public float UpForce;
+    float Cronometro = 3;
+
     private Rigidbody2D Rigidbody2D;
     private Animator Animator;
     public GameObject Player;
@@ -61,7 +62,18 @@ public class BallChainNinjaScript : MonoBehaviour
                 }
             }
         }
-        else if (Animator.GetBool("Grounded")) Rigidbody2D.velocity = new Vector3(0, 0, 0);
+        else if (Animator.GetBool("Grounded"))
+        {
+            if (Animator.GetBool("Death"))
+            {
+                Rigidbody2D.velocity = new Vector3(0, 0, 0);
+                Cronometro -= Time.deltaTime;
+                if (Cronometro <= 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
+        }
         
     }
     //End Update
@@ -113,7 +125,7 @@ public class BallChainNinjaScript : MonoBehaviour
             if (Player.GetComponent<NarutoMovement>().KnockBackHit)
             {
                 Animator.SetTrigger("KnockBack");
-                UpForce = 0.01f;
+                Animator.SetBool("Falling", true);
             }
             else
             {
@@ -145,19 +157,25 @@ public class BallChainNinjaScript : MonoBehaviour
 
     public void UpTranslate()
     {
-        if(TranslateBool) transform.Translate(Vector3.up * UpForce, Space.World);
+        if(TranslateBool) transform.Translate(Vector3.up * Naruto.UpForce, Space.World);
+    }
+    
+    public void Bounce()
+    {
+        Naruto.UpForce = 0.02f;
     }
 
-    
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground") Animator.SetBool("Grounded", true);
+        Animator.SetBool("Falling", false);
     }
 
     public void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground") Animator.SetBool("Grounded", false);
+        
     }
 
     public void FinishDamage()
@@ -167,12 +185,5 @@ public class BallChainNinjaScript : MonoBehaviour
     }
 
 
-    //Debugger code
-    //private void OnDrawGizmos()
-    //{
-    //    Gizmos.color = Color.blue;
-    //    Gizmos.DrawWireSphere(transform.position, rangeOfVision);
-    //    Gizmos.DrawWireSphere(transform.position, rangeOfAttack);
-    //}
-    
+
 }

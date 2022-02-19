@@ -105,7 +105,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 7c565ad6999da5e48ac16fa0f3d72674, type: 2}
   m_Interpolate: 0
-  m_SleepingMode: 2
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &234259737731452794
@@ -155,13 +155,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3579803f3046b44aae71c7fe7ca77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Naruto: {fileID: 0}
   rangeOfVision: 2
   rangeOfAttack: 1.5
   Health: 100
   direccion: {x: 0, y: 0}
   player: {fileID: 0}
   KnockBackTranslate: 0
-  UpForce: 0
   Player: {fileID: 0}
   KnockBack: 0
   Hit: 0

@@ -7,6 +7,8 @@ public class NarutoMovement : MonoBehaviour
 {
     public PlayerHealthController HealthController = new PlayerHealthController(); 
     public GameObject ShurikenPrefab;
+    
+
 
     [Header("Movement")]
     public float SpeedRunning;
@@ -24,6 +26,7 @@ public class NarutoMovement : MonoBehaviour
     public bool Moving;
     protected bool Flag;
 
+
     [Header("Components")]
     private Rigidbody2D Rigidbody2D; 
     private float Horizontal;       
@@ -36,6 +39,7 @@ public class NarutoMovement : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         HealthController = GetComponent<PlayerHealthController>();
+        
     }
 
     //Start Update
@@ -64,7 +68,8 @@ public class NarutoMovement : MonoBehaviour
                         direccion = 1;
                     }
                 }
-                Animator.SetBool("Crouch", Input.GetKey(KeyCode.S));
+                
+                if(!Animator.GetBool("Uppercut")) Animator.SetBool("Crouch", Input.GetKey(KeyCode.S));
 
                 if (!Animator.GetBool("Animating_Something"))
                 {
@@ -133,30 +138,46 @@ public class NarutoMovement : MonoBehaviour
     }
     //End FixedUpdate
 
-    ///---------------------------------------------
+    ///=============================================
     ///     SECCION DE FUNCIONES DEL JUGADOR
-    ///---------------------------------------------
+    ///=============================================
 
 
-    //----------------------------------------------
+    //==============================================
     //             COMBOS DE GOLPES
-    //----------------------------------------------
+    //==============================================
     public void ComboCount()
     {
         
-        if(Input.GetKeyDown(KeyCode.K) && !Attacking  && !Animator.GetBool("Jumping") && !Animator.GetBool("Flag"))
+        if(Input.GetKeyDown(KeyCode.K) && !Attacking  && !Animator.GetBool("Jumping") && !Animator.GetBool("Flag") && !Animator.GetBool("Crouch"))
         {
             Attacking = true;
             Animator.SetTrigger(""+Combo);
+            UpForce = 0.02f;
         }
-
-
-        if (Input.GetKeyDown(KeyCode.K) && !Attacking && Animator.GetBool("Jumping") && !Animator.GetBool("Flag"))
+        else if(Input.GetKeyDown(KeyCode.K) && !Attacking && Animator.GetBool("Jumping") && !Animator.GetBool("Flag") && !Animator.GetBool("Crouch"))
         {
             Attacking = true;
             Animator.SetTrigger("AirPunch"+Combo);
+            UpForce = 0.02f;
         }
+        else if (Animator.GetBool("Crouch") && Input.GetKeyDown(KeyCode.K) && !Attacking && !Animator.GetBool("Jumping"))
+        {
+            Attacking = true;
+            Animator.SetBool("Uppercut", true);
+            
+            
+            Animator.SetBool("Crouch", false);
+            Uppercut();
+        }
+
+        
     }
+
+    ///============================================================
+    ///                 CONTADOR DE GOLPES
+    ///============================================================
+
 
     public void Start_Combo()
     {
@@ -171,10 +192,15 @@ public class NarutoMovement : MonoBehaviour
     {
         Attacking = false;
         Combo = 0;
+        
     }
 
+
+    ///============================================================
+    ///                Bandera para siguiente golpe
+    ///============================================================
     //Bandera para siguiente golpe
-        //Si es verdadero, el siguiente golpe podrá animarse
+    //Si es verdadero, el siguiente golpe podrá animarse
     public void flag()
     {
         Animator.SetBool("Flag", true);
@@ -186,9 +212,7 @@ public class NarutoMovement : MonoBehaviour
     }
     //Fin bandera
 
-    //----------------------------------------------
-    //----------------------------------------------
-    //----------------------------------------------
+   
 
 
     //Funcion salto
@@ -198,8 +222,16 @@ public class NarutoMovement : MonoBehaviour
     }
     //Fin funcion salto
 
+
+    ///=====================================================================
+    ///                             GOLPES
+    ///=====================================================================
     //Desplazamiento por cada golpe
-        //Naruto por cada golpe deberá avanzar para no dejar ir a su enemigo
+    //hitTranslate es la un numero el cual se multiplica por el vector de movimiento,
+    //Lo que hace es desplazar a Naruto en la direccion hacia la que apunta cuando lanza un golpe
+    //Naruto por cada golpe deberá avanzar para no dejar ir a su enemigo
+    //UpForce siendo la fuerza con la que Naruto envia a sus enemigos al aire
+
     public void Punch1()
     {
         hitTranslate = 1.5f;
@@ -214,13 +246,30 @@ public class NarutoMovement : MonoBehaviour
     }
     public void Punch3()
     {
+        
         KnockBackHit = true;
         Moving = true;
         hitTranslate = 4;
         UpForce = 0.02f;
         PunchTranslate();
+        
     }
 
+    public void Uppercut()
+    {
+        KnockBackHit = true;
+        Moving = true;
+        hitTranslate = 15;
+        UpForce = 0.2f;
+        PunchTranslate();
+        
+    }
+    public void EndUppercut()
+    {
+        Animator.SetBool("Uppercut", false);
+    }
+
+    //Funcion que mueve al personaje cuando golpea
     public void PunchTranslate()
     {
         if (Moving)
@@ -233,18 +282,12 @@ public class NarutoMovement : MonoBehaviour
     
 
     //Fin desplazamiento por golpe
-
-
     public void FinishMoving()
     {
         Moving = false;
     }
     //----------------------------------------------
-    //----------------------------------------------
-    //----------------------------------------------
-
-
-
+    
     //Controla la barra verde de vida
     public void Health()
     {

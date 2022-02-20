@@ -102,8 +102,9 @@ public class Boss : MonoBehaviour
             if (colision.CompareTag("Player") )
             {
                 //DAÑO AL JUGADOR
-                colision.GetComponent<KnockBackHit>(); ;
                 HitSound.Play();
+                colision.GetComponent<KnockBackHit>(); ;
+             
                 //.Damage(AttackDamage);
             }
         }

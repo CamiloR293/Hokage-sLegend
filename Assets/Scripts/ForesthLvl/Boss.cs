@@ -20,6 +20,8 @@ public class Boss : MonoBehaviour
 
     private bool Rigth = true;
 
+    [SerializeField] private GameObject ByujiDama;
+
  
     [Header("Attack")]
 
@@ -52,7 +54,9 @@ public class Boss : MonoBehaviour
         else {
             HealtH.SetActive(false);
         }
-       
+              
+              
+      
     }
     // Recibir da�o Boss
     public void Damage(float damage)

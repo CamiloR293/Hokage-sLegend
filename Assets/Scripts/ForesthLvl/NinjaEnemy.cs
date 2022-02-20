@@ -18,6 +18,8 @@ public class NinjaEnemy : MonoBehaviour
 
     public Transform Player;
 
+    public Transform pos;
+
     private bool SeeRigth = true;
 
     public GameObject Collectible;
@@ -66,7 +68,8 @@ public class NinjaEnemy : MonoBehaviour
     // Muerte Boss
     private void Dead()
     {
-        Instantiate(Collectible);
+       
+        Instantiate(Collectible, pos.transform.position, pos.transform.rotation);
         Destroy(gameObject);
         
     }

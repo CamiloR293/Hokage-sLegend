@@ -243,6 +243,7 @@ GameObject:
   - component: {fileID: 5423323777060789118}
   - component: {fileID: 5423323777060789112}
   - component: {fileID: 5423323777060789113}
+  - component: {fileID: 434609709}
   m_Layer: 7
   m_Name: Naruto
   m_TagString: Player
@@ -372,6 +373,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthController: {fileID: 0}
   ShurikenPrefab: {fileID: 3732365949381450379, guid: fdbb7deefdf8a3248b7e7d2f5f06ef44, type: 3}
+  SpecialAttack: {fileID: 0}
+  player: {fileID: 0}
   SpeedRunning: 3
   SpeedWalking: 1.5
   JumpForce: 175
@@ -382,6 +385,7 @@ MonoBehaviour:
   UpForce: 0
   direccion: 0
   Moving: 0
+  Rasengan: 0
   Animator: {fileID: 0}
 --- !u!114 &5423323777060789112
 MonoBehaviour:
@@ -401,6 +405,7 @@ MonoBehaviour:
   Bar: {fileID: 0}
   Death: 0
   KnockBack: 0
+  player: {fileID: 0}
 --- !u!95 &5423323777060789113
 Animator:
   serializedVersion: 3
@@ -420,6 +425,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &434609709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423323777060789123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d393ad431145a641a41af73a1b091c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5423323777606044869
 GameObject:
   m_ObjectHideFlags: 0

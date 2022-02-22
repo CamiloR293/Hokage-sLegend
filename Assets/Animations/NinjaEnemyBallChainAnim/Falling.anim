@@ -165,6 +165,25 @@ AnimationClip:
     path: 
     classID: 70
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_GravityScale
+    path: 
+    classID: 50
+    script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
@@ -217,6 +236,13 @@ AnimationClip:
       typeID: 212
       customType: 23
       isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 0
+      attribute: 2336549521
+      script: {fileID: 0}
+      typeID: 50
+      customType: 0
+      isPPtrCurve: 0
     pptrCurveMapping:
     - {fileID: 3988874589486417720, guid: 001d39fb71ea99b4b90fb6bea79366c1, type: 3}
     - {fileID: -1093923470747320572, guid: 001d39fb71ea99b4b90fb6bea79366c1, type: 3}
@@ -388,6 +414,25 @@ AnimationClip:
     attribute: m_Size.x
     path: 
     classID: 70
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0.5
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_GravityScale
+    path: 
+    classID: 50
     script: {fileID: 0}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0

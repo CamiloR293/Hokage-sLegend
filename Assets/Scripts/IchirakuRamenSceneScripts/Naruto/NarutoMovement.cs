@@ -7,8 +7,8 @@ public class NarutoMovement : MonoBehaviour
 {
     public PlayerHealthController HealthController = new PlayerHealthController(); 
     public GameObject ShurikenPrefab;
-    
-
+    public SpecialAttack SpecialAttack = new SpecialAttack();
+    public NarutoMovement player;
 
     [Header("Movement")]
     public float SpeedRunning;
@@ -25,7 +25,7 @@ public class NarutoMovement : MonoBehaviour
     public int direccion;
     public bool Moving;
     protected bool Flag;
-
+    public bool Rasengan;
 
     [Header("Components")]
     private Rigidbody2D Rigidbody2D; 
@@ -39,7 +39,9 @@ public class NarutoMovement : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         HealthController = GetComponent<PlayerHealthController>();
-        
+        SpecialAttack = GetComponent<SpecialAttack>();
+        player = GetComponent<NarutoMovement>();
+        direccion = 1;
     }
 
     //Start Update
@@ -50,9 +52,13 @@ public class NarutoMovement : MonoBehaviour
         {
 
             HealthController.Damage();
+
             if (!HealthController.Damage_)
             {
+
                 ComboCount();
+                
+
 
                 Horizontal = Input.GetAxisRaw("Horizontal");
                 if (!Animator.GetBool("Animating_Something"))
@@ -70,6 +76,14 @@ public class NarutoMovement : MonoBehaviour
                 }
                 
                 if(!Animator.GetBool("Uppercut")) Animator.SetBool("Crouch", Input.GetKey(KeyCode.S));
+
+
+                //===========================================================================================
+                //                                      RASENGAN
+                //===========================================================================================
+                if (Animator.GetBool("Crouch") && Input.GetKeyDown(KeyCode.L)) Rasengan = true;
+                if (Rasengan) SpecialAttack.RasenganCharge(Animator, player);
+                //===========================================================================================
 
                 if (!Animator.GetBool("Animating_Something"))
                 {
@@ -362,6 +376,9 @@ public class NarutoMovement : MonoBehaviour
         Rigidbody2D.velocity = new Vector2(0, 0);
     }
 
-    
+    public void EndRasengan()
+    {
+        SpecialAttack.EndRasengan(Animator, player);
+    }
 
 }

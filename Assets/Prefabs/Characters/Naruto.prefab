@@ -171,6 +171,100 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.27354074, y: 0.14367127}
   m_EdgeRadius: 0
+--- !u!1 &4121571824257402960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8316748066630187044}
+  - component: {fileID: 6550690193345111171}
+  m_Layer: 9
+  m_Name: Rasengan(Charge)
+  m_TagString: SpecialHit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8316748066630187044
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121571824257402960}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6260577514682105137}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &6550690193345111171
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4121571824257402960}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.37579334, y: 0.017550707}
+  m_Size: {x: 0.114121675, y: 0.18916273}
+  m_Direction: 0
+--- !u!1 &4362388657736509298
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1419852608712799973}
+  - component: {fileID: 3013550146230783451}
+  m_Layer: 9
+  m_Name: Rasengan(Impact)
+  m_TagString: SpecialHit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1419852608712799973
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362388657736509298}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6260577514682105137}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &3013550146230783451
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362388657736509298}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.4208727, y: 0.04493463}
+  m_Size: {x: 0.57119036, y: 0.6113694}
+  m_Direction: 0
 --- !u!1 &5423323776975235466
 GameObject:
   m_ObjectHideFlags: 0
@@ -268,6 +362,7 @@ Transform:
   - {fileID: 243177462}
   - {fileID: 1598501701}
   - {fileID: 1071849752}
+  - {fileID: 6260577514682105137}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -375,6 +470,8 @@ MonoBehaviour:
   ShurikenPrefab: {fileID: 3732365949381450379, guid: fdbb7deefdf8a3248b7e7d2f5f06ef44, type: 3}
   SpecialAttack: {fileID: 0}
   player: {fileID: 0}
+  RasenganCollider: {fileID: 4121571824257402960}
+  RasenganColliderAttack: {fileID: 4362388657736509298}
   SpeedRunning: 3
   SpeedWalking: 1.5
   JumpForce: 175
@@ -386,6 +483,8 @@ MonoBehaviour:
   direccion: 0
   Moving: 0
   Rasengan: 0
+  MoveRasengan: 0
+  timeRasengan: 0
   Animator: {fileID: 0}
 --- !u!114 &5423323777060789112
 MonoBehaviour:
@@ -406,6 +505,7 @@ MonoBehaviour:
   Death: 0
   KnockBack: 0
   player: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!95 &5423323777060789113
 Animator:
   serializedVersion: 3
@@ -551,3 +651,35 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3287611, y: 0.1277709}
   m_EdgeRadius: 0
+--- !u!1 &8697653841971660087
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6260577514682105137}
+  m_Layer: 7
+  m_Name: Rasengan
+  m_TagString: SpecialHit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6260577514682105137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8697653841971660087}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8316748066630187044}
+  - {fileID: 1419852608712799973}
+  m_Father: {fileID: 5423323777060789117}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

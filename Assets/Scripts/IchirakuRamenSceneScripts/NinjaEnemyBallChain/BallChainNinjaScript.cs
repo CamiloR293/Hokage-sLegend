@@ -11,7 +11,7 @@ public class BallChainNinjaScript : MonoBehaviour
     public float Health = 50.0f;
     public Vector2 direccion;
     public Transform player;
-    public int KnockBackTranslate;
+    public float KnockBackTranslate;
     float Cronometro = 3;
 
     private Rigidbody2D Rigidbody2D;
@@ -100,19 +100,7 @@ public class BallChainNinjaScript : MonoBehaviour
 
     public void Damage()
     {
-        
-        if (Health > 0)
-        {
-            //if (transform.position.x > player.position.x)
-            //{
-                KnockBackTranslate = -1;
-            //}
-            //else
-            //{
-                //KnockBackTranslate = 1;
-            //}
-        }
-        
+        if (Health > 0) KnockBackTranslate = -1;    
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -124,6 +112,28 @@ public class BallChainNinjaScript : MonoBehaviour
             
             if (Player.GetComponent<NarutoMovement>().KnockBackHit)
             {
+                KnockBackTranslate = -1.5f;
+                Animator.SetTrigger("KnockBack");
+                Animator.SetBool("Falling", true);
+            }
+            else
+            {
+                Animator.SetTrigger("Damage");
+            }
+
+            Health -= Player.GetComponent<NarutoMovement>().hitDamage;
+        }
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SpecialHit"))
+        {
+            Hit = true;
+            KnockBackTranslate = -0.2f;
+            if (Player.GetComponent<NarutoMovement>().KnockBackHit)
+            {
+                KnockBackTranslate = -2;
                 Animator.SetTrigger("KnockBack");
                 Animator.SetBool("Falling", true);
             }

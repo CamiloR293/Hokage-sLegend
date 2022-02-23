@@ -14,18 +14,10 @@ public class SpecialAttack : MonoBehaviour
         
         animator.SetBool("Animating_Something", true);
         animator.SetBool("Rasengan", true);
+        player.Moving = true;
         Cronometro -= Time.deltaTime;
-        if (Cronometro <= 0) Rasengan(animator, player);
+        if (Cronometro <= 0) EndRasengan(animator, player);
     }
-
-    public void Rasengan(Animator animator, NarutoMovement player)
-    {
-        Debug.Log("Rasengan jia");
-        EndRasengan(animator, player);
-    }
-
-    
-
 
     public void EndRasengan(Animator animator, NarutoMovement player)
     {
@@ -33,5 +25,5 @@ public class SpecialAttack : MonoBehaviour
         player.Rasengan = false;
         Cronometro = 1;
     }
-
+    //===============================================================
 }

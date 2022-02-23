@@ -47,6 +47,7 @@ public class NinjaEnemy : MonoBehaviour
 
     private void Update()
     {
+       // Medir distancia a la que se encuentra el jugador
         float Distance = Vector2.Distance(transform.position, Player.position);
         animator.SetFloat("Distance", Distance);
     }
@@ -65,21 +66,21 @@ public class NinjaEnemy : MonoBehaviour
     }
     // Fin recibir da�o
 
-    // Muerte Boss
+    // Muerte enemigo
     private void Dead()
     {
-       
+       // Al morir deja una pocion 
         Instantiate(Collectible, pos.transform.position, pos.transform.rotation);
         Destroy(gameObject);
         
     }
-    // Fin muerte Boss
+    // Fin muerte enemgo
 
     public void SearchPlayer()
     {
 
     
-
+         // Esta funcion hace que el enemigo mire a la posicion que se encuentra el jugador 
         if ((Player.position.x < transform.position.x && !SeeRigth)
             || (Player.position.x > transform.position.x && SeeRigth))
         {
@@ -91,6 +92,7 @@ public class NinjaEnemy : MonoBehaviour
 
     public void Attack()
     {
+        // Hacer daño al jugador
         Collider2D[] Objects = Physics2D.OverlapCircleAll(ControllerAttack.position, RangeAttack);
         foreach (Collider2D colision in Objects)
         {
@@ -106,6 +108,8 @@ public class NinjaEnemy : MonoBehaviour
 
     }
 
+
+// Dibuja el rango de ataque y vision del enemigo
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;

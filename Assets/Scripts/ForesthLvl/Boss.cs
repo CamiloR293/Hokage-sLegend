@@ -45,8 +45,11 @@ public class Boss : MonoBehaviour
 
     private void Update()
     {
-        float Distance = Vector2.Distance(transform.position, Player.position);
+       // Mide la distancia en la cual se encuentra el jugador y entra en accion 
+       //cuando se encuentre cerca
+       float Distance = Vector2.Distance(transform.position, Player.position);
         animator.SetFloat("Distance", Distance);
+        // Activa del HUD de la barra de vida
         if(Distance < 4 )
         {
         HealtH.SetActive(true);
@@ -58,7 +61,7 @@ public class Boss : MonoBehaviour
               
       
     }
-    // Recibir da�o Boss
+    // Recibir daño Boss
     public void Damage(float damage)
     {
         healthHUD.Health -= damage;
@@ -73,7 +76,7 @@ public class Boss : MonoBehaviour
         }
     }
    
-    // Fin recibir da�o
+    // Fin recibir daño
 
     // Muerte Boss
     private void Dead()
@@ -86,6 +89,7 @@ public class Boss : MonoBehaviour
 
     public void SearchPlayer()
     {
+         // Esta funcion hace que el enemigo mire a la posicion que se encuentra el jugador 
         if ((Player.position.x < transform.position.x && !Rigth)
             || (Player.position.x > transform.position.x && Rigth))
         {
@@ -96,6 +100,7 @@ public class Boss : MonoBehaviour
 
     public void Attack()
     {
+       // Hacer daño al jugador
         Collider2D[] Objects = Physics2D.OverlapCircleAll(ControllerAttack.position, RangeAttack);
         foreach (Collider2D colision in Objects)
         {
@@ -112,6 +117,7 @@ public class Boss : MonoBehaviour
 
     }
 
+// Dibuja el rango de ataque y vision del enemigo
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.magenta;

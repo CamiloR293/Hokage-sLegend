@@ -1,22 +1,16 @@
 fileFormatVersion: 2
-guid: 49b7d68681695f641b0d210f45f676a0
+guid: d2c54ddc567b9804290178eacd951ca4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7188646314854687999
-    second: Shishi Rendan 2_0
+      213: 5210376888184761170
+    second: Bola de fuego 4 REPEAT_0
   - first:
-      213: -4809448111166978640
-    second: Shishi Rendan 2_1
+      213: -5557749741652575600
+    second: Bola de fuego 4 REPEAT_1
   - first:
-      213: 3961027534362036677
-    second: Shishi Rendan 2_2
-  - first:
-      213: -3814235012047624823
-    second: Shishi Rendan 2_3
-  - first:
-      213: 482959004013357093
-    second: Shishi Rendan 2_4
+      213: -6279704334083493365
+    second: Bola de fuego 4 REPEAT_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shishi Rendan 2_0
+      name: Bola de fuego 4 REPEAT_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 39
-        height: 41
+        width: 57
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b5a23834ccc3c90800000000000000
-      internalID: -7188646314854687999
+      spriteID: 25b682e8c2afe4840800000000000000
+      internalID: 5210376888184761170
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_1
+      name: Bola de fuego 4 REPEAT_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 72
         y: 0
-        width: 44
-        height: 32
+        width: 57
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b50838ac68614db0800000000000000
-      internalID: -4809448111166978640
+      spriteID: 09a77426e08eed2b0800000000000000
+      internalID: -5557749741652575600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_2
+      name: Bola de fuego 4 REPEAT_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 141
         y: 0
-        width: 34
-        height: 29
+        width: 56
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,50 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9c03b5e8568f630800000000000000
-      internalID: 3961027534362036677
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shishi Rendan 2_3
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 0
-        width: 27
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9852b09177d111bc0800000000000000
-      internalID: -3814235012047624823
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shishi Rendan 2_4
-      rect:
-        serializedVersion: 2
-        x: 245
-        y: 0
-        width: 28
-        height: 53
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 528ea43c7a0d3b600800000000000000
-      internalID: 482959004013357093
+      spriteID: b02f870fd220ad8a0800000000000000
+      internalID: -6279704334083493365
       vertices: []
       indices: 
       edges: []

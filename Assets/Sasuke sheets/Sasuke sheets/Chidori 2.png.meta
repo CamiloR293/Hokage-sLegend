@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 49b7d68681695f641b0d210f45f676a0
+guid: e9fdc955636940d45a8c0144f3490420
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7188646314854687999
-    second: Shishi Rendan 2_0
+      213: -2446653765897212223
+    second: Chidori 2_0
   - first:
-      213: -4809448111166978640
-    second: Shishi Rendan 2_1
+      213: 4454517820373245367
+    second: Chidori 2_1
   - first:
-      213: 3961027534362036677
-    second: Shishi Rendan 2_2
+      213: 8885604112693033733
+    second: Chidori 2_2
   - first:
-      213: -3814235012047624823
-    second: Shishi Rendan 2_3
+      213: 8799673253422283533
+    second: Chidori 2_3
   - first:
-      213: 482959004013357093
-    second: Shishi Rendan 2_4
+      213: 1544258057329877141
+    second: Chidori 2_4
+  - first:
+      213: 6004208880218253472
+    second: Chidori 2_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shishi Rendan 2_0
+      name: Chidori 2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 39
-        height: 41
+        y: 3
+        width: 91
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b5a23834ccc3c90800000000000000
-      internalID: -7188646314854687999
+      spriteID: 1ce2353ec5dbb0ed0800000000000000
+      internalID: -2446653765897212223
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_1
+      name: Chidori 2_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 44
-        height: 32
+        x: 106
+        y: 2
+        width: 87
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b50838ac68614db0800000000000000
-      internalID: -4809448111166978640
+      spriteID: 7bd9ef84b50a1dd30800000000000000
+      internalID: 4454517820373245367
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_2
+      name: Chidori 2_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 211
         y: 0
-        width: 34
-        height: 29
+        width: 90
+        height: 37
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9c03b5e8568f630800000000000000
-      internalID: 3961027534362036677
+      spriteID: 50b71dfccd1005b70800000000000000
+      internalID: 8885604112693033733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_3
+      name: Chidori 2_3
       rect:
         serializedVersion: 2
-        x: 187
-        y: 0
-        width: 27
-        height: 55
+        x: 320
+        y: 1
+        width: 87
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9852b09177d111bc0800000000000000
-      internalID: -3814235012047624823
+      spriteID: d0bbdb98338be1a70800000000000000
+      internalID: 8799673253422283533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_4
+      name: Chidori 2_4
       rect:
         serializedVersion: 2
-        x: 245
-        y: 0
-        width: 28
-        height: 53
+        x: 471
+        y: 1
+        width: 83
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +219,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 528ea43c7a0d3b600800000000000000
-      internalID: 482959004013357093
+      spriteID: 590aea4758e4e6510800000000000000
+      internalID: 1544258057329877141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Chidori 2_5
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 0
+        width: 79
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8a7a63a2c335350800000000000000
+      internalID: 6004208880218253472
       vertices: []
       indices: 
       edges: []

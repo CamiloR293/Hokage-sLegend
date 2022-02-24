@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Naruto
       objectReference: {fileID: 0}
+    - target: {fileID: 5423323777060789123, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
 --- !u!1001 &1128807939
@@ -659,26 +663,13 @@ GameObject:
   - component: {fileID: 1763652629777309732}
   - component: {fileID: 1763652629777309733}
   - component: {fileID: 1763652629777310169}
-  - component: {fileID: 1763652629777309739}
-  m_Layer: 6
+  m_Layer: 10
   m_Name: EnemyF
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1763652629777309739
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1763652629777309734}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24465a8bed94de74eaef521e573968cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1763652629777310169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2896,7 +2887,7 @@ GameObject:
   - component: {fileID: 6955478571319730968}
   - component: {fileID: 6955478571319730969}
   - component: {fileID: 6955478571319730970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Sasuke (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -3026,7 +3017,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6955478571714436890}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.04, z: 0}
+  m_LocalPosition: {x: -0.069, y: 0.333, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6955478571319730965}

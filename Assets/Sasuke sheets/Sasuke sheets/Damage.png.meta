@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 49b7d68681695f641b0d210f45f676a0
+guid: 71384d3ca1c1dc54cb23f008a218152c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7188646314854687999
-    second: Shishi Rendan 2_0
+      213: -7854629474860912292
+    second: Damage_0
   - first:
-      213: -4809448111166978640
-    second: Shishi Rendan 2_1
+      213: -6941875414966023432
+    second: Damage_1
   - first:
-      213: 3961027534362036677
-    second: Shishi Rendan 2_2
+      213: -5657879152074187224
+    second: Damage_2
   - first:
-      213: -3814235012047624823
-    second: Shishi Rendan 2_3
+      213: 1692577817029316766
+    second: Damage_3
   - first:
-      213: 482959004013357093
-    second: Shishi Rendan 2_4
+      213: 7902016671040685316
+    second: Damage_4
+  - first:
+      213: -7539558455403388953
+    second: Damage_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shishi Rendan 2_0
+      name: Damage_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 39
-        height: 41
+        width: 37
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b5a23834ccc3c90800000000000000
-      internalID: -7188646314854687999
+      spriteID: c513a94bb10cef290800000000000000
+      internalID: -7854629474860912292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_1
+      name: Damage_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 56
         y: 0
-        width: 44
-        height: 32
+        width: 35
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b50838ac68614db0800000000000000
-      internalID: -4809448111166978640
+      spriteID: 8facee7f61189af90800000000000000
+      internalID: -6941875414966023432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_2
+      name: Damage_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
-        width: 34
-        height: 29
+        x: 117
+        y: 5
+        width: 38
+        height: 36
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9c03b5e8568f630800000000000000
-      internalID: 3961027534362036677
+      spriteID: 82e978e43ec2b71b0800000000000000
+      internalID: -5657879152074187224
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_3
+      name: Damage_3
       rect:
         serializedVersion: 2
-        x: 187
-        y: 0
-        width: 27
-        height: 55
+        x: 174
+        y: 3
+        width: 48
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9852b09177d111bc0800000000000000
-      internalID: -3814235012047624823
+      spriteID: e901db29e8e3d7710800000000000000
+      internalID: 1692577817029316766
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_4
+      name: Damage_4
       rect:
         serializedVersion: 2
-        x: 245
+        x: 239
         y: 0
-        width: 28
-        height: 53
+        width: 51
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +219,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 528ea43c7a0d3b600800000000000000
-      internalID: 482959004013357093
+      spriteID: 405489eab4a99ad60800000000000000
+      internalID: 7902016671040685316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_5
+      rect:
+        serializedVersion: 2
+        x: 306
+        y: 0
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ef5366f78b1e5790800000000000000
+      internalID: -7539558455403388953
       vertices: []
       indices: 
       edges: []

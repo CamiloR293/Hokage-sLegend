@@ -20,7 +20,7 @@ public class MovimientoSasuke : MonoBehaviour
     public Vector2 direccion;
     public Transform Player;
 
-    private bool Grounded;
+    //private bool Grounded;
     private float cont = 1f;
 
     public string tagPlayer = "GolpePlayer";
@@ -43,12 +43,12 @@ public class MovimientoSasuke : MonoBehaviour
 
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
 
-        Debug.DrawRay(transform.position, Vector3.down * 0.30f, Color.red);
-        if (Physics2D.Raycast(transform.position, Vector3.down, 0.30f))
-        {
-            Grounded = true;
-        }
-        else Grounded = false;
+        //Debug.DrawRay(transform.position, Vector3.down * 0.30f, Color.red);
+        //if (Physics2D.Raycast(transform.position, Vector3.down, 0.30f))
+        //{
+        //    Grounded = true;
+        //}
+        //else Grounded = false;
 
         //if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death")&& Horizontal !=0f)
         //{
@@ -78,26 +78,32 @@ public class MovimientoSasuke : MonoBehaviour
             }
             if (distance <= 0.8F )
             {
-                
-                if (Time.time > lastShoot+1.5f && cont == 1f)
+                if (Time.time > lastShoot + 1.1f && cont == 1f)
+                {
+                    Animator.SetTrigger("Golpe4");
+                    lastShoot = Time.time;
+                    cont = 4f;
+                }
+
+                if (Time.time > lastShoot+1.1f && cont == 4f)
                 {
                     Animator.SetTrigger("Golpe1");
                     lastShoot = Time.time;
                     cont = 2f;
                 }
-                if ( Time.time > lastShoot + 1.5f && cont ==0f)
+                if ( Time.time > lastShoot + 1.1f && cont ==0f)
                 {
                     Animator.SetTrigger("Golpe2");
                     lastShoot = Time.time;
                     cont = 1f;
                 }
-                if (Time.time > lastShoot + 1.5f && cont == 2f)
+                if (Time.time > lastShoot + 1.1f && cont == 2f)
                 {
                     Animator.SetTrigger("Golpe3");
                     lastShoot = Time.time;
                     cont = 3f;
                 }
-                if (Time.time > lastShoot + 1.5f && cont == 3f)
+                if (Time.time > lastShoot + 1.1f && cont == 3f)
                 {
                     Animator.SetTrigger("BolaF");
                     lastShoot = Time.time;

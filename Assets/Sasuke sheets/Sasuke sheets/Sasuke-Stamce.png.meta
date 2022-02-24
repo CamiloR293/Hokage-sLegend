@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 49b7d68681695f641b0d210f45f676a0
+guid: 1de1dcc96fca351418a6c6fa25a40dd1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7188646314854687999
-    second: Shishi Rendan 2_0
+      213: -7886372585089954799
+    second: Sasuke-Stamce_0
   - first:
-      213: -4809448111166978640
-    second: Shishi Rendan 2_1
+      213: 7503257645119914678
+    second: Sasuke-Stamce_1
   - first:
-      213: 3961027534362036677
-    second: Shishi Rendan 2_2
+      213: -6398775569298041132
+    second: Sasuke-Stamce_2
   - first:
-      213: -3814235012047624823
-    second: Shishi Rendan 2_3
+      213: -7972513943925599582
+    second: Sasuke-Stamce_3
   - first:
-      213: 482959004013357093
-    second: Shishi Rendan 2_4
+      213: -5290836603526858822
+    second: Sasuke-Stamce_4
+  - first:
+      213: -1476252572671591062
+    second: Sasuke-Stamce_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shishi Rendan 2_0
+      name: Sasuke-Stamce_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 39
-        height: 41
+        width: 37
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b5a23834ccc3c90800000000000000
-      internalID: -7188646314854687999
+      spriteID: 11c855beae9fd8290800000000000000
+      internalID: -7886372585089954799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_1
+      name: Sasuke-Stamce_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 59
         y: 0
-        width: 44
-        height: 32
+        width: 38
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b50838ac68614db0800000000000000
-      internalID: -4809448111166978640
+      spriteID: 6b24b93031de02860800000000000000
+      internalID: 7503257645119914678
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_2
+      name: Sasuke-Stamce_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 116
         y: 0
-        width: 34
-        height: 29
+        width: 38
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9c03b5e8568f630800000000000000
-      internalID: 3961027534362036677
+      spriteID: 4d6da8a958bf237a0800000000000000
+      internalID: -6398775569298041132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_3
+      name: Sasuke-Stamce_3
       rect:
         serializedVersion: 2
-        x: 187
+        x: 175
         y: 0
-        width: 27
-        height: 55
+        width: 38
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +198,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9852b09177d111bc0800000000000000
-      internalID: -3814235012047624823
+      spriteID: 2a25775eec0fb5190800000000000000
+      internalID: -7972513943925599582
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_4
+      name: Sasuke-Stamce_4
       rect:
         serializedVersion: 2
-        x: 245
+        x: 228
         y: 0
-        width: 28
-        height: 53
+        width: 37
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +219,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 528ea43c7a0d3b600800000000000000
-      internalID: 482959004013357093
+      spriteID: ab7b522242c2396b0800000000000000
+      internalID: -5290836603526858822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sasuke-Stamce_5
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 0
+        width: 36
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d372f4b1c438be0800000000000000
+      internalID: -1476252572671591062
       vertices: []
       indices: 
       edges: []

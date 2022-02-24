@@ -1,22 +1,25 @@
 fileFormatVersion: 2
-guid: 49b7d68681695f641b0d210f45f676a0
+guid: d4dfd8948a3880243a495cb8967405eb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7188646314854687999
-    second: Shishi Rendan 2_0
+      213: -4794392808050421011
+    second: X attack 1_0
   - first:
-      213: -4809448111166978640
-    second: Shishi Rendan 2_1
+      213: -1994430383061147744
+    second: X attack 1_1
   - first:
-      213: 3961027534362036677
-    second: Shishi Rendan 2_2
+      213: 2261511644894158191
+    second: X attack 1_2
   - first:
-      213: -3814235012047624823
-    second: Shishi Rendan 2_3
+      213: -3846300105940778491
+    second: X attack 1_3
   - first:
-      213: 482959004013357093
-    second: Shishi Rendan 2_4
+      213: 1737393044731718498
+    second: X attack 1_4
+  - first:
+      213: -5707140904695719656
+    second: X attack 1_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +121,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shishi Rendan 2_0
+      name: X attack 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 39
-        height: 41
+        width: 36
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,41 +135,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b5a23834ccc3c90800000000000000
-      internalID: -7188646314854687999
+      spriteID: de297729425e67db0800000000000000
+      internalID: -4794392808050421011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_1
+      name: X attack 1_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 44
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0b50838ac68614db0800000000000000
-      internalID: -4809448111166978640
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shishi Rendan 2_2
-      rect:
-        serializedVersion: 2
-        x: 128
+        x: 53
         y: 0
         width: 34
-        height: 29
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +156,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9c03b5e8568f630800000000000000
-      internalID: 3961027534362036677
+      spriteID: 0afd460322c5254e0800000000000000
+      internalID: -1994430383061147744
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_3
+      name: X attack 1_2
       rect:
         serializedVersion: 2
-        x: 187
+        x: 103
         y: 0
-        width: 27
-        height: 55
+        width: 34
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +177,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9852b09177d111bc0800000000000000
-      internalID: -3814235012047624823
+      spriteID: f6d5359ebd0826f10800000000000000
+      internalID: 2261511644894158191
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_4
+      name: X attack 1_3
       rect:
         serializedVersion: 2
-        x: 245
+        x: 161
         y: 0
-        width: 28
-        height: 53
+        width: 43
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +198,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 528ea43c7a0d3b600800000000000000
-      internalID: 482959004013357093
+      spriteID: 5024ad5ae623f9ac0800000000000000
+      internalID: -3846300105940778491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: X attack 1_4
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 0
+        width: 47
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26be772e4c57c1810800000000000000
+      internalID: 1737393044731718498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: X attack 1_5
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 0
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819928cb5992cc0b0800000000000000
+      internalID: -5707140904695719656
       vertices: []
       indices: 
       edges: []

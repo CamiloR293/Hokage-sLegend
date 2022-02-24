@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: 49b7d68681695f641b0d210f45f676a0
+guid: 849198f257b086640809faf439cb7ee3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7188646314854687999
-    second: Shishi Rendan 2_0
+      213: -6167507538061888492
+    second: WInner_8
   - first:
-      213: -4809448111166978640
-    second: Shishi Rendan 2_1
+      213: -1763814159239892967
+    second: WInner_9
   - first:
-      213: 3961027534362036677
-    second: Shishi Rendan 2_2
+      213: -3380320769051928182
+    second: WInner_10
   - first:
-      213: -3814235012047624823
-    second: Shishi Rendan 2_3
+      213: 5617402549257470494
+    second: WInner_11
   - first:
-      213: 482959004013357093
-    second: Shishi Rendan 2_4
+      213: -339646951592837294
+    second: WInner_12
+  - first:
+      213: -1911739805866459960
+    second: WInner_13
+  - first:
+      213: 920102575429958696
+    second: WInner_14
+  - first:
+      213: 1860721906908767707
+    second: WInner_15
+  - first:
+      213: -7127270397171151851
+    second: WInner_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +130,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shishi Rendan 2_0
+      name: WInner_8
       rect:
         serializedVersion: 2
-        x: 0
+        x: 338
         y: 0
-        width: 39
-        height: 41
+        width: 25
+        height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b5a23834ccc3c90800000000000000
-      internalID: -7188646314854687999
+      spriteID: 414f64c229c986aa0800000000000000
+      internalID: -6167507538061888492
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_1
+      name: WInner_9
       rect:
         serializedVersion: 2
-        x: 64
+        x: 383
         y: 0
-        width: 44
-        height: 32
+        width: 24
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +165,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b50838ac68614db0800000000000000
-      internalID: -4809448111166978640
+      spriteID: 910b3b40e5ca587e0800000000000000
+      internalID: -1763814159239892967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_2
+      name: WInner_10
       rect:
         serializedVersion: 2
-        x: 128
+        x: 422
         y: 0
-        width: 34
-        height: 29
+        width: 24
+        height: 52
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9c03b5e8568f630800000000000000
-      internalID: 3961027534362036677
+      spriteID: a89d8c59b20b611d0800000000000000
+      internalID: -3380320769051928182
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_3
+      name: WInner_11
       rect:
         serializedVersion: 2
-        x: 187
-        y: 0
-        width: 27
-        height: 55
+        x: 464
+        y: 1
+        width: 22
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,19 +207,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9852b09177d111bc0800000000000000
-      internalID: -3814235012047624823
+      spriteID: e128dd43bd505fd40800000000000000
+      internalID: 5617402549257470494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_4
+      name: WInner_12
       rect:
         serializedVersion: 2
-        x: 245
-        y: 0
-        width: 28
+        x: 500
+        y: 1
+        width: 29
         height: 53
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -216,8 +228,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 528ea43c7a0d3b600800000000000000
-      internalID: 482959004013357093
+      spriteID: 25fb345a5e4594bf0800000000000000
+      internalID: -339646951592837294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WInner_13
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 1
+        width: 24
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccfa5086c22875e0800000000000000
+      internalID: -1911739805866459960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WInner_14
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 1
+        width: 22
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82cbc6dda6cd4cc00800000000000000
+      internalID: 920102575429958696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WInner_15
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 1
+        width: 24
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd5a51f37bc92d910800000000000000
+      internalID: 1860721906908767707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WInner_16
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 1
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51cc47ee559d61d90800000000000000
+      internalID: -7127270397171151851
       vertices: []
       indices: 
       edges: []

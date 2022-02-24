@@ -1,22 +1,37 @@
 fileFormatVersion: 2
-guid: 49b7d68681695f641b0d210f45f676a0
+guid: dd182c98dd110d24a86eb09c14b5ffb9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7188646314854687999
-    second: Shishi Rendan 2_0
+      213: 2082125570066861788
+    second: ArmaLanzadaSasuke_0
   - first:
-      213: -4809448111166978640
-    second: Shishi Rendan 2_1
+      213: 402893989434696780
+    second: ArmaLanzadaSasuke_1
   - first:
-      213: 3961027534362036677
-    second: Shishi Rendan 2_2
+      213: 3834897731139883603
+    second: ArmaLanzadaSasuke_2
   - first:
-      213: -3814235012047624823
-    second: Shishi Rendan 2_3
+      213: -1799586973735979898
+    second: ArmaLanzadaSasuke_3
   - first:
-      213: 482959004013357093
-    second: Shishi Rendan 2_4
+      213: 9011181218510154150
+    second: ArmaLanzadaSasuke_4
+  - first:
+      213: 86666021476733534
+    second: ArmaLanzadaSasuke_5
+  - first:
+      213: -5354990798453952036
+    second: ArmaLanzadaSasuke_6
+  - first:
+      213: 659464063871670871
+    second: ArmaLanzadaSasuke_7
+  - first:
+      213: -9139053546353539667
+    second: ArmaLanzadaSasuke_8
+  - first:
+      213: 5861945533471337674
+    second: ArmaLanzadaSasuke_9
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,13 +133,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shishi Rendan 2_0
+      name: ArmaLanzadaSasuke_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 39
-        height: 41
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10b5a23834ccc3c90800000000000000
-      internalID: -7188646314854687999
+      spriteID: cdec795ac2235ec10800000000000000
+      internalID: 2082125570066861788
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_1
+      name: ArmaLanzadaSasuke_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 39
         y: 0
-        width: 44
-        height: 32
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -153,20 +168,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0b50838ac68614db0800000000000000
-      internalID: -4809448111166978640
+      spriteID: c442562e2fd579500800000000000000
+      internalID: 402893989434696780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_2
+      name: ArmaLanzadaSasuke_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 69
         y: 0
-        width: 34
-        height: 29
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,20 +189,83 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c9c03b5e8568f630800000000000000
-      internalID: 3961027534362036677
+      spriteID: 3525b861b2b483530800000000000000
+      internalID: 3834897731139883603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_3
+      name: ArmaLanzadaSasuke_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 684fb089e259607e0800000000000000
+      internalID: -1799586973735979898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmaLanzadaSasuke_4
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a928ff23952e0d70800000000000000
+      internalID: 9011181218510154150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmaLanzadaSasuke_5
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5297309946e33100800000000000000
+      internalID: 86666021476733534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmaLanzadaSasuke_6
       rect:
         serializedVersion: 2
         x: 187
         y: 0
-        width: 27
-        height: 55
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,20 +273,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9852b09177d111bc0800000000000000
-      internalID: -3814235012047624823
+      spriteID: cd1baa2ad304fa5b0800000000000000
+      internalID: -5354990798453952036
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shishi Rendan 2_4
+      name: ArmaLanzadaSasuke_7
       rect:
         serializedVersion: 2
-        x: 245
+        x: 219
         y: 0
         width: 28
-        height: 53
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +294,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 528ea43c7a0d3b600800000000000000
-      internalID: 482959004013357093
+      spriteID: 75ad4357213e62900800000000000000
+      internalID: 659464063871670871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmaLanzadaSasuke_8
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da5c25a683f8b2180800000000000000
+      internalID: -9139053546353539667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArmaLanzadaSasuke_9
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 0
+        width: 28
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acc2f3f9760d95150800000000000000
+      internalID: 5861945533471337674
       vertices: []
       indices: 
       edges: []

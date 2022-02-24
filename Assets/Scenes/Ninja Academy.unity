@@ -130,6 +130,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 243177461, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: Golpeplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071849751, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: Golpeplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1598501700, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: Golpeplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423323776975235466, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: Golpeplayer
+      objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789112, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: Bar
       value: 
@@ -185,6 +201,18 @@ PrefabInstance:
     - target: {fileID: 5423323777060789123, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423323777606044869, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: Golpeplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423323777643786481, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: Golpeplayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 8697653841971660087, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
@@ -2850,7 +2878,8 @@ MonoBehaviour:
   Player: {fileID: 5423323777057563413}
   tagPlayer: Golpeplayer
   player: {fileID: 5423323777057563627}
-  Life: 9
+  Life: 50
+  Cooldown: 2
   TimeDestroy: 3
 --- !u!50 &6955478571319730970
 Rigidbody2D:

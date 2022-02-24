@@ -26,9 +26,9 @@ public class MovimientoSasuke : MonoBehaviour
     public string tagPlayer = "GolpePlayer";
     public GameObject player;
 
-    public float Life = 9f;
-
-    public float TimeDestroy = 0.1f;
+    public float Life;
+    public float Cooldown;
+    public float TimeDestroy;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -78,32 +78,32 @@ public class MovimientoSasuke : MonoBehaviour
             }
             if (distance <= 0.8F )
             {
-                if (Time.time > lastShoot + 1.1f && cont == 1f)
+                if (Time.time > lastShoot + Cooldown && cont == 1f)
                 {
                     Animator.SetTrigger("Golpe4");
                     lastShoot = Time.time;
                     cont = 4f;
                 }
 
-                if (Time.time > lastShoot+1.1f && cont == 4f)
+                if (Time.time > lastShoot+ Cooldown && cont == 4f)
                 {
                     Animator.SetTrigger("Golpe1");
                     lastShoot = Time.time;
                     cont = 2f;
                 }
-                if ( Time.time > lastShoot + 1.1f && cont ==0f)
+                if ( Time.time > lastShoot + Cooldown && cont ==0f)
                 {
                     Animator.SetTrigger("Golpe2");
                     lastShoot = Time.time;
                     cont = 1f;
                 }
-                if (Time.time > lastShoot + 1.1f && cont == 2f)
+                if (Time.time > lastShoot + Cooldown && cont == 2f)
                 {
                     Animator.SetTrigger("Golpe3");
                     lastShoot = Time.time;
                     cont = 3f;
                 }
-                if (Time.time > lastShoot + 1.1f && cont == 3f)
+                if (Time.time > lastShoot + Cooldown && cont == 3f)
                 {
                     Animator.SetTrigger("BolaF");
                     lastShoot = Time.time;

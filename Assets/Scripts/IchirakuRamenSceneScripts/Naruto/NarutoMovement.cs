@@ -9,6 +9,8 @@ public class NarutoMovement : MonoBehaviour
     public GameObject ShurikenPrefab;
     public SpecialAttack SpecialAttack = new SpecialAttack();
     public NarutoMovement player;
+    public GameObject RasenganCollider;
+    public GameObject RasenganColliderAttack;
 
     [Header("Movement")]
     public float SpeedRunning;
@@ -26,6 +28,8 @@ public class NarutoMovement : MonoBehaviour
     public bool Moving;
     protected bool Flag;
     public bool Rasengan;
+    public bool MoveRasengan = false;
+    public float timeRasengan;
 
     [Header("Components")]
     private Rigidbody2D Rigidbody2D; 
@@ -42,6 +46,7 @@ public class NarutoMovement : MonoBehaviour
         SpecialAttack = GetComponent<SpecialAttack>();
         player = GetComponent<NarutoMovement>();
         direccion = 1;
+        timeRasengan = 0.19f;
     }
 
     //Start Update
@@ -50,16 +55,10 @@ public class NarutoMovement : MonoBehaviour
         Health();
         if (HealthController.MinHealth > 0)
         {
-
             HealthController.Damage();
-
             if (!HealthController.Damage_)
             {
-
                 ComboCount();
-                
-
-
                 Horizontal = Input.GetAxisRaw("Horizontal");
                 if (!Animator.GetBool("Animating_Something"))
                 {
@@ -81,40 +80,41 @@ public class NarutoMovement : MonoBehaviour
                 //===========================================================================================
                 //                                      RASENGAN
                 //===========================================================================================
-                if (Animator.GetBool("Crouch") && Input.GetKeyDown(KeyCode.L)) Rasengan = true;
+
+
+                RasenganTranslate();
+
+                if (Animator.GetBool("Crouch") && Input.GetKeyDown(KeyCode.L) && !Attacking)
+                {
+                    timeRasengan = 0.19f;
+                    Rasengan = true;
+                    Attacking = true;
+                }
+                
                 if (Rasengan) SpecialAttack.RasenganCharge(Animator, player);
+
+                
+
+
                 //===========================================================================================
 
                 if (!Animator.GetBool("Animating_Something"))
                 {
                     if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) && !isCrouch)
                     {
-                        if (Grounded)
+                        if (Grounded) Jump();
+                        else if (JumpAgain)
                         {
-                            Jump();
-                        }
-                        else
-                        {
-                            if (JumpAgain)
-                            {
                                 Jump();
                                 JumpAgain = false;
-                            }
                         }
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.F))
-                {
-                    Throw();
-                }
-
+                if (Input.GetKeyDown(KeyCode.F)) Throw();
             }
         }
-        else
-        {
-            Animator.SetBool("Death", true);
-        }
+        else Animator.SetBool("Death", true);
     }
     //End Update
 
@@ -276,7 +276,6 @@ public class NarutoMovement : MonoBehaviour
         hitTranslate = 15;
         UpForce = 0.2f;
         PunchTranslate();
-        
     }
     public void EndUppercut()
     {
@@ -286,6 +285,7 @@ public class NarutoMovement : MonoBehaviour
     //Funcion que mueve al personaje cuando golpea
     public void PunchTranslate()
     {
+       
         if (Moving)
         {
             Vector3 direccion = new Vector3(this.direccion, 0, 0);
@@ -294,7 +294,6 @@ public class NarutoMovement : MonoBehaviour
     }
 
     
-
     //Fin desplazamiento por golpe
     public void FinishMoving()
     {
@@ -316,7 +315,6 @@ public class NarutoMovement : MonoBehaviour
     public void LockAnimation()
     {
         Animator.SetBool("Animating_Something", true);
-
     }
 
     public void UnlockAnimation()
@@ -368,17 +366,64 @@ public class NarutoMovement : MonoBehaviour
     }
     //Fin de colisiones
 
-
     
+
     //Los muertos no se mueven, tonces dejamos inmovil a Naruto
     public void DeathTranslate()
     {
         Rigidbody2D.velocity = new Vector2(0, 0);
     }
+    //=====================================================================================
+    //                                      RASENGAN
+    //=====================================================================================
 
-    public void EndRasengan()
+    public void MovingRasengan()
     {
-        SpecialAttack.EndRasengan(Animator, player);
+        MoveRasengan = true;
     }
+    public void NoMoveRasengan()
+    {
+        MoveRasengan = false;
+        Animator.SetFloat("Time", 0.19f);
+    }
+    public void RasenganTranslate()
+    {
+        if (MoveRasengan)
+        {
+            Debug.Log("RasenganTranslate");
+            this.Animator.SetFloat("Time", Timer());
+            Vector3 direccion = new Vector3(this.direccion, 0, 0);
+            transform.Translate(direccion * 10 * Time.deltaTime, Space.World);
+        }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (RasenganCollider == collision.CompareTag("Enemy"))
+        {
+            Debug.Log("Le dio el rasen");
+            Animator.SetBool("HitRasengan", true);
+            NoMoveRasengan();
+        }
+    }
+    public void UnHitRasengan()
+    {
+        Animator.SetBool("HitRasengan", false);
+    }
+
+    public void RasenganHit()
+    {
+        KnockBackHit = true;
+        Moving = true;
+        hitTranslate = 15;
+        UpForce = 0.2f;
+    }
+
+    public float Timer()
+    {
+        this.timeRasengan -= Time.deltaTime;
+        Debug.Log(timeRasengan);
+        return timeRasengan;
+    }
+
 
 }

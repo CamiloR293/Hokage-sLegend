@@ -12,23 +12,26 @@ public class PlayerHealthController : MonoBehaviour
     public int Death = -1;
     public float KnockBack;
     public NarutoMovement player;
+    public Animator animator;
 
     private void Start()
     {
         player = GetComponent<NarutoMovement>();
+        animator = GetComponent<Animator>();
+
     }
     public void Damage()
     {
         if (Damage_)
         {
-            
+            player.SpecialAttack.EndRasengan(animator, player);
+            player.NoMoveRasengan();
             transform.Translate(Vector3.right * KnockBack * Time.deltaTime, Space.World);   
         }
     }
 
     public void FinishDamage()
     {
-        
         transform.rotation = Quaternion.Euler(0, 0, 0);
         Damage_ = false;
     }

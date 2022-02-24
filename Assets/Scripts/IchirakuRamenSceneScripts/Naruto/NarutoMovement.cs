@@ -11,6 +11,7 @@ public class NarutoMovement : MonoBehaviour
     public NarutoMovement player;
     public GameObject RasenganCollider;
     public GameObject RasenganColliderAttack;
+    private NarutoSoundController SoundController;
 
     [Header("Movement")]
     public float SpeedRunning;
@@ -36,7 +37,7 @@ public class NarutoMovement : MonoBehaviour
     private float Horizontal;       
     private bool Grounded;         
     public Animator Animator;
-    
+
 
     void Start()
     {
@@ -45,6 +46,7 @@ public class NarutoMovement : MonoBehaviour
         HealthController = GetComponent<PlayerHealthController>();
         SpecialAttack = GetComponent<SpecialAttack>();
         player = GetComponent<NarutoMovement>();
+        SoundController = GetComponent<NarutoSoundController>();
         direccion = 1;
         timeRasengan = 0.19f;
     }
@@ -102,11 +104,14 @@ public class NarutoMovement : MonoBehaviour
                 {
                     if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W) && !isCrouch)
                     {
-                        if (Grounded) Jump();
+                        if (Grounded)
+                        {
+                            Jump();
+                        }
                         else if (JumpAgain)
                         {
-                                Jump();
-                                JumpAgain = false;
+                            Jump();
+                            JumpAgain = false;
                         }
                     }
                 }
@@ -232,6 +237,7 @@ public class NarutoMovement : MonoBehaviour
     //Funcion salto
     private void Jump()
     {
+        SoundController.Jump.Play();
         Rigidbody2D.AddForce(Vector2.up * JumpForce);
     }
     //Fin funcion salto
@@ -248,6 +254,7 @@ public class NarutoMovement : MonoBehaviour
 
     public void Punch1()
     {
+        SoundController.Hit1.Play();
         hitTranslate = 1.5f;
         Moving = true;
         PunchTranslate();

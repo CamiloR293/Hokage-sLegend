@@ -338,6 +338,7 @@ GameObject:
   - component: {fileID: 5423323777060789112}
   - component: {fileID: 5423323777060789113}
   - component: {fileID: 434609709}
+  - component: {fileID: 6264722524170778848}
   m_Layer: 7
   m_Name: Naruto
   m_TagString: Player
@@ -535,6 +536,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d393ad431145a641a41af73a1b091c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6264722524170778848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423323777060789123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62675503aa0ff7d47b405f72f01b1b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5423323777606044869

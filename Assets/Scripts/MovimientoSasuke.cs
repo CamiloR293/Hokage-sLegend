@@ -184,12 +184,22 @@ public class MovimientoSasuke : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-            if (collision.CompareTag("Player") && !attacking)
+        if (collision.CompareTag("Player") && !attacking)
+        {
+            if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
             {
                 Debug.Log(("Golpe"));
                 Life -= player.GetComponent<NarutoMovement>().hitDamage;
                 Animator.SetTrigger("GetGolpe");
             }
+            if(Life <= 0)
+            {
+                Animator.SetBool("Die", true);
+
+            }
+
+
+        }
 
 
 

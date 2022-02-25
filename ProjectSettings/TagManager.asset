@@ -7,6 +7,10 @@ TagManager:
   - Enemy
   - Ground
   - SpecialHit
+  - Golpeplayer
+  - Principal
+  - GolpeEnemigo
+  - Naruto
   layers:
   - Default
   - TransparentFX

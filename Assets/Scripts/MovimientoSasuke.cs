@@ -171,20 +171,13 @@ public class MovimientoSasuke : MonoBehaviour
     //    Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
     //}
 
-    public void Attacking()
-    {
-        attacking = true;
-    }
-    public void NoAttacking()
-    {
-        attacking = false;
-    }
+    
 
     //Recibir daño. (Cuando guardia)
     private void OnTriggerEnter2D(Collider2D collision)
     {
        
-        if (collision.CompareTag("Player") && !attacking)
+        if (collision.CompareTag("Player"))
         {
             if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
             {
@@ -226,8 +219,15 @@ public class MovimientoSasuke : MonoBehaviour
             //    Rigidbody2D.AddForce(Vector2.right *
             //        (GetComponentInParent<Transform>().localScale.x * -1) * 5, ForceMode2D.Impulse);
             //}
+    }
 
+    public void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SpecialHit"))
+        {
+            //Animar daño y caida
 
-        
+            Life -= Player.GetComponent<NarutoMovement>().hitDamage;
+        }
     }
 }

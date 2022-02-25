@@ -11,6 +11,7 @@ TagManager:
   - Principal
   - GolpeEnemigo
   - Naruto
+  - PlayerHitBox
   layers:
   - Default
   - TransparentFX

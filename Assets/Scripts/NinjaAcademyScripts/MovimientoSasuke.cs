@@ -12,7 +12,7 @@ public class MovimientoSasuke : MonoBehaviour
     private float Horizontal= 1f;
     public float JumpForce;
     public float Speed;
-    private bool attacking;
+    //private bool attacking;
     public float distancia;
     private Animator Animator;
 
@@ -225,9 +225,15 @@ public class MovimientoSasuke : MonoBehaviour
     {
         if (collision.CompareTag("SpecialHit"))
         {
-            //Animar daño y caida
+            if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
+            {
+                //Animar daño y caida
 
-            Life -= Player.GetComponent<NarutoMovement>().hitDamage;
+                Life -= Player.GetComponent<NarutoMovement>().hitDamage;
+            }
         }
+
+           
     }
 }
+

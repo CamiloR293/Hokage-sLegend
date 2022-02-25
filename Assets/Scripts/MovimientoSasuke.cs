@@ -5,7 +5,6 @@ using UnityEngine;
 public class MovimientoSasuke : MonoBehaviour
 {
     private Rigidbody2D Rigidbody2D;
-
     public GameObject shurikenPrefab;
 
     private float lastShoot;
@@ -13,7 +12,7 @@ public class MovimientoSasuke : MonoBehaviour
     private float Horizontal= 1f;
     public float JumpForce;
     public float Speed;
-
+    private bool attacking;
     public float distancia;
     private Animator Animator;
 
@@ -23,7 +22,6 @@ public class MovimientoSasuke : MonoBehaviour
     //private bool Grounded;
     private float cont = 1f;
 
-    public string tagPlayer = "GolpePlayer";
     public GameObject player;
 
     public float Life;
@@ -32,8 +30,8 @@ public class MovimientoSasuke : MonoBehaviour
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
-
         Animator = GetComponent<Animator>();
+        
     }
 
   
@@ -42,53 +40,55 @@ public class MovimientoSasuke : MonoBehaviour
     {
 
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
-                
-        if ( Horizontal != 0f)
+        if (Life > 0)
         {
-            if (Player.position.x < Rigidbody2D.position.x)
+            if (Horizontal != 0f)
             {
-                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-                this.direccion.x = -1;
-            }
-            else
-            {
-                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-                this.direccion.x = 1;
-            }
-            if (distance <= 0.8F )
-            {
-                if (Time.time > lastShoot + Cooldown && cont == 1f)
+                if (Player.position.x < Rigidbody2D.position.x)
                 {
-                    Animator.SetTrigger("Golpe4");
-                    lastShoot = Time.time;
-                    cont = 4f;
+                    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                    this.direccion.x = -1;
                 }
+                else
+                {
+                    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                    this.direccion.x = 1;
+                }
+                if (distance <= 0.8F)
+                {
+                    if (Time.time > lastShoot + Cooldown && cont == 1f)
+                    {
+                        Animator.SetTrigger("Golpe4");
+                        lastShoot = Time.time;
+                        cont = 4f;
+                    }
 
-                if (Time.time > lastShoot+ Cooldown && cont == 4f)
-                {
-                    Animator.SetTrigger("Golpe1");
-                    lastShoot = Time.time;
-                    cont = 2f;
-                }
-                if ( Time.time > lastShoot + Cooldown && cont ==0f)
-                {
-                    Animator.SetTrigger("Golpe2");
-                    lastShoot = Time.time;
-                    cont = 1f;
-                }
-                if (Time.time > lastShoot + Cooldown && cont == 2f)
-                {
-                    Animator.SetTrigger("Golpe3");
-                    lastShoot = Time.time;
-                    cont = 3f;
-                }
-                if (Time.time > lastShoot + Cooldown && cont == 3f)
-                {
-                    Animator.SetTrigger("BolaF");
-                    lastShoot = Time.time;
-                    cont = 0f;
-                }
+                    if (Time.time > lastShoot + Cooldown && cont == 4f)
+                    {
+                        Animator.SetTrigger("Golpe1");
+                        lastShoot = Time.time;
+                        cont = 2f;
+                    }
+                    if (Time.time > lastShoot + Cooldown && cont == 0f)
+                    {
+                        Animator.SetTrigger("Golpe2");
+                        lastShoot = Time.time;
+                        cont = 1f;
+                    }
+                    if (Time.time > lastShoot + Cooldown && cont == 2f)
+                    {
+                        Animator.SetTrigger("Golpe3");
+                        lastShoot = Time.time;
+                        cont = 3f;
+                    }
+                    if (Time.time > lastShoot + Cooldown && cont == 3f)
+                    {
+                        Animator.SetTrigger("BolaF");
+                        lastShoot = Time.time;
+                        cont = 0f;
+                    }
 
+                }
             }
         }
 
@@ -171,25 +171,29 @@ public class MovimientoSasuke : MonoBehaviour
     //    Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
     //}
 
+    public void Attacking()
+    {
+        attacking = true;
+    }
+    public void NoAttacking()
+    {
+        attacking = false;
+    }
 
     //Recibir daño. (Cuando guardia)
-    private void OnTriggerEnter2D(Collider2D ColDaño)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
        
-            if (ColDaño.CompareTag("Golpeplayer"))
+            if (collision.CompareTag("Player") && !attacking)
             {
-                Debug.Log(("Golpe -3"));
-                Life -= 3;
+                Debug.Log(("Golpe"));
+                Life -= player.GetComponent<NarutoMovement>().hitDamage;
                 Animator.SetTrigger("GetGolpe");
-
-                if (Life <= 0)
-                {
-                    Animator.SetBool("Die", true);
-                    Rigidbody2D.velocity = Vector3.zero;
-                    Horizontal = 0.0f;
-                }
-
             }
+
+
+
+
             //    if (ColDaño.tag.Equals(tagPlayer))
             //{
             //    Debug.Log(("Golpe -3"));

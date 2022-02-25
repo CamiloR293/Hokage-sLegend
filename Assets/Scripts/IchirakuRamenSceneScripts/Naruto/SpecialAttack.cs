@@ -11,7 +11,6 @@ public class SpecialAttack : MonoBehaviour
     
     public void RasenganCharge(Animator animator, NarutoMovement player)
     {
-        
         animator.SetBool("Animating_Something", true);
         animator.SetBool("Rasengan", true);
         player.Moving = true;

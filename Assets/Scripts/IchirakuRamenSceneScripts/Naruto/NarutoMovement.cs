@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class NarutoMovement : MonoBehaviour
 {
+    [Header("Components")]
     public PlayerHealthController HealthController = new PlayerHealthController(); 
     public GameObject ShurikenPrefab;
     public SpecialAttack SpecialAttack = new SpecialAttack();
@@ -33,7 +34,7 @@ public class NarutoMovement : MonoBehaviour
     public float timeRasengan;
 
     [Header("Components")]
-    private Rigidbody2D Rigidbody2D; 
+    private Rigidbody2D Rigidbody2D;
     private float Horizontal;       
     private bool Grounded;         
     public Animator Animator;
@@ -88,15 +89,13 @@ public class NarutoMovement : MonoBehaviour
 
                 if (Animator.GetBool("Crouch") && Input.GetKeyDown(KeyCode.L) && !Attacking)
                 {
+                    SoundController.Clone.Play();
                     timeRasengan = 0.19f;
                     Rasengan = true;
                     Attacking = true;
                 }
                 
                 if (Rasengan) SpecialAttack.RasenganCharge(Animator, player);
-
-                
-
 
                 //===========================================================================================
 
@@ -184,8 +183,6 @@ public class NarutoMovement : MonoBehaviour
         {
             Attacking = true;
             Animator.SetBool("Uppercut", true);
-            
-            
             Animator.SetBool("Crouch", false);
             Uppercut();
         }
@@ -251,7 +248,14 @@ public class NarutoMovement : MonoBehaviour
     //Lo que hace es desplazar a Naruto en la direccion hacia la que apunta cuando lanza un golpe
     //Naruto por cada golpe deberá avanzar para no dejar ir a su enemigo
     //UpForce siendo la fuerza con la que Naruto envia a sus enemigos al aire
-
+    public void AirPunch1()
+    {
+        SoundController.Hit1.Play();
+    }
+    public void AirPunch2()
+    {
+        SoundController.Hit2.Play();
+    }
     public void Punch1()
     {
         SoundController.Hit1.Play();
@@ -261,13 +265,14 @@ public class NarutoMovement : MonoBehaviour
     }
     public void Punch2()
     {
+        SoundController.Hit2.Play();
         hitTranslate = 1.5f;
         Moving = true;
         PunchTranslate();
     }
     public void Punch3()
     {
-        
+        SoundController.Hit3.Play();
         KnockBackHit = true;
         Moving = true;
         hitTranslate = 4;
@@ -278,6 +283,7 @@ public class NarutoMovement : MonoBehaviour
 
     public void Uppercut()
     {
+        SoundController.Uppercut.Play();
         KnockBackHit = true;
         Moving = true;
         hitTranslate = 15;
@@ -336,6 +342,7 @@ public class NarutoMovement : MonoBehaviour
     private void Throw()
     {
         Animator.SetBool("Throwing", Input.GetKeyDown(KeyCode.F));
+        SoundController.Throw.Play();
         Vector3 direccion;
         if (transform.localScale.x == 1.0f) direccion = Vector3.right;
         else direccion = Vector3.left;
@@ -386,6 +393,8 @@ public class NarutoMovement : MonoBehaviour
 
     public void MovingRasengan()
     {
+        
+        SoundController.Rasengan3.Play();
         MoveRasengan = true;
     }
     public void NoMoveRasengan()
@@ -407,7 +416,6 @@ public class NarutoMovement : MonoBehaviour
     {
         if (RasenganCollider == collision.CompareTag("Enemy"))
         {
-            Debug.Log("Le dio el rasen");
             Animator.SetBool("HitRasengan", true);
             NoMoveRasengan();
         }
@@ -419,6 +427,7 @@ public class NarutoMovement : MonoBehaviour
 
     public void RasenganHit()
     {
+        SoundController.Rasengan1.Play();
         KnockBackHit = true;
         Moving = true;
         hitTranslate = 15;
@@ -431,6 +440,6 @@ public class NarutoMovement : MonoBehaviour
         Debug.Log(timeRasengan);
         return timeRasengan;
     }
-
+    //===============================================================
 
 }

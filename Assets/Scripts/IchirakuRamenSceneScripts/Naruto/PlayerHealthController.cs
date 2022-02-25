@@ -13,12 +13,12 @@ public class PlayerHealthController : MonoBehaviour
     public float KnockBack;
     public NarutoMovement player;
     public Animator animator;
-
+    public NarutoSoundController SoundController;
     private void Start()
     {
         player = GetComponent<NarutoMovement>();
         animator = GetComponent<Animator>();
-
+        SoundController = GetComponent<NarutoSoundController>();
     }
     public void Damage()
     {

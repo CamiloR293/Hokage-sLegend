@@ -42,28 +42,7 @@ public class MovimientoSasuke : MonoBehaviour
     {
 
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
-
-        //Debug.DrawRay(transform.position, Vector3.down * 0.30f, Color.red);
-        //if (Physics2D.Raycast(transform.position, Vector3.down, 0.30f))
-        //{
-        //    Grounded = true;
-        //}
-        //else Grounded = false;
-
-        //if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death")&& Horizontal !=0f)
-        //{
-        //    if(distance < 0.5f && Time.time > lastShoot + 1.7f)
-        //    {
-        //        Animator.SetTrigger("Golpe1");
-        //        lastShoot = Time.time;
-        //    }
-        //    if(distance > 0.4f && distance < 0.6 && Time.time > lastShoot + 1.5f)
-        //    {
-        //        Animator.SetTrigger("Golpe2");
-        //        lastShoot = Time.time;
-        //    }
-        //}
-        
+                
         if ( Horizontal != 0f)
         {
             if (Player.position.x < Rigidbody2D.position.x)
@@ -112,6 +91,8 @@ public class MovimientoSasuke : MonoBehaviour
 
             }
         }
+
+
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath")&& Life <=0)
         {
             TimeDestroy -= Time.deltaTime;
@@ -119,23 +100,7 @@ public class MovimientoSasuke : MonoBehaviour
         }
 
 
-        //    //golpes
-
-        //    //GOLPE 1
-        //    if (Input.GetKeyDown(KeyCode.Z)) Animator.SetTrigger("Golpe");
-
-
-        //    //Guardia
-        //    Animator.SetBool("Guard", Input.GetKey(KeyCode.X));
-        //    if (Input.GetKey(KeyCode.X))
-        //    {
-        //        Horizontal = 0f;
-        //        Rigidbody2D.gravityScale = 13f;
-        //    }
-        //    else
-        //    {
-        //        Rigidbody2D.gravityScale = 1f;
-        //    }
+    
         //        //shuriken
         //    bool flag = false;
         //    if (Input.GetKey(KeyCode.Space) && Time.time > lastShoot + 0.6f)
@@ -208,11 +173,10 @@ public class MovimientoSasuke : MonoBehaviour
 
 
     //Recibir daño. (Cuando guardia)
-    public void OnTriggerEnter2D(Collider2D ColDaño)
+    private void OnTriggerEnter2D(Collider2D ColDaño)
     {
-        if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
-        {
-            if (ColDaño.tag.Equals(tagPlayer))
+       
+            if (ColDaño.CompareTag("Golpeplayer"))
             {
                 Debug.Log(("Golpe -3"));
                 Life -= 3;
@@ -250,6 +214,6 @@ public class MovimientoSasuke : MonoBehaviour
             //}
 
 
-        }
+        
     }
 }

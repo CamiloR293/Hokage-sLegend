@@ -192,7 +192,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -1961143400776045778}
-    m_Position: {x: 140, y: 380, z: 0}
+    m_Position: {x: 180, y: 390, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8281330224031565926}
     m_Position: {x: -130, y: 500, z: 0}
@@ -221,7 +221,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: -50, y: -50, z: 0}
-  m_EntryPosition: {x: 140, y: 520, z: 0}
+  m_EntryPosition: {x: 200, y: 470, z: 0}
   m_ExitPosition: {x: 450, y: -50, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -1961143400776045778}
@@ -306,6 +306,12 @@ AnimatorController:
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
   - m_Name: Combo
+    m_Type: 4
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
+  - m_Name: Animating
     m_Type: 4
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -475,7 +481,7 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 0.99605197
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1

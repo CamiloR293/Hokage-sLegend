@@ -11,6 +11,7 @@ public class PlayerHealthController : MonoBehaviour
     public Image Bar;
     public int Death = -1;
     public float KnockBack;
+    
     public NarutoMovement player;
     public Animator animator;
     public NarutoSoundController SoundController;

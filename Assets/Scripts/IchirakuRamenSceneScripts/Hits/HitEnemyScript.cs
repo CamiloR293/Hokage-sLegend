@@ -7,10 +7,10 @@ public class HitEnemyScript : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("PlayerHitBox"))
         {
             collision.GetComponent<NarutoMovement>().Animator.SetTrigger("Damaging");
-            collision.GetComponent<NarutoMovement>().Animator.SetInteger("Damage", Random.Range(1, 2));
+            collision.GetComponent<NarutoMovement>().Animator.SetInteger("Damage", Random.Range(1, 3));
             collision.GetComponent<NarutoMovement>().HealthController.Damage_ = true;
 
             if (transform.position.x > collision.transform.position.x)

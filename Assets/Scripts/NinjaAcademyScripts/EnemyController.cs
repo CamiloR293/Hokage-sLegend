@@ -7,13 +7,12 @@ public class EnemyController : MonoBehaviour
     public float moveSpeed;
     public Transform leftPoint, rightPoint;
     public bool movingright;
-    public bool Atack;
+    private bool Atack;
 
     public float moveTime, waitTime;
     private float moveCount, waitCount;
 
-    public string tagPlayer = "GolpePlayer";
-    public float Life = 9f;
+    public float Life;
 
     public GameObject player;
     public float distancia;
@@ -25,27 +24,10 @@ public class EnemyController : MonoBehaviour
 
 
     private float lastShoot;
-    ////-0.51,  4.17 limits x---- modo guardia
-    //static Vector2 LimitsX = new Vector2(-0.51f, 4.17f);
-
-    //enum States{patrol, pursuit}
-    //[SerializeField]
-    //States state = States.patrol;
-    //[SerializeField]
-    //float SearchRange = 1;
-
-    //[SerializeField]
-    //float stoppingDistance = 0.3f;
-
-    //Transform player;
-    //Vector3 target;
     // Start is called before the first frame update
     void Start()
     {
 
-        //Busqueda player
-        //player = GameObject.FindGameObjectWithTag("Principal").transform;
-        //------------------------------
         theRB = GetComponent<Rigidbody2D>();
         Anim = GetComponent<Animator>();
 
@@ -64,6 +46,7 @@ public class EnemyController : MonoBehaviour
 
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
 
+        //Hit
         if (distance < distancia && Time.time > lastShoot + 3.12f && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
         {            
             Anim.SetTrigger("Hit");
@@ -127,22 +110,16 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    //Golpe
-    //public void OnTriggerEnter2D(Collider ColGolpe)
-    //{
-    //    if (ColGolpe.tag.Equals("Principal")) Anim.SetTrigger("Hit");
-    //}
-    //Recibe daño
-    public void OnTriggerEnter2D(Collider2D ColDaño)
+    //Recibir daño
+    private void OnTriggerEnter2D(Collider2D ColDaño)
     {
-        if (ColDaño.tag.Equals(tagPlayer))
+        if (ColDaño.CompareTag("Player"))
         {
             if (!Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
             {
-                Life -= 3;
-                Anim.SetTrigger("Hurt");
-                theRB.AddForce(Vector2.right *
-                    (GetComponentInParent<Transform>().localScale.x * -1) * 5, ForceMode2D.Impulse);
+
+                Life -= player.GetComponent<NarutoMovement>().hitDamage;
+                Anim.SetTrigger("Hurt");;
                 if (Life < 0)
                 {
                     Anim.SetBool("Die", true);

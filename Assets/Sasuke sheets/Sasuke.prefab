@@ -502,5 +502,6 @@ MonoBehaviour:
   Player: {fileID: 0}
   player: {fileID: 0}
   Life: 100
-  Cooldown: 4
+  Cooldown: 2
   TimeDestroy: 3
+  TimeAtack: 4

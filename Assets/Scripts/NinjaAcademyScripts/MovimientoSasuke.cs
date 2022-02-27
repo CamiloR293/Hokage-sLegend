@@ -27,6 +27,7 @@ public class MovimientoSasuke : MonoBehaviour
     public float Life;
     public float Cooldown;
     public float TimeDestroy;
+    public float TimeAtack;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -42,53 +43,74 @@ public class MovimientoSasuke : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
         if (Life > 0)
         {
-            if (Horizontal != 0f)
+            if(distance <2 && distance > 0.3){
+                TimeAtack -= Time.deltaTime;
+                if (TimeAtack <= 0
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Sasuke_Golpe")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("y down")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeBolaFuego")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Sasuke_Golpe")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("GetSpecialAttack")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Xattack")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Y + jump")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("FastGet"))
+                {
+                    Animator.SetBool("Run", true);
+                    transform.Translate(direccion * 1.6f * Time.deltaTime, Space.World);
+                }
+                
+            }
+
+            if (Player.position.x < Rigidbody2D.position.x)
             {
-                if (Player.position.x < Rigidbody2D.position.x)
+                transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
+                this.direccion.x = -1;
+            }
+            else
+            {
+                transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
+                this.direccion.x = 1;
+            }
+            if (distance <= 0.3)
+            {
+                Animator.SetBool("Run", false);
+                transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
+                if (Time.time > lastShoot + Cooldown && cont == 1f)
                 {
-                    transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-                    this.direccion.x = -1;
+                    Animator.SetTrigger("Golpe4");
+                    lastShoot = Time.time;
+                    cont = 4f;
                 }
-                else
-                {
-                    transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-                    this.direccion.x = 1;
-                }
-                if (distance <= 0.8F)
-                {
-                    if (Time.time > lastShoot + Cooldown && cont == 1f)
-                    {
-                        Animator.SetTrigger("Golpe4");
-                        lastShoot = Time.time;
-                        cont = 4f;
-                    }
 
-                    if (Time.time > lastShoot + Cooldown && cont == 4f)
-                    {
-                        Animator.SetTrigger("Golpe1");
-                        lastShoot = Time.time;
-                        cont = 2f;
-                    }
-                    if (Time.time > lastShoot + Cooldown && cont == 0f)
-                    {
-                        Animator.SetTrigger("Golpe2");
-                        lastShoot = Time.time;
-                        cont = 1f;
-                    }
-                    if (Time.time > lastShoot + Cooldown && cont == 2f)
-                    {
-                        Animator.SetTrigger("Golpe3");
-                        lastShoot = Time.time;
-                        cont = 3f;
-                    }
-                    if (Time.time > lastShoot + Cooldown && cont == 3f)
-                    {
-                        Animator.SetTrigger("BolaF");
-                        lastShoot = Time.time;
-                        cont = 0f;
-                    }
-
+                if (Time.time > lastShoot + Cooldown && cont == 4f)
+                {
+                    Animator.SetTrigger("Golpe1");
+                    lastShoot = Time.time;
+                    cont = 2f;
                 }
+                if (Time.time > lastShoot + Cooldown && cont == 0f)
+                {
+                    Animator.SetTrigger("Golpe2");
+                    lastShoot = Time.time;
+                    cont = 1f;
+                }
+                if (Time.time > lastShoot + Cooldown && cont == 2f)
+                {
+                    Animator.SetTrigger("Golpe3");
+                    lastShoot = Time.time;
+                    cont = 3f;
+                }
+                if (Time.time > lastShoot + Cooldown && cont == 3f)
+                {
+                    Animator.SetTrigger("BolaF");
+                    lastShoot = Time.time;
+                    cont = 0f;
+                }
+
+
+
+
             }
         }
 

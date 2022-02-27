@@ -2780,6 +2780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7910324209121277202}
   - component: {fileID: 7910324209121277205}
+  - component: {fileID: 7910324209121277204}
   m_Layer: 0
   m_Name: FondoPro 1
   m_TagString: Untagged
@@ -2787,6 +2788,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &7910324209121277204
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7910324209121277203}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c63a44224c1a1043b41cae87151618b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!212 &7910324209121277205
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ public class KakashiMovement : MonoBehaviour
     private float timerRun = 3;
     private float timeAproach = 3;
     private float timeRaikiri = 1;
-    private float chargeRaikiri = 30;
+    private float chargeRaikiri = 3;
     private int opcion;
     private float jumpForce = 170;
     private bool combo;
@@ -34,38 +34,48 @@ public class KakashiMovement : MonoBehaviour
 
     void Update()
     {
-        playerDistance = (transform.position.x - playerPosition.position.x);
-        if (playerDistance < 0)
+        if (!Naruto.GetComponent<NarutoMovement>().Animator.GetBool("Death"))
         {
-            transform.localScale = new Vector3(1, 1, 1);
-            direccion = new Vector3(1.0f, 0.0f, 0.0f);
+            playerDistance = (transform.position.x - playerPosition.position.x);
+            if (playerDistance < 0)
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+                direccion = new Vector3(1.0f, 0.0f, 0.0f);
+            }
+            else
+            {
+                direccion = new Vector3(-1.0f, 0.0f, 0.0f);
+                transform.localScale = new Vector3(-1, 1, 1);
+            }
+
+
+            Combo();
+            PunchTranslate();
+            Raikiri();
+
+            timerRun = TimerRun();
+
+            if (playerDistance > 2) chargeRaikiri = RaikiriTimer();
+
+            if (chargeRaikiri <= 0)
+            {
+                animator.SetBool("Animating", true);
+                ResetTimerRaikiri();
+            }
+
+            if (!animator.GetBool("Animating"))
+            {
+                if (timerRun <= 0)
+                {
+                    Acercarse();
+                    if (!animator.GetBool("Run")) ResetTimerRun();
+                }
+            }
         }
         else
         {
-            direccion = new Vector3(-1.0f, 0.0f, 0.0f);
-            transform.localScale = new Vector3(-1, 1, 1);
+            animator.SetBool("StartAnim", true);
         }
-        
-        
-        Combo();
-        PunchTranslate();
-
-
-        timerRun = TimerRun();
-        if(playerDistance > 2) chargeRaikiri = RaikiriTimer(); 
-        if(chargeRaikiri <= 0)
-        {
-            animator.SetBool("Animating", true);
-        }
-        if (!animator.GetBool("Animating"))
-        {
-            if (timerRun <= 0)
-            {
-                Acercarse();
-                if (!animator.GetBool("Run")) ResetTimerRun();
-            }
-        }
-
     }
 
     
@@ -86,11 +96,15 @@ public class KakashiMovement : MonoBehaviour
     float RaikiriTimer()
     {
         chargeRaikiri -= Time.deltaTime;
+        if(chargeRaikiri <= 0)
+        {
+            animator.SetBool("Raikiri", true);
+        }
         return chargeRaikiri;
     }
     void ResetTimerRaikiri()
     {
-        chargeRaikiri = 30;
+        chargeRaikiri = 3;
     }
 
     //=====================================================================================
@@ -125,7 +139,7 @@ public class KakashiMovement : MonoBehaviour
 
     void Acercarse()
     {
-        if (!animator.GetBool("Animating"))
+        if (!animator.GetBool("Animating") && !animator.GetBool("Raikiri"))
         {
             timeAproach -= Time.deltaTime;
             if (timeAproach >= 0)
@@ -212,16 +226,19 @@ public class KakashiMovement : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            animator.SetBool("Raikiri", false);
             animator.SetTrigger("Damage");
             if (Naruto.GetComponent<NarutoMovement>().KnockBackHit)
             {
                 animator.SetBool("KnockBack", true);
             }
             else animator.SetBool("KnockBack", false);
-            
+
             health -= Naruto.GetComponent<NarutoMovement>().hitDamage;
-            
+
         }
     }
+
+    
 
 }

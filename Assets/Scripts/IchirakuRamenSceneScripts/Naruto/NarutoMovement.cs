@@ -76,8 +76,8 @@ public class NarutoMovement : MonoBehaviour
                         direccion = 1;
                     }
                 }
-                
-                if(!Animator.GetBool("Uppercut")) Animator.SetBool("Crouch", Input.GetKey(KeyCode.S));
+
+                if (!Animator.GetBool("Uppercut")) Animator.SetBool("Crouch", Input.GetKey(KeyCode.S));
 
 
                 //===========================================================================================
@@ -94,7 +94,7 @@ public class NarutoMovement : MonoBehaviour
                     Rasengan = true;
                     Attacking = true;
                 }
-                
+
                 if (Rasengan) SpecialAttack.RasenganCharge(Animator, player);
 
                 //===========================================================================================
@@ -118,7 +118,11 @@ public class NarutoMovement : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.F)) Throw();
             }
         }
-        else Animator.SetBool("Death", true);
+        else
+        {
+            Animator.SetBool("Death", true);
+            Animator.SetTrigger("KnockBack");
+        }
     }
     //End Update
 

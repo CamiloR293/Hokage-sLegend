@@ -24,6 +24,8 @@ public class NinjaEnemy : MonoBehaviour
 
     public GameObject Collectible;
 
+    public GameObject Naruto;
+
     [SerializeField] private float Health;
 
     [Header("Attack")]
@@ -98,9 +100,17 @@ public class NinjaEnemy : MonoBehaviour
         {
             if (colision.CompareTag("Player"))
             {
-                colision.GetComponent<KnockBackHit>(); ;
-                Clip.Play();
+               // colision.GetComponent<KnockBackHit>(); ;
+            
+            
+                   if (Naruto.GetComponent<NarutoMovement>().KnockBackHit)
+            {
+                animator.SetBool("KnockBack", true);
+            }
+            else animator.SetBool("KnockBack", false);
+           
                 //.Damage(AttackDamage);
+                    Clip.Play();
 
             }
         }

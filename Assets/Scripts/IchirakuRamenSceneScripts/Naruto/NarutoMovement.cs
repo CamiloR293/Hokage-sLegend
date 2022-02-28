@@ -32,6 +32,7 @@ public class NarutoMovement : MonoBehaviour
     public bool Rasengan;
     public bool MoveRasengan = false;
     public float timeRasengan;
+    int i = 0;
 
     [Header("Components")]
     private Rigidbody2D Rigidbody2D;
@@ -119,9 +120,13 @@ public class NarutoMovement : MonoBehaviour
             }
         }
         else
-        {
+        {   
             Animator.SetBool("Death", true);
-            Animator.SetTrigger("KnockBack");
+            if (i == 0)
+            {
+                i = 1;
+                Animator.SetTrigger("KnockBack");
+            }
         }
     }
     //End Update

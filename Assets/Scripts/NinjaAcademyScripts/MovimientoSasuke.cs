@@ -5,7 +5,7 @@ using UnityEngine;
 public class MovimientoSasuke : MonoBehaviour
 {
     private Rigidbody2D Rigidbody2D;
-    public GameObject shurikenPrefab;
+    public GameObject BolaFuegoPrefab;
 
     private float lastShoot;
 
@@ -43,7 +43,7 @@ public class MovimientoSasuke : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
         if (Life > 0)
         {
-            if(distance <2 && distance > 0.3){
+            if(distance <5 && distance > 0.355){
                 TimeAtack -= Time.deltaTime;
                 if (TimeAtack <= 0
                     && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Sasuke_Golpe")
@@ -54,10 +54,19 @@ public class MovimientoSasuke : MonoBehaviour
                     && !Animator.GetCurrentAnimatorStateInfo(0).IsName("GetSpecialAttack")
                     && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Xattack")
                     && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Y + jump")
-                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("FastGet"))
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("FastGet")
+                    && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Chidori"))
                 {
-                    Animator.SetBool("Run", true);
-                    transform.Translate(direccion * 1.6f * Time.deltaTime, Space.World);
+                    if (Animator.GetCurrentAnimatorStateInfo(0).IsName("Chidori2"))
+                    {
+
+                        transform.Translate(direccion * 5.6f * Time.deltaTime, Space.World);
+                    }
+                    else
+                    {
+                        Animator.SetBool("Run", true);
+                        transform.Translate(direccion * 1.6f * Time.deltaTime, Space.World);
+                    }
                 }
                 
             }
@@ -72,7 +81,7 @@ public class MovimientoSasuke : MonoBehaviour
                 transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                 this.direccion.x = 1;
             }
-            if (distance <= 0.3)
+            if (distance <= 0.4)
             {
                 Animator.SetBool("Run", false);
                 transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
@@ -80,14 +89,14 @@ public class MovimientoSasuke : MonoBehaviour
                 {
                     Animator.SetTrigger("Golpe4");
                     lastShoot = Time.time;
-                    cont = 4f;
+                    cont = 2f;
                 }
 
                 if (Time.time > lastShoot + Cooldown && cont == 4f)
                 {
                     Animator.SetTrigger("Golpe1");
                     lastShoot = Time.time;
-                    cont = 2f;
+                    cont = 5f;
                 }
                 if (Time.time > lastShoot + Cooldown && cont == 0f)
                 {
@@ -104,95 +113,41 @@ public class MovimientoSasuke : MonoBehaviour
                 if (Time.time > lastShoot + Cooldown && cont == 3f)
                 {
                     Animator.SetTrigger("BolaF");
+                    
+                        Shoot();
+                    
+                    lastShoot = Time.time;
+                    cont = 4f;
+                }
+                if (Time.time > lastShoot + Cooldown && cont == 5f)
+                {
+                    Animator.SetTrigger("Chidori");                                        
                     lastShoot = Time.time;
                     cont = 0f;
                 }
-
-
-
-
             }
         }
-
+                
 
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath")&& Life <=0)
         {
             TimeDestroy -= Time.deltaTime;
             if (TimeDestroy <= 0) Destroy(gameObject);
         }
-
-
-    
-        //        //shuriken
-        //    bool flag = false;
-        //    if (Input.GetKey(KeyCode.Space) && Time.time > lastShoot + 0.6f)
-        //    {
-
-        //        Shoot();
-        //        lastShoot = Time.time;
-        //        flag = true;
-
-        //    }
-        //    Animator.SetBool("lanzar", flag != false && Input.GetKey(KeyCode.Space));
-        //    //animaciones
-        //   if(!Animator.GetCurrentAnimatorStateInfo(0).IsName("Sasuke_Golpe")
-        //        && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Guard")
-        //        && !Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeHurt")
-        //        && !Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
-        //    {
-        //        //movimiento
-        //        Horizontal = Input.GetAxisRaw("Horizontal");
-
-        //        if (Horizontal < 0.0f)
-        //        {
-        //            transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-
-        //        }
-        //        else if (Horizontal > 0.0f)
-        //        {
-        //            transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-        //        }
-        //        Animator.SetBool("running", Horizontal != 0.0f);
-
-        //        //Salto
-        //Debug.DrawRay(transform.position, Vector3.down * 0.30f, Color.red);
-        //if (Physics2D.Raycast(transform.position, Vector3.down, 0.30f))
-        //{
-        //    Grounded = true;
-        //}
-        //else Grounded = false;
-        //        if (Input.GetKeyDown(KeyCode.W) && Grounded)
-        //        {
-        //            Jump();
-        //        }
-        //    }
-        //    else
-        //    {
-        //        Rigidbody2D.velocity = Vector3.zero;
-        //    }
     }
 
+    
+    private void Shoot()
+    {
+        
+        Vector3 direction;
+        if (transform.localScale.x == 1.0f) direction = Vector3.left;
+        else direction = Vector3.right;
 
-    //private void Shoot()
-    //{
+       GameObject Fuego = Instantiate(BolaFuegoPrefab, transform.position + direction *0.2f, Quaternion.identity);
+        Fuego.GetComponent<ShurikenScript>().SetDirection(direction);
 
-    //    Vector3 direction;
-    //    if (transform.localScale.x == 1.0f) direction = Vector3.right;
-    //    else direction = Vector3.left;
-
-    //   GameObject Shuriken = Instantiate(shurikenPrefab, transform.position + direction *0.3f, Quaternion.identity);
-    //    Shuriken.GetComponent<ShurikenScrip>().SetDirection(direction);
-
-    //}
-    //private void Jump()
-    //{
-    //    Rigidbody2D.AddForce(Vector2.up * JumpForce);
-    //}
-    //private void FixedUpdate()
-    //{
-    //    Rigidbody2D.velocity = new Vector2(Horizontal, Rigidbody2D.velocity.y);
-    //}
-
+    }
     
 
     //Recibir daño. (Cuando guardia)
@@ -212,46 +167,22 @@ public class MovimientoSasuke : MonoBehaviour
                 Animator.SetBool("Die", true);
 
             }
-
-
         }
 
-
-
-
-            //    if (ColDaño.tag.Equals(tagPlayer))
-            //{
-            //    Debug.Log(("Golpe -3"));
-            //    Life -= 3;
-            //    Animator.SetTrigger("GetGolpe");
-            //    Rigidbody2D.AddForce(Vector2.right *
-            //        (GetComponentInParent<Transform>().localScale.x * -1) * 5, ForceMode2D.Impulse);
-
-            //    if (Life <= 0)
-            //    {
-            //        Animator.SetBool("Die", true);
-            //        Rigidbody2D.velocity = Vector3.zero;
-            //        Horizontal = 0.0f;
-            //    }
-            //else 
-            //{
-            //    Debug.Log(("Golpe -3"));
-            //    Life -= 3;
-            //    Animator.SetTrigger("GetGolpe");
-            //    Rigidbody2D.AddForce(Vector2.right *
-            //        (GetComponentInParent<Transform>().localScale.x * -1) * 5, ForceMode2D.Impulse);
-            //}
     }
 
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("SpecialHit"))
         {
-            if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
+            int i= 0;
+            if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath") &&  i == 0)
             {
                 //Animar daño y caida
-
+                Animator.SetTrigger("GetSpecialHit");
                 Life -= Player.GetComponent<NarutoMovement>().hitDamage;
+                Debug.Log("Recibe Rasengan");
+                i++;
             }
         }
 

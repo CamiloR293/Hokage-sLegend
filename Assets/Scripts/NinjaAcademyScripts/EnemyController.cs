@@ -109,7 +109,10 @@ public class EnemyController : MonoBehaviour
             theRB.velocity = Vector3.zero;
         }
     }
-
+    public void Destroy()
+    {
+        Destroy(gameObject);
+    }
     //Recibir daño
     private void OnTriggerEnter2D(Collider2D ColDaño)
     {

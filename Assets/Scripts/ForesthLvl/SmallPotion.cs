@@ -9,7 +9,7 @@ public class SmallPotion : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player") && !isCollected )
+        if(collision.CompareTag("PlayerHitBox") && !isCollected )
         {
             if(issmallHeal)
             {

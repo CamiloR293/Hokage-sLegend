@@ -9,7 +9,7 @@ public class ChangeScene : MonoBehaviour
 // al nivel y en loadscene cambiar el numero dependiendo la escena
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "PlayerHitBox")
         {
             SceneManager.LoadScene(4);
         }

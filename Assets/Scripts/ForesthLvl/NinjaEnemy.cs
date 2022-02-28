@@ -55,39 +55,24 @@ public class NinjaEnemy : MonoBehaviour
         animator.SetFloat("Distance", Distance);
     }
     // Recibir daño enemigo
-   public void TriggerEnter2D(Collider2D collision)
-    {
-
-        if (collision.CompareTag("Player"))
-        {
-
-            Health -= Player.GetComponent<NarutoMovement>().hitDamage;
-             if (Health <= 0)
-
-        {
-            Clip1.Play();
-            animator.SetTrigger("Die Animation Ninja");
-            Dead();
-        }
-        }
-    }
+ 
     // Fin recibir da�o
     
 
-/*
-  if (Health <= 0)
+
+  
+
+
+    // Muerte enemigo
+   public void Dead(float HealthUdapte)
+    {
+       // Al morir deja una pocion 
+       if (HealthUdapte<= 0)
 
         {
             Clip1.Play();
             animator.SetTrigger("Die Animation Ninja");
-            Dead();
         }
-*/
-
-    // Muerte enemigo
-    private void Dead()
-    {
-       // Al morir deja una pocion 
         Instantiate(Collectible, pos.transform.position, pos.transform.rotation);
         Destroy(gameObject);
         

@@ -7,7 +7,8 @@ using UnityEngine.Audio;
 public class NinjaEnemy : MonoBehaviour
 {
 
-    // SIRVE PARA TODOS LOS ENEMIGOS
+    
+    public NarutoMovement Naruto = new NarutoMovement();
     private Animator animator;
 
     public Rigidbody2D body;
@@ -24,7 +25,7 @@ public class NinjaEnemy : MonoBehaviour
 
     public GameObject Collectible;
 
-    public GameObject Naruto;
+    public GameObject Naruto1;
 
     [SerializeField] private float Health;
 
@@ -54,19 +55,34 @@ public class NinjaEnemy : MonoBehaviour
         animator.SetFloat("Distance", Distance);
     }
     // Recibir daño enemigo
-    public void Damage(float damage)
+   public void TriggerEnter2D(Collider2D collision)
     {
-        Health -= damage;
-   
-        if (Health <= 0)
+
+        if (collision.CompareTag("Player"))
+        {
+
+            Health -= Player.GetComponent<NarutoMovement>().hitDamage;
+             if (Health <= 0)
 
         {
             Clip1.Play();
             animator.SetTrigger("Die Animation Ninja");
             Dead();
         }
+        }
     }
     // Fin recibir da�o
+    
+
+/*
+  if (Health <= 0)
+
+        {
+            Clip1.Play();
+            animator.SetTrigger("Die Animation Ninja");
+            Dead();
+        }
+*/
 
     // Muerte enemigo
     private void Dead()
@@ -92,39 +108,39 @@ public class NinjaEnemy : MonoBehaviour
         } 
     }
 
-    public void Attack()
+   public void Attack()
     {
         // Hacer daño al jugador
         Collider2D[] Objects = Physics2D.OverlapCircleAll(ControllerAttack.position, RangeAttack);
         foreach (Collider2D colision in Objects)
         {
-            if (colision.CompareTag("Player"))
-            {
-               // colision.GetComponent<KnockBackHit>(); ;
-            
-            
-                   if (Naruto.GetComponent<NarutoMovement>().KnockBackHit)
-            {
-                animator.SetBool("KnockBack", true);
-            }
-            else animator.SetBool("KnockBack", false);
+          if (colision.CompareTag("Player"))
+        {
            
-                //.Damage(AttackDamage);
-                    Clip.Play();
-
+            Clip.Play();
+            if (Naruto1.GetComponent<NarutoMovement>().KnockBackHit)
+            {
+             animator.SetBool("KnockBack", true);
             }
+            else
+            {
+               animator.SetBool("KnockBack", false);
+            }
+            
+
+            
         }
+        
 
-
+        }
     }
 
+  
 
-// Dibuja el rango de ataque y vision del enemigo
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(ControllerAttack.position, RangeAttack);
-    }
+
+
+
+
+  
 
 }
-//SIRVE

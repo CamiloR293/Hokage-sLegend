@@ -15,11 +15,12 @@ public class KakashiMovement : MonoBehaviour
     private float jumpForce = 170;
     private bool combo;
     private bool hit;
-    private bool raikiri;
+    public bool raikiri;
     Vector3 direccion;
 
 
     [Header("Components")]
+    public BoxCollider2D raikiriCollider;
     private Rigidbody2D rigidbody2D;
     public Transform playerPosition;
     private Animator animator;
@@ -30,6 +31,7 @@ public class KakashiMovement : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        raikiriCollider = GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -37,38 +39,42 @@ public class KakashiMovement : MonoBehaviour
         if (!Naruto.GetComponent<NarutoMovement>().Animator.GetBool("Death"))
         {
             playerDistance = (transform.position.x - playerPosition.position.x);
-            if (playerDistance < 0)
+            if (!animator.GetBool("Combo"))
             {
-                transform.localScale = new Vector3(1, 1, 1);
-                direccion = new Vector3(1.0f, 0.0f, 0.0f);
-            }
-            else
-            {
-                direccion = new Vector3(-1.0f, 0.0f, 0.0f);
-                transform.localScale = new Vector3(-1, 1, 1);
-            }
-
-
-            Combo();
-            PunchTranslate();
-            Raikiri();
-
-            timerRun = TimerRun();
-
-            if (playerDistance > 2) chargeRaikiri = RaikiriTimer();
-
-            if (chargeRaikiri <= 0)
-            {
-                animator.SetBool("Animating", true);
-                ResetTimerRaikiri();
+                if (playerDistance < 0)
+                {
+                    transform.localScale = new Vector3(1, 1, 1);
+                    direccion = new Vector3(1.0f, 0.0f, 0.0f);
+                }
+                else
+                {
+                    direccion = new Vector3(-1.0f, 0.0f, 0.0f);
+                    transform.localScale = new Vector3(-1, 1, 1);
+                }
             }
 
+                Combo();
+                PunchTranslate();
+                Raikiri();
             if (!animator.GetBool("Animating"))
             {
-                if (timerRun <= 0)
+                timerRun = TimerRun();
+
+                if (playerDistance > 2) chargeRaikiri = RaikiriTimer();
+
+                if (chargeRaikiri <= 0)
                 {
-                    Acercarse();
-                    if (!animator.GetBool("Run")) ResetTimerRun();
+                    animator.SetBool("Animating", true);
+                    ResetTimerRaikiri();
+                }
+
+                if (!animator.GetBool("Animating"))
+                {
+                    if (timerRun <= 0)
+                    {
+                        Acercarse();
+                        if (!animator.GetBool("Run")) ResetTimerRun();
+                    }
                 }
             }
         }
@@ -115,18 +121,26 @@ public class KakashiMovement : MonoBehaviour
 
     void Jump()
     {
-        animator.SetBool("Jump", true);
-        rigidbody2D.AddForce(Vector2.up * jumpForce);
+        if (!animator.GetBool("Animating"))
+        {
+            animator.SetBool("Jump", true);
+            rigidbody2D.AddForce(Vector2.up * jumpForce);
+        }
     }
 
     void Combo()
     {
-        if (Mathf.Abs(playerDistance) < 0.6f )
+        if (Mathf.Abs(playerDistance) < 0.6f)
         {
             animator.SetBool("Combo", true);
+            animator.SetBool("Animating", false);
             combo = true;
         }
-        else animator.SetBool("Combo", false);
+        else
+        {
+            animator.SetBool("Combo", false);
+            animator.SetBool("Animating", false);
+        }
     }
     
     void PunchTranslate()
@@ -153,6 +167,11 @@ public class KakashiMovement : MonoBehaviour
                 animator.SetBool("Run", false);
                 timeAproach = 3;
             }
+        }
+        else
+        {
+            animator.SetBool("Run", false);
+            timeAproach = 3;
         }
     }
 
@@ -189,6 +208,8 @@ public class KakashiMovement : MonoBehaviour
     void RaikiriOff()
     {
         animator.SetBool("Animating", false);
+        animator.SetBool("Raikiri", false);
+        ResetTimerRaikiri();
         raikiri = false;
     }
 
@@ -240,5 +261,6 @@ public class KakashiMovement : MonoBehaviour
     }
 
     
+
 
 }

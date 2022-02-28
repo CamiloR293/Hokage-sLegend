@@ -37,9 +37,6 @@ public class MovimientoSasuke : MonoBehaviour
     public GameObject BolaFuego;
     public GameObject Death;
     public GameObject GetHit;
-    public GameObject Stamce;
-    public GameObject Stamce1;
-    public GameObject StamceEnd;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();

@@ -27,7 +27,6 @@ public class NinjaEnemy : MonoBehaviour
 
     public GameObject Naruto1;
 
-    [SerializeField] private float Health;
 
     [Header("Attack")]
 
@@ -67,14 +66,16 @@ public class NinjaEnemy : MonoBehaviour
    public void Dead(float HealthUdapte)
     {
        // Al morir deja una pocion 
+       Clip1.Play();
        if (HealthUdapte<= 0)
 
         {
-            Clip1.Play();
-            animator.SetTrigger("Die Animation Ninja");
-        }
+        
+        animator.SetTrigger("Die Animation Ninja");
         Instantiate(Collectible, pos.transform.position, pos.transform.rotation);
         Destroy(gameObject);
+        }
+      
         
     }
     // Fin muerte enemgo
@@ -99,17 +100,20 @@ public class NinjaEnemy : MonoBehaviour
         Collider2D[] Objects = Physics2D.OverlapCircleAll(ControllerAttack.position, RangeAttack);
         foreach (Collider2D colision in Objects)
         {
+            Clip.Play();
           if (colision.CompareTag("Player"))
         {
            
-            Clip.Play();
+            
             if (Naruto1.GetComponent<NarutoMovement>().KnockBackHit)
             {
              animator.SetBool("KnockBack", true);
+             Clip.Play();
             }
             else
             {
                animator.SetBool("KnockBack", false);
+               Clip.Play();
             }
             
 

@@ -43,6 +43,8 @@ public class MovimientoSasuke : MonoBehaviour
     public GameObject BolaFuego;
     public GameObject Death;
     public GameObject GetHit;
+    public GameObject Defeat;
+    public GameObject YouWin;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -57,8 +59,10 @@ public class MovimientoSasuke : MonoBehaviour
     void Update()
     {
 
+        float NarutoLife = player.GetComponent<PlayerHealthController>().MinHealth;
+
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
-        if (Life > 0)
+        if (Life > 0 && NarutoLife > 0)
         {
             if (distance < 5.5) HealtHUD.SetActive(true);
             else HealtHUD.SetActive(false);
@@ -84,7 +88,7 @@ public class MovimientoSasuke : MonoBehaviour
 
                         transform.Translate(direccion * 5.6f * Time.deltaTime, Space.World);
                     }
-                    else 
+                    else
                     {
                         Animator.SetBool("Run", true);
                         transform.Translate(direccion * 1.6f * Time.deltaTime, Space.World);
@@ -168,15 +172,27 @@ public class MovimientoSasuke : MonoBehaviour
             }
         }
 
-
+        if (NarutoLife <= 0 && Life > 0) Animator.SetBool("Win", true);
+        
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath") && Life <= 0)
         {
+
+            Animator.SetBool("Die", true);
             Animator.SetBool("Run", false);
             TimeDestroy -= Time.deltaTime;
             if (TimeDestroy <= 0) Destroy(gameObject);
+
         }
     }
-    
+    public void YOUWIN()
+    {
+        Instantiate(YouWin);
+
+    }
+    public void DEFEAT()
+    {
+        Instantiate(Defeat);
+    }
     public void Die()
     {
         Instantiate(Death);

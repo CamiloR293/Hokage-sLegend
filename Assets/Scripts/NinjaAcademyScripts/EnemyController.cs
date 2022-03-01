@@ -47,7 +47,7 @@ public class EnemyController : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
 
         //Hit
-        if (distance < distancia && Time.time > lastShoot + 3.12f && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
+        if (distance < distancia && Time.time > lastShoot + 2.77f && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
         {            
             Anim.SetTrigger("Hit");
             lastShoot = Time.time;

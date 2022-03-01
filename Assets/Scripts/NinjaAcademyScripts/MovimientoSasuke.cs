@@ -6,10 +6,12 @@ public class MovimientoSasuke : MonoBehaviour
 {
     private Rigidbody2D Rigidbody2D;
     public GameObject BolaFuegoPrefab;
+    public GameObject player;
+
     private float lastShoot;
 
-    private float Horizontal = 1f;
-    public float JumpForce;
+    //private float Horizontal = 1f;
+    //public float JumpForce;
     public float Speed;
     //private bool attacking;
     public float distancia;
@@ -21,9 +23,12 @@ public class MovimientoSasuke : MonoBehaviour
     //private bool Grounded;
     private float cont = 1f;
 
-    public GameObject player;
+    
 
-    public float Life;
+    [SerializeField] private float Life;
+    [SerializeField] private float maxLife;
+    [SerializeField] private HealthBar healthB;
+
     public float Cooldown;
     public float TimeDestroy;
     public float TimeAtack;
@@ -42,6 +47,8 @@ public class MovimientoSasuke : MonoBehaviour
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
 
+        Life = maxLife;
+        healthB.LifeInit(Life);
     }
 
 
@@ -93,12 +100,12 @@ public class MovimientoSasuke : MonoBehaviour
             }
             if (distance <= 0.4)
             {
-                Animator.SetBool("Run", false);
-                transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                 if (Time.time > lastShoot + Cooldown && cont == 1f)
                 {
                     //Sound, Ready
                     Animator.SetTrigger("Golpe4");
+                    Animator.SetBool("Run", false);
+                    transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     lastShoot = Time.time;
                     cont = 2f;
                 }
@@ -107,6 +114,8 @@ public class MovimientoSasuke : MonoBehaviour
                 {
                     Instantiate(Hit1);
                     Animator.SetTrigger("Golpe1");
+                    Animator.SetBool("Run", false);
+                    transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     lastShoot = Time.time;
                     cont = 5f;
                 }
@@ -114,6 +123,8 @@ public class MovimientoSasuke : MonoBehaviour
                 {
                     Instantiate(UpperKick);
                     Animator.SetTrigger("Golpe2");
+                    Animator.SetBool("Run", false);
+                    transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     lastShoot = Time.time;
                     cont = 1f;
                 }
@@ -122,6 +133,8 @@ public class MovimientoSasuke : MonoBehaviour
 
                     Instantiate(Hit1);
                     Animator.SetTrigger("Golpe3");
+                    Animator.SetBool("Run", false);
+                    transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     lastShoot = Time.time;
                     cont = 3f;
                 }
@@ -129,6 +142,8 @@ public class MovimientoSasuke : MonoBehaviour
                 {
                     Instantiate(BolaFuego);
                     Animator.SetTrigger("BolaF");
+                    Animator.SetBool("Run", false);
+                    transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     Shoot();
                     lastShoot = Time.time;
                     cont = 4f;
@@ -137,6 +152,8 @@ public class MovimientoSasuke : MonoBehaviour
                 {
                     Instantiate(Chidori);
                     Animator.SetTrigger("Chidori");
+                    Animator.SetBool("Run", false);
+                    transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     lastShoot = Time.time;
                     cont = 0f;
 
@@ -149,6 +166,7 @@ public class MovimientoSasuke : MonoBehaviour
 
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath") && Life <= 0)
         {
+            Animator.SetBool("Run", false);
             TimeDestroy -= Time.deltaTime;
             if (TimeDestroy <= 0) Destroy(gameObject);
         }
@@ -188,9 +206,11 @@ public class MovimientoSasuke : MonoBehaviour
         {
             if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
             {
+
                 Instantiate(GetHit);
                 Debug.Log(("Golpe"));
                 Life -= player.GetComponent<NarutoMovement>().hitDamage;
+                healthB.ChangeActLife(Life);
                 Animator.SetTrigger("GetGolpe");
             }
             if(Life <= 0)
@@ -212,6 +232,7 @@ public class MovimientoSasuke : MonoBehaviour
                 //Animar daño y caida
                 Animator.SetTrigger("GetSpecialHit");
                 Life -= Player.GetComponent<NarutoMovement>().hitDamage;
+                healthB.ChangeActLife(Life);
                 Debug.Log("*****************Recibe Rasengan***********");
                 Instantiate(GetSpecialHit);
                 if (transform.position.x > collision.transform.position.x)

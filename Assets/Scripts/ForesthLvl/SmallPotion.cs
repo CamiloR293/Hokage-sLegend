@@ -7,6 +7,8 @@ public class SmallPotion : MonoBehaviour
     public bool issmallHeal;
     private bool isCollected;
 
+    public PlayerHealthController player = new PlayerHealthController();
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("PlayerHitBox") && !isCollected )
@@ -14,14 +16,8 @@ public class SmallPotion : MonoBehaviour
             if(issmallHeal)
             {
                 
-               /*  if(PlayerHealtController.insance.currenthHealt != PlayerHealtController.insace.maxHealt)
-                 {
-                 PlayerHealtController.insance.HealPlayer();
                  isCollected = true;
-                 Destroy(gameObject);
-                 }
-                 */
-                 
+                 Destroy(gameObject); 
                  
             }
         }

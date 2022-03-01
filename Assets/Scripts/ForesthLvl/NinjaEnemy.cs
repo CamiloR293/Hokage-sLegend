@@ -70,7 +70,7 @@ public class NinjaEnemy : MonoBehaviour
        if (HealthUdapte<= 0)
 
         {
-        
+        Clip1.Play();
         animator.SetTrigger("Die Animation Ninja");
         Instantiate(Collectible, pos.transform.position, pos.transform.rotation);
         Destroy(gameObject);

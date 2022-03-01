@@ -67,7 +67,7 @@ public class Boss : MonoBehaviour
     // Recibir daño Boss
     public void Damage(float damage)
     {
-        healthHUD.Health -= damage;
+        healthHUD.Health = damage;
         DeadSound.Play();
     
         if (healthHUD.Health <= 0)
@@ -76,6 +76,8 @@ public class Boss : MonoBehaviour
             
             animator.SetTrigger("Dead");
             Destroy(gameObject);
+            Destroy(healthHUD);
+            HealtH.SetActive(false);
 
         }
     }

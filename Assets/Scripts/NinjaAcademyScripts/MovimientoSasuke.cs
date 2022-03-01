@@ -7,7 +7,7 @@ public class MovimientoSasuke : MonoBehaviour
     private Rigidbody2D Rigidbody2D;
     public GameObject BolaFuegoPrefab;
     public GameObject player;
-
+    
     private float lastShoot;
 
     //private float Horizontal = 1f;
@@ -28,6 +28,7 @@ public class MovimientoSasuke : MonoBehaviour
     [SerializeField] private float Life;
     [SerializeField] private float maxLife;
     [SerializeField] private HealthBar healthB;
+    [SerializeField]private GameObject HealtHUD;
 
     public float Cooldown;
     public float TimeDestroy;
@@ -59,7 +60,11 @@ public class MovimientoSasuke : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
         if (Life > 0)
         {
+            if (distance < 5.5) HealtHUD.SetActive(true);
+            else HealtHUD.SetActive(false);
+
             if (distance < 5 && distance > 0.355) {
+
 
                 TimeAtack -= Time.deltaTime;
                 if (TimeAtack <= 0
@@ -79,7 +84,7 @@ public class MovimientoSasuke : MonoBehaviour
 
                         transform.Translate(direccion * 5.6f * Time.deltaTime, Space.World);
                     }
-                    else
+                    else 
                     {
                         Animator.SetBool("Run", true);
                         transform.Translate(direccion * 1.6f * Time.deltaTime, Space.World);
@@ -98,7 +103,7 @@ public class MovimientoSasuke : MonoBehaviour
                 transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                 this.direccion.x = 1;
             }
-            if (distance <= 0.4)
+            if (distance <= 0.359)
             {
                 if (Time.time > lastShoot + Cooldown && cont == 1f)
                 {
@@ -204,7 +209,9 @@ public class MovimientoSasuke : MonoBehaviour
        
         if (collision.CompareTag("Player"))
         {
-            if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
+            if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath") 
+                && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Chidori") 
+                && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Chidori2"))
             {
 
                 Instantiate(GetHit);

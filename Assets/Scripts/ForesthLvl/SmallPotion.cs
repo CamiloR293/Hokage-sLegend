@@ -13,15 +13,16 @@ public class SmallPotion : MonoBehaviour
         {
             if(issmallHeal)
             {
-                /*
-                 *if(PlayerHealtController.insance.currenthHealt != PlayerHealtController.insace.maxHealt)
-                 *{
-                 *PlayerHealtController.insance.HealPlayer();
-                 *isCollected = true;
-                 *Destroy(gameObject);
-                 *}
-                 
+                
+               /*  if(PlayerHealtController.insance.currenthHealt != PlayerHealtController.insace.maxHealt)
+                 {
+                 PlayerHealtController.insance.HealPlayer();
+                 isCollected = true;
+                 Destroy(gameObject);
+                 }
                  */
+                 
+                 
             }
         }
     }

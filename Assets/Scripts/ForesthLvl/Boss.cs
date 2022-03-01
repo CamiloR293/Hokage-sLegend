@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    public NarutoMovement Naruto = new NarutoMovement();
+
+     public GameObject Naruto1;
      public HealthHUD healthHUD;
 
      public GameObject HealtH;
@@ -65,27 +68,21 @@ public class Boss : MonoBehaviour
     public void Damage(float damage)
     {
         healthHUD.Health -= damage;
+        DeadSound.Play();
     
         if (healthHUD.Health <= 0)
 
         {
-            DeadSound.Play();
+            
             animator.SetTrigger("Dead");
-             Dead();
+            Destroy(gameObject);
 
         }
     }
    
     // Fin recibir daño
 
-    // Muerte Boss
-    private void Dead()
-    {
-       
-        Destroy(gameObject);
-        
-    }
-    // Fin muerte Boss
+  
 
     public void SearchPlayer()
     {
@@ -104,13 +101,23 @@ public class Boss : MonoBehaviour
         Collider2D[] Objects = Physics2D.OverlapCircleAll(ControllerAttack.position, RangeAttack);
         foreach (Collider2D colision in Objects)
         {
+            HitSound.Play();
             if (colision.CompareTag("Player") )
             {
                 //DAÑO AL JUGADOR
-                HitSound.Play();
-                colision.GetComponent<KnockBackHit>(); ;
+                
+            if (Naruto1.GetComponent<NarutoMovement>().KnockBackHit)
+            {
+             animator.SetBool("KnockBack", true);
+             HitSound.Play();
+            }
+            else
+            {
+               animator.SetBool("KnockBack", false);
+               HitSound.Play();
+            }
              
-                //.Damage(AttackDamage);
+                
             }
         }
 

@@ -14,8 +14,6 @@ GameObject:
   - component: {fileID: 3646730036202927258}
   - component: {fileID: 3646730036202927253}
   - component: {fileID: 3646730036202927252}
-  - component: {fileID: 397689974}
-  - component: {fileID: 397689975}
   m_Layer: 8
   m_Name: Sasuke
   m_TagString: Enemy
@@ -162,127 +160,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BolaFuegoPrefab: {fileID: 1679372710110586644, guid: c37d8a0319fbe334d8e66cc3b8b00c22, type: 3}
-  JumpForce: 150
+  player: {fileID: 0}
   Speed: 2
   distancia: 0.4
   direccion: {x: 0, y: 0}
   Player: {fileID: 0}
-  player: {fileID: 0}
-  Life: 1000
-  Cooldown: 2
+  Life: 200
+  maxLife: 200
+  healthB: {fileID: 0}
+  Cooldown: 1.55
   TimeDestroy: 3
-  TimeAtack: 3
+  TimeAtack: 5
   Chidori: {fileID: 727817390374385278, guid: c5e7ed8d97008bf4bb8423379e5e8164, type: 3}
   ChidoriHit: {fileID: 7776022344269183168, guid: 23b1ebd8220c847499c9455f54f68e8c, type: 3}
---- !u!82 &397689974
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3646730036202927254}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 6de5f8181db19534db3c0d40b752aec4, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &397689975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3646730036202927254}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac917447840850e439c803c5118bb118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Chidori: {fileID: 397689974}
+  GetSpecialHit: {fileID: 7830533884371054806, guid: 51f6d00a24653bc418473ccbe84e3aeb, type: 3}
+  Hit1: {fileID: 1947813441780264473, guid: 67dbbc4c9d01065429cbe7426d3e19a3, type: 3}
+  UpperKick: {fileID: 2271238244288882704, guid: 227368e9e3812dd42a6f357d7c70ed05, type: 3}
+  BolaFuego: {fileID: 1569495240392782654, guid: 3120eab7b814c6d4381d05b3260373fb, type: 3}
+  Death: {fileID: 6746321933578201462, guid: caa1f18649888924fbe800410c1edcff, type: 3}
+  GetHit: {fileID: 6521072404365593860, guid: 23cde59778471354fbd3c2f3d7ae405c, type: 3}
 --- !u!1 &5916915503185470925
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,6 +24,11 @@ public class EnemyController : MonoBehaviour
 
 
     private float lastShoot;
+
+    [Header("Sounds")]
+    public GameObject Death;
+    public GameObject Hit;
+    public GameObject GetHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -50,6 +55,7 @@ public class EnemyController : MonoBehaviour
         if (distance < distancia && Time.time > lastShoot + 2.77f && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
         {            
             Anim.SetTrigger("Hit");
+            Instantiate(Hit);
             lastShoot = Time.time;
         }
         if (!Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_hit") && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
@@ -123,9 +129,11 @@ public class EnemyController : MonoBehaviour
 
                 Life -= player.GetComponent<NarutoMovement>().hitDamage;
                 Anim.SetTrigger("Hurt");;
+                Instantiate(GetHit);
                 if (Life < 0)
                 {
                     Anim.SetBool("Die", true);
+                    Instantiate(Death);
                     moveSpeed = 0;
                 }
             }

@@ -28,7 +28,9 @@ public class BallChainNinjaScript : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         Rigidbody2D = GetComponent<Rigidbody2D>();
-        
+        Player = GameObject.Find("Naruto");
+        player = Player.transform;
+        Naruto = Player.GetComponent<NarutoMovement>();
     }
     
     //Start Update

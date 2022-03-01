@@ -11,7 +11,11 @@ public class KakashiMovement : MonoBehaviour
     private float timeAproach = 3;
     private float timeRaikiri = 1;
     private float chargeRaikiri = 3;
+    private float timeHit = 1f;
+    private float nextShuriken = 3;
     private int opcion;
+    private bool damage;
+    private bool knockBack;
     private float jumpForce = 170;
     private bool combo;
     private bool hit;
@@ -39,7 +43,7 @@ public class KakashiMovement : MonoBehaviour
         if (!Naruto.GetComponent<NarutoMovement>().Animator.GetBool("Death"))
         {
             playerDistance = (transform.position.x - playerPosition.position.x);
-            if (!animator.GetBool("Combo"))
+            if (!animator.GetBool("Combo") && !animator.GetBool("Raikiri"))
             {
                 if (playerDistance < 0)
                 {
@@ -53,9 +57,11 @@ public class KakashiMovement : MonoBehaviour
                 }
             }
 
-                Combo();
-                PunchTranslate();
-                Raikiri();
+            Combo();
+            PunchTranslate();
+            Damage();
+            Raikiri();
+            NextShuriken();
             if (!animator.GetBool("Animating"))
             {
                 timerRun = TimerRun();
@@ -113,6 +119,19 @@ public class KakashiMovement : MonoBehaviour
         chargeRaikiri = 3;
     }
 
+    void NextShuriken()
+    {
+        if(playerDistance > 4)
+        {
+            nextShuriken -= Time.deltaTime;
+        }
+        if (nextShuriken <= 0)
+        {
+            animator.SetTrigger("Throw");
+            nextShuriken = 3;
+        }
+    }
+
     //=====================================================================================
 
     //=====================================================================================
@@ -130,7 +149,8 @@ public class KakashiMovement : MonoBehaviour
 
     void Combo()
     {
-        if (Mathf.Abs(playerDistance) < 0.6f)
+        timeHit -= Time.deltaTime;
+        if ((Mathf.Abs(playerDistance) < 0.6f) && timeHit <= 0)
         {
             animator.SetBool("Combo", true);
             animator.SetBool("Animating", false);
@@ -188,6 +208,19 @@ public class KakashiMovement : MonoBehaviour
 
     }
 
+    void Damage()
+    {
+        if (damage && Naruto.GetComponent<NarutoMovement>().KnockBackHit)
+        {
+            transform.Translate(direccion * -1.5f * Time.deltaTime, Space.World);
+            transform.Translate(Vector2.up * 1.5f * Time.deltaTime, Space.World);
+            
+        }else if (damage)
+        {
+            transform.Translate(direccion * -0.3f * Time.deltaTime, Space.World);
+        }
+    }
+
     //=====================================================================================
     //                              LLAMADAS IN-GAME
     //=====================================================================================
@@ -200,6 +233,16 @@ public class KakashiMovement : MonoBehaviour
     {
         hit = false;
     }
+
+    void OnDamage()
+    {
+        damage = true;
+    }
+    void OffDamage()
+    {
+        damage = false;
+    }
+    
 
     void RaikiriOn()
     {
@@ -225,6 +268,7 @@ public class KakashiMovement : MonoBehaviour
         {
             animator.SetBool("Jump", false);
             animator.SetBool("Grounded", true);
+            animator.SetBool("KnockBack", false);
         }
     }
 
@@ -233,6 +277,7 @@ public class KakashiMovement : MonoBehaviour
         if(collision.gameObject.tag == "Ground")
         {
             animator.SetBool("Grounded", false);
+            
         }
     }
 
@@ -249,11 +294,15 @@ public class KakashiMovement : MonoBehaviour
         {
             animator.SetBool("Raikiri", false);
             animator.SetTrigger("Damage");
+            OnDamage();
+            timeAproach = 3;
+            timeHit = 1;
             if (Naruto.GetComponent<NarutoMovement>().KnockBackHit)
             {
                 animator.SetBool("KnockBack", true);
+                timeAproach = 3;
             }
-            else animator.SetBool("KnockBack", false);
+            
 
             health -= Naruto.GetComponent<NarutoMovement>().hitDamage;
 

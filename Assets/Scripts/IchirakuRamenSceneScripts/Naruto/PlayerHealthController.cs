@@ -21,6 +21,15 @@ public class PlayerHealthController : MonoBehaviour
         animator = GetComponent<Animator>();
         SoundController = GetComponent<NarutoSoundController>();
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SpecialHitEnemy"))
+        {
+            KnockBack = 0;
+        }
+        
+    }
     public void Damage()
     {
         if (Damage_)

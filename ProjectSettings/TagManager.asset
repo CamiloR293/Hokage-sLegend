@@ -12,6 +12,7 @@ TagManager:
   - GolpeEnemigo
   - Naruto
   - PlayerHitBox
+  - SpecialHitEnemy
   layers:
   - Default
   - TransparentFX

@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 5453776410229686285}
   m_Layer: 10
   m_Name: Raikiri
-  m_TagString: Untagged
+  m_TagString: SpecialHitEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

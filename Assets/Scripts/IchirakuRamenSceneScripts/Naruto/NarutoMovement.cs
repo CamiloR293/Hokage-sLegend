@@ -43,6 +43,7 @@ public class NarutoMovement : MonoBehaviour
 
     void Start()
     {
+        
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
         HealthController = GetComponent<PlayerHealthController>();
@@ -350,7 +351,7 @@ public class NarutoMovement : MonoBehaviour
     //Aparicion de prefab de lanzamiento
     private void Throw()
     {
-        Animator.SetBool("Throwing", Input.GetKeyDown(KeyCode.F));
+        Animator.SetTrigger("Throwing");
         SoundController.Throw.Play();
         Vector3 direccion;
         if (transform.localScale.x == 1.0f) direccion = Vector3.right;
@@ -428,6 +429,8 @@ public class NarutoMovement : MonoBehaviour
             Animator.SetBool("HitRasengan", true);
             NoMoveRasengan();
         }
+
+        
     }
     public void UnHitRasengan()
     {

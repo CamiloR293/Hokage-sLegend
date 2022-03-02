@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instructions.unity
     guid: bfe472084113e904593d64c23cae9c72
+  - enabled: 1
+    path: Assets/Scenes/Ninja Academy.unity
+    guid: f0599a7e7973744478c9ed09fdaad47c
   m_configObjects: {}

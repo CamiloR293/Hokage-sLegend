@@ -13,6 +13,7 @@ TagManager:
   - Naruto
   - PlayerHitBox
   - SpecialHitEnemy
+  - Potion
   layers:
   - Default
   - TransparentFX

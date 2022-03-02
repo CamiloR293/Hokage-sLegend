@@ -7,7 +7,9 @@ public class PauseManager : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private GameObject pause;
+    
     [SerializeField] private GameObject Pausemenu;
+
 
     void Start()
     {
@@ -44,6 +46,7 @@ public class PauseManager : MonoBehaviour
     public void Quit(){
         Application.Quit();
     }
+
 
 
 }

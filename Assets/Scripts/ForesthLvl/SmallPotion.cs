@@ -11,6 +11,7 @@ public class SmallPotion : MonoBehaviour
 
     public bool isKunai;
 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("PlayerHitBox") && !isCollected )

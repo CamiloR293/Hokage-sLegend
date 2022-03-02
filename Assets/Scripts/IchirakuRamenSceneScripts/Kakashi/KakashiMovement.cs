@@ -203,11 +203,6 @@ public class KakashiMovement : MonoBehaviour
         }
     }
 
-    void JumpToPlatform()
-    {
-
-    }
-
     void Damage()
     {
         if (damage && Naruto.GetComponent<NarutoMovement>().KnockBackHit)

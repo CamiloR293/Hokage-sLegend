@@ -9,7 +9,7 @@ public class SmallPotion : MonoBehaviour
 
     public bool isPotion;
 
-    public PlayerHealthController player = new PlayerHealthController();
+    public bool isKunai;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -23,6 +23,14 @@ public class SmallPotion : MonoBehaviour
                  
             }
             if(isPotion)
+            {
+                
+                 isCollected = true;
+                 Destroy(gameObject); 
+                 
+            }
+
+            if(isKunai)
             {
                 
                  isCollected = true;

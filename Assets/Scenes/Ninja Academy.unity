@@ -4525,6 +4525,10 @@ PrefabInstance:
       propertyPath: TimeDestroy
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
+      propertyPath: BolaFuegoPrefab
+      value: 
+      objectReference: {fileID: 1679372710110586644, guid: c37d8a0319fbe334d8e66cc3b8b00c22, type: 3}
     - target: {fileID: 3646730036202927254, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: m_Name
       value: Sasuke
@@ -4535,7 +4539,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927256, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 42.4
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927256, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: m_LocalPosition.y

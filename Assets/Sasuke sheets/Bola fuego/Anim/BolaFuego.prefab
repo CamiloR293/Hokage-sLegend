@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1679372710110586862}
   - component: {fileID: 1679372710110586857}
   - component: {fileID: 483329788823200497}
-  m_Layer: 0
+  - component: {fileID: 7353569917790901768}
+  m_Layer: 10
   m_Name: BolaFuego
   m_TagString: GolpeEnemigo
   m_Icon: {fileID: 0}
@@ -136,7 +137,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.012431957, y: 0}
@@ -155,3 +156,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 4.55
+--- !u!114 &7353569917790901768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679372710110586644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21f4ace143934d748aa67bd85807aae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -332,7 +332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9added69eb4c9bb4da5cf642c8e431f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Sasuke: {fileID: 730822086}
   StamceEnd: {fileID: 6117393733882194999, guid: 3aca62a66c6a3e1459a9ed0c29b810e5, type: 3}
+  InitLife: 100
 --- !u!61 &269411105
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -367,11 +369,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 269411103}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 28.36, y: -2.060349, z: 8.504054}
+  m_LocalPosition: {x: -0.33000016, y: -0.6493952, z: 0}
   m_LocalScale: {x: 0.0125, y: 3.4429688, z: 1}
   m_Children: []
-  m_Father: {fileID: 7910324209064012513}
-  m_RootOrder: 2
+  m_Father: {fileID: 730822092}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &698072218
 GameObject:
@@ -448,6 +450,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 698072218}
   m_CullTransparentMesh: 1
+--- !u!1 &730822086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3646730036202927254, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
+  m_PrefabInstance: {fileID: 5916915503527745421}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &730822092 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3646730036202927256, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
+  m_PrefabInstance: {fileID: 5916915503527745421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &785685981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4506,6 +4518,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5423323777057563627}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
+      propertyPath: sensor
+      value: 
+      objectReference: {fileID: 269411106}
+    - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: healthB
       value: 
       objectReference: {fileID: 1590670873}
@@ -4519,7 +4535,7 @@ PrefabInstance:
       objectReference: {fileID: 1590670871}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: TimeAtack
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: TimeDestroy
@@ -4604,7 +4620,6 @@ Transform:
   m_Children:
   - {fileID: 7910324209147666215}
   - {fileID: 7910324209121277202}
-  - {fileID: 269411106}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

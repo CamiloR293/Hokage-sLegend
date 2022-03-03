@@ -23,10 +23,10 @@ public class MovimientoSasuke : MonoBehaviour
     //private bool Grounded;
     private float cont = 1f;
 
-    
+    public Transform sensor;
 
     [SerializeField] private float Life;
-    [SerializeField] private float maxLife;
+    [SerializeField] private float maxLife =100;
     [SerializeField] private HealthBar healthB;
     [SerializeField]private GameObject HealtHUD;
 
@@ -52,6 +52,7 @@ public class MovimientoSasuke : MonoBehaviour
 
         Life = maxLife;
         healthB.LifeInit(Life);
+        sensor.parent = null;
     }
 
 
@@ -183,6 +184,10 @@ public class MovimientoSasuke : MonoBehaviour
             if (TimeDestroy <= 0) Destroy(gameObject);
 
         }
+    }
+    public void InitialLife(float life)
+    {
+        healthB.ChangeActLife(life);
     }
     public void YOUWIN()
     {

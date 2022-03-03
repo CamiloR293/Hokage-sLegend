@@ -27,12 +27,13 @@ public class MenuOptions : MonoBehaviour
         
     }
 
-
+//Vuelve al menu principal
     public void ScenBack(){
         
         SceneManager.LoadScene(0);
         
     }
+// El metodo MuteCheck se activara cuando el nivel del sonido sea cero 
     public void MuteCheck()
     {
         if(slidervalue ==0)
@@ -44,7 +45,7 @@ public class MenuOptions : MonoBehaviour
 
         }
     }
-    
+    // Este metodo cambia las variables del slider del volumen
     public void Change (float value)
     {
         slidervalue = value;

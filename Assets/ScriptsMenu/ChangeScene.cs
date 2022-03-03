@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
 // Este prefab en forma de kunai(go) se utiliza para cambiar de niveles , solo es agregar el prefab
-// al nivel y en loadscene cambiar el numero dependiendo la escena
-
+// al nivel y activar el bool pediendo del nivel
 
    
 

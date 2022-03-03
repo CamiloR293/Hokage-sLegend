@@ -17,18 +17,18 @@ public class Menu : MonoBehaviour
     {
         
     }
-
+//Al seleccionar el boton "Play" Cargara la escena donde se encuentra las instrucciones de los controles 
     public void ScenePlay(){
      
         SceneManager.LoadScene(6);
     }
-
+// Carga la escena donde se encuentra el menu de opciones
     public void SceneOption(){
          
         SceneManager.LoadScene(5);
       
     }
-
+// Sale del video juego
      public void ScenEXIT(){
          
         Application.Quit();

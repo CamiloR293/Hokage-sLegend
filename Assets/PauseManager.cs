@@ -21,7 +21,7 @@ public class PauseManager : MonoBehaviour
     {
         
     }
-
+// El metodo Pause , esta asignado el boton Pause del video juego, este hara que detenga y activara el menu de opciones
     public void Pause()
     {
         Time.timeScale =0f;
@@ -29,20 +29,20 @@ public class PauseManager : MonoBehaviour
         Pausemenu.SetActive(true);
 
     }
-
+// El siguiente metodo vuelve hacer que el juego continue
     public void Resume(){
         Time.timeScale = 1f;
          pause.SetActive(true);
         Pausemenu.SetActive(false);
 
     }
-
+// Reinicia el nivel en el cual se esta jugando
     public void Reset(){
          Time.timeScale = 1f;
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
     }
-
+// Sale del video juego
     public void Quit(){
         Application.Quit();
     }

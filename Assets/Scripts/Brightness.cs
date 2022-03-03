@@ -22,7 +22,7 @@ public class Brightness : MonoBehaviour
     {
         
     }
-
+// Cambia el valor del slider y aumenta o disminuye el brillo
     public void ChangeSlider(float value )
     {
 slidervalue = value;

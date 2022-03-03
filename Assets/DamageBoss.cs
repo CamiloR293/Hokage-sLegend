@@ -25,7 +25,7 @@ public class DamageBoss : MonoBehaviour
     {
         
     }
-
+// Con el siguiente metodo el boss recibe daño y llama al metodo damage que esta en el script de Boss, cuando la vida sea 0 o menor se destruira el objeto
  public void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -35,7 +35,7 @@ public class DamageBoss : MonoBehaviour
             boss.GetComponent<Boss>().Damage(Health);
         }
     }
-
+// Con el siguiente metodo el boss recibe daño y llama al metodo damage que esta en el script de Boss, cuando la vida sea 0 o menor se destruira el objeto
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("SpecialHit"))

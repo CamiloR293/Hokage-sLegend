@@ -11,13 +11,15 @@ public class HealthHUD : MonoBehaviour
 
     public Image HealtHUD;
 
+
+// Se cambiara la barra de vida a medida que el enemigo pierda vida
     void Update()
     {
         HealtHUD.fillAmount = Health / MaxHealth;
         
     }
 
-    //sirve
+   
 
 
    

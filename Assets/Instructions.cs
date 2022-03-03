@@ -15,7 +15,7 @@ public class Instructions : MonoBehaviour
     {
         
     }
-
+// Incia el video juego, en el primer nivel
       public void SceneLvl(){
      
         SceneManager.LoadScene(1);

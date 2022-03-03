@@ -24,6 +24,7 @@ public class Damager : MonoBehaviour
         
     }
 
+// En este script es para que el enemigo reciba daño al ser golpeado por el player, este primer metodo funciona para los puños
      public void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -33,7 +34,7 @@ public class Damager : MonoBehaviour
             Ninja.GetComponent<NinjaEnemy>().Dead(Health);
         }
     }
-
+// Y este con la habilidad 
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("SpecialHit"))

@@ -73,7 +73,7 @@ public class SoundNinja : MonoBehaviour
                             {
                                 case 1: //Caminar hacia delante
                                     TimerWalk();
-                                    Debug.Log("Caminar hacia delante");
+                                    
                                     animator.SetBool("Walk", true);
                                     transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
                                     direccion = new Vector3(-1.0f, 0.0f, 0.0f);
@@ -81,7 +81,7 @@ public class SoundNinja : MonoBehaviour
                                     break;
                                 case 2:
                                     TimerWalk();
-                                    Debug.Log("Caminar hacia atras");
+                                    
                                     animator.SetBool("Walk", true);
                                     transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                                     direccion = new Vector3(1.0f, 0.0f, 0.0f);

@@ -38,8 +38,6 @@ public class NinjaEnemy : MonoBehaviour
 
     void Start()
     {
-
-       
         animator = GetComponent<Animator>();
         body = GetComponent<Rigidbody2D>();
         Player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
@@ -64,26 +62,23 @@ public class NinjaEnemy : MonoBehaviour
 
     // Muerte enemigo
    public void Dead(float HealthUdapte)
-    {
+   {
        // Al morir deja una pocion 
        Clip1.Play();
        if (HealthUdapte<= 0)
-
-        {
-        Clip1.Play();
-        animator.SetTrigger("Die Animation Ninja");
-        Instantiate(Collectible, pos.transform.position, pos.transform.rotation);
-        Destroy(gameObject);
-        }
+       {
+           Clip1.Play();
+           animator.SetTrigger("Die Animation Ninja");
+           Instantiate(Collectible, pos.transform.position, pos.transform.rotation);
+           Destroy(gameObject);
+       }
       
         
-    }
+   }
     // Fin muerte enemgo
 
     public void SearchPlayer()
     {
-
-    
          // Esta funcion hace que el enemigo mire a la posicion que se encuentra el jugador 
         if ((Player.position.x < transform.position.x && !SeeRigth)
             || (Player.position.x > transform.position.x && SeeRigth))
@@ -101,26 +96,19 @@ public class NinjaEnemy : MonoBehaviour
         foreach (Collider2D colision in Objects)
         {
             Clip.Play();
-          if (colision.CompareTag("Player"))
-        {
-           
-            
-            if (Naruto1.GetComponent<NarutoMovement>().KnockBackHit)
+            if (colision.CompareTag("Player"))
             {
-             animator.SetBool("KnockBack", true);
-             Clip.Play();
+                if (Naruto1.GetComponent<NarutoMovement>().KnockBackHit)
+                {
+                 animator.SetBool("KnockBack", true);
+                 Clip.Play();
+                }
+                else
+                {
+                   animator.SetBool("KnockBack", false);
+                   Clip.Play();
+                }
             }
-            else
-            {
-               animator.SetBool("KnockBack", false);
-               Clip.Play();
-            }
-            
-
-            
-        }
-        
-
         }
     }
 

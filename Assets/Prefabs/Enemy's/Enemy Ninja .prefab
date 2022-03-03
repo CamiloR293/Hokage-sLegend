@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 5467677844539959689}
   - component: {fileID: 5467677844790005380}
   - component: {fileID: 5467677844790005404}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: 'Enemy Ninja '
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -172,18 +172,18 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5467677844539959694}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 259e9008e85665345a03b3758933d77d, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!61 &5467677844539959688
 BoxCollider2D:
@@ -415,6 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f4ace143934d748aa67bd85807aae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitDamage: 10
 --- !u!1 &5467677844855734222
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,9 +457,9 @@ GameObject:
   - component: {fileID: 5467677844916921754}
   - component: {fileID: 5467677844916921755}
   - component: {fileID: 5467677844916921752}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Damage
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -490,8 +491,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0138145685, y: 0.09293547}
-  m_Size: {x: 0.1737926, y: 0.45003754}
+  m_Offset: {x: -0.0138145685, y: 0.06931767}
+  m_Size: {x: 0.1737926, y: 0.49727315}
   m_Direction: 0
 --- !u!114 &5467677844916921752
 MonoBehaviour:
@@ -506,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Naruto: {fileID: 0}
-  Health: 30
+  Health: 50
   Naruto1: {fileID: 0}
   Player: {fileID: 0}
   Ninja: {fileID: 5467677844539959690}

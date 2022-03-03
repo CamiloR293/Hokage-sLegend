@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class KnockBackHit : MonoBehaviour
 {
+    public float hitDamage = 1;
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PlayerHitBox"))
@@ -25,7 +26,7 @@ public class KnockBackHit : MonoBehaviour
                     collision.transform.rotation = Quaternion.Euler(0, 0, 0);
                 }
 
-                collision.GetComponent<NarutoMovement>().HealthController.MinHealth -= 10;
+                collision.GetComponent<NarutoMovement>().HealthController.MinHealth -= hitDamage;
             }
         }
     }

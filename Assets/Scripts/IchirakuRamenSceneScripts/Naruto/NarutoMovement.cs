@@ -117,7 +117,11 @@ public class NarutoMovement : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.F)) Throw();
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    Animator.SetTrigger("Throw");
+                    Throw();
+                }
             }
         }
         else
@@ -351,7 +355,6 @@ public class NarutoMovement : MonoBehaviour
     //Aparicion de prefab de lanzamiento
     private void Throw()
     {
-        Animator.SetTrigger("Throwing");
         SoundController.Throw.Play();
         Vector3 direccion;
         if (transform.localScale.x == 1.0f) direccion = Vector3.right;
@@ -359,6 +362,7 @@ public class NarutoMovement : MonoBehaviour
 
         GameObject Shuriken = Instantiate(ShurikenPrefab, transform.position + direccion * 0.2f, Quaternion.identity);
         Shuriken.GetComponent<ShurikenScript>().SetDirection(direccion);
+        
 
     }
     //Fin lanzamiento
@@ -429,8 +433,6 @@ public class NarutoMovement : MonoBehaviour
             Animator.SetBool("HitRasengan", true);
             NoMoveRasengan();
         }
-
-        
     }
     public void UnHitRasengan()
     {

@@ -265,5 +265,20 @@ public class SoundNinja : MonoBehaviour
         }
     }
 
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("SpecialHit") && health > 0)
+        {
+            animator.SetBool("Run", false);
+            animator.SetTrigger("Damage");
+            OnDamage();
+            timeAproach = 3;
+            if (Naruto.GetComponent<NarutoMovement>().KnockBackHit)
+            {
+                animator.SetBool("KnockBack", true);
+                timeAproach = 3;
+            }
+            health -= Naruto.GetComponent<NarutoMovement>().hitDamage;
+        }
+    }
 }

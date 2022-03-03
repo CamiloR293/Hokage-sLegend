@@ -13,6 +13,7 @@ public class NarutoMovement : MonoBehaviour
     public GameObject RasenganCollider;
     public GameObject RasenganColliderAttack;
     private NarutoSoundController SoundController;
+    
 
     [Header("Movement")]
     public float SpeedRunning;
@@ -57,6 +58,7 @@ public class NarutoMovement : MonoBehaviour
     //Start Update
     void Update()
     {
+        
         Health();
         if (HealthController.MinHealth > 0)
         {
@@ -359,11 +361,8 @@ public class NarutoMovement : MonoBehaviour
         Vector3 direccion;
         if (transform.localScale.x == 1.0f) direccion = Vector3.right;
         else direccion = Vector3.left;
-
         GameObject Shuriken = Instantiate(ShurikenPrefab, transform.position + direccion * 0.2f, Quaternion.identity);
         Shuriken.GetComponent<ShurikenScript>().SetDirection(direccion);
-        
-
     }
     //Fin lanzamiento
 
@@ -407,7 +406,6 @@ public class NarutoMovement : MonoBehaviour
 
     public void MovingRasengan()
     {
-        
         SoundController.Rasengan3.Play();
         MoveRasengan = true;
     }
@@ -420,20 +418,12 @@ public class NarutoMovement : MonoBehaviour
     {
         if (MoveRasengan)
         {
-            Debug.Log("RasenganTranslate");
             this.Animator.SetFloat("Time", Timer());
             Vector3 direccion = new Vector3(this.direccion, 0, 0);
             transform.Translate(direccion * 10 * Time.deltaTime, Space.World);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (RasenganCollider == collision.CompareTag("Enemy"))
-        {
-            Animator.SetBool("HitRasengan", true);
-            NoMoveRasengan();
-        }
-    }
+    
     public void UnHitRasengan()
     {
         Animator.SetBool("HitRasengan", false);

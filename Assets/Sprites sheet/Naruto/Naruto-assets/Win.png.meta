@@ -1,52 +1,40 @@
 fileFormatVersion: 2
-guid: af1a8c3784924e042b25ce42535f5557
+guid: edb21622316a2574296b13df468838c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5307882462097650756
-    second: Combo_0
+      213: 3302273018506617863
+    second: Win_0
   - first:
-      213: 7025939505041739649
-    second: Combo_1
+      213: 954963436607154304
+    second: Win_1
   - first:
-      213: -7095796568512115512
-    second: Combo_2
+      213: -4455476159343789129
+    second: Win_2
   - first:
-      213: 2914659995586302541
-    second: Combo_3
+      213: 6519960470705124959
+    second: Win_3
   - first:
-      213: -7122823368952423505
-    second: Combo_4
+      213: 52362372452818622
+    second: Win_4
   - first:
-      213: -1708730421325579329
-    second: Combo_5
+      213: 3810677228439233811
+    second: Win_5
   - first:
-      213: -3972341839318418528
-    second: Combo_6
+      213: -3225272027129934318
+    second: Win_6
   - first:
-      213: -7231733367029299936
-    second: Combo_7
+      213: 2500226511144422677
+    second: Win_7
   - first:
-      213: -6130100197531928721
-    second: Combo_8
+      213: 4137319832174097565
+    second: Win_8
   - first:
-      213: -6320630066674232877
-    second: Combo_9
+      213: -8007984669383512409
+    second: Win_9
   - first:
-      213: 406785895475594571
-    second: Combo_10
-  - first:
-      213: -5801544414831587644
-    second: Combo_11
-  - first:
-      213: -2226043862063425700
-    second: Combo_12
-  - first:
-      213: 2461542334212987129
-    second: Combo_13
-  - first:
-      213: 927037854862371070
-    second: Combo_14
+      213: 7868574776547157192
+    second: Win_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,316 +124,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Combo_0
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 67
-        width: 33
-        height: 52
-      alignment: 9
-      pivot: {x: 0.48242447, y: 0.45114693}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4443bd61af269a940800000000000000
-      internalID: 5307882462097650756
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_1
-      rect:
-        serializedVersion: 2
-        x: 50
-        y: 67
-        width: 35
-        height: 52
-      alignment: 9
-      pivot: {x: 0.5125728, y: 0.45038545}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18f856b31c6218160800000000000000
-      internalID: 7025939505041739649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_2
-      rect:
-        serializedVersion: 2
-        x: 93
-        y: 67
-        width: 42
-        height: 52
-      alignment: 9
-      pivot: {x: 0.59433585, y: 0.44944412}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8cc4667bd9aa68d90800000000000000
-      internalID: -7095796568512115512
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_3
-      rect:
-        serializedVersion: 2
-        x: 153
-        y: 67
-        width: 28
-        height: 52
-      alignment: 9
-      pivot: {x: 0.3907171, y: 0.45115456}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d4296fdc2d3f27820800000000000000
-      internalID: 2914659995586302541
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_4
-      rect:
-        serializedVersion: 2
-        x: 190
-        y: 67
-        width: 46
-        height: 52
-      alignment: 9
-      pivot: {x: 0.6291607, y: 0.45035845}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fab5dbf52e5a62d90800000000000000
-      internalID: -7122823368952423505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_5
-      rect:
-        serializedVersion: 2
-        x: 241
-        y: 67
-        width: 54
-        height: 52
-      alignment: 9
-      pivot: {x: 0.6847008, y: 0.4515145}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fbb3cfb2cbe5948e0800000000000000
-      internalID: -1708730421325579329
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_6
-      rect:
-        serializedVersion: 2
-        x: 303
-        y: 67
-        width: 55
-        height: 52
-      alignment: 9
-      pivot: {x: 0.6897932, y: 0.45074564}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0abf00db4286fd8c0800000000000000
-      internalID: -3972341839318418528
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_7
-      rect:
-        serializedVersion: 2
-        x: 370
-        y: 67
-        width: 32
-        height: 52
-      alignment: 9
-      pivot: {x: 0.4681282, y: 0.45000032}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 02501eb61d8b3ab90800000000000000
-      internalID: -7231733367029299936
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Combo_8
+      name: Win_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 59
-        height: 50
-      alignment: 9
-      pivot: {x: 0.7112831, y: 0.4687134}
+        width: 30
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f67be8859528deaa0800000000000000
-      internalID: -6130100197531928721
+      spriteID: 704a17b60d704dd20800000000000000
+      internalID: 3302273018506617863
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combo_9
+      name: Win_1
       rect:
         serializedVersion: 2
-        x: 66
+        x: 57
         y: 0
-        width: 48
-        height: 50
-      alignment: 9
-      pivot: {x: 0.64524955, y: 0.468787}
+        width: 33
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d19a37417c9848a0800000000000000
-      internalID: -6320630066674232877
+      spriteID: 088a47c9f26b04d00800000000000000
+      internalID: 954963436607154304
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combo_10
+      name: Win_2
       rect:
         serializedVersion: 2
-        x: 120
+        x: 110
         y: 0
-        width: 38
-        height: 50
-      alignment: 9
-      pivot: {x: 0.55169237, y: 0.4690689}
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b45467fdd9135a500800000000000000
-      internalID: 406785895475594571
+      spriteID: 7bb77190a08fa22c0800000000000000
+      internalID: -4455476159343789129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combo_11
+      name: Win_3
       rect:
         serializedVersion: 2
-        x: 186
+        x: 159
+        y: 0
+        width: 32
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f56b7fdf08d8b7a50800000000000000
+      internalID: 6519960470705124959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_4
+      rect:
+        serializedVersion: 2
+        x: 207
         y: 0
         width: 28
-        height: 50
-      alignment: 9
-      pivot: {x: 0.38892692, y: 0.46926036}
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4cecf45b716cc7fa0800000000000000
-      internalID: -5801544414831587644
+      spriteID: ebe95a1ec470ab000800000000000000
+      internalID: 52362372452818622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combo_12
+      name: Win_5
       rect:
         serializedVersion: 2
-        x: 224
+        x: 254
         y: 0
-        width: 54
-        height: 50
-      alignment: 9
-      pivot: {x: 0.68473023, y: 0.46941304}
+        width: 29
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c57554bc6e08b11e0800000000000000
-      internalID: -2226043862063425700
+      spriteID: 3156acadfbe32e430800000000000000
+      internalID: 3810677228439233811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combo_13
+      name: Win_6
       rect:
         serializedVersion: 2
-        x: 287
+        x: 299
         y: 0
-        width: 59
-        height: 50
-      alignment: 9
-      pivot: {x: 0.71086764, y: 0.46829593}
+        width: 35
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f8d95e06b7292220800000000000000
-      internalID: 2461542334212987129
+      spriteID: 21e8ae6fd288d33d0800000000000000
+      internalID: -3225272027129934318
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Combo_14
+      name: Win_7
       rect:
         serializedVersion: 2
-        x: 355
+        x: 348
         y: 0
-        width: 58
-        height: 50
-      alignment: 9
-      pivot: {x: 0.70650506, y: 0.4690304}
+        width: 35
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef8696074008ddc00800000000000000
-      internalID: 927037854862371070
+      spriteID: 51d07ced3c692b220800000000000000
+      internalID: 2500226511144422677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 36
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d947ae68776ba6930800000000000000
+      internalID: 4137319832174097565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 0
+        width: 35
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ae2f9e0f5cedd090800000000000000
+      internalID: -8007984669383512409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Win_10
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 0
+        width: 36
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c421bcd11bc23d60800000000000000
+      internalID: 7868574776547157192
       vertices: []
       indices: 
       edges: []

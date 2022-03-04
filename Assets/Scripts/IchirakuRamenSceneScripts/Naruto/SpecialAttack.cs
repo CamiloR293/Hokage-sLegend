@@ -5,15 +5,17 @@ using UnityEngine;
 public class SpecialAttack : MonoBehaviour
 {
     float Cronometro = 1;
+    int i = 0;
     //============================================================
     //                         RASENGAN
     //============================================================
-    
+
     public void RasenganCharge(Animator animator, NarutoMovement player)
     {
         animator.SetBool("Animating_Something", true);
         animator.SetBool("Rasengan", true);
-        player.Moving = true;
+        
+
         Cronometro -= Time.deltaTime;
         if (Cronometro <= 0) EndRasengan(animator, player);
     }

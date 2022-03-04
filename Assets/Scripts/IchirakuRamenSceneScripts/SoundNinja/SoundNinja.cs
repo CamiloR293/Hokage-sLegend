@@ -8,6 +8,7 @@ public class SoundNinja : MonoBehaviour
     public float rangeOfVision = 1.7f;
     private float timeAproach = 3;
     private float timeRun = 3;
+    private float timeBreak = 1f;
     private float timeAttack = 0;
     private float timeWalk = 1.4f;
     public float health = 50;
@@ -79,7 +80,7 @@ public class SoundNinja : MonoBehaviour
                                     direccion = new Vector3(-1.0f, 0.0f, 0.0f);
                                     if (timeWalk > 0) transform.Translate(direccion * 0.2f * Time.deltaTime, Space.World);
                                     break;
-                                case 2:
+                                case 2: //Caminar hacia atras
                                     TimerWalk();
                                     
                                     animator.SetBool("Walk", true);
@@ -99,12 +100,10 @@ public class SoundNinja : MonoBehaviour
                     }
                 }
 
-
                 if (Mathf.Abs(playerDistance) <= 0.5)
                 {
                     timeAttack -= Time.deltaTime;
                     if (timeAttack < 0) animator.SetBool("Combo", true);
-
                 }
                 else
                 {
@@ -132,24 +131,19 @@ public class SoundNinja : MonoBehaviour
     //=====================================================================================
     void Acercarse()
     {
+        timeBreak -= Time.deltaTime;
         
-        timeAproach -= Time.deltaTime;
-        if (timeAproach >= 0)
+        if (timeBreak <= 0)
         {
             animator.SetBool("Run", true);
             transform.Translate(-direccion * 1f * Time.deltaTime, Space.World);
-            if (Mathf.Abs(playerDistance) < 0.6) timeAproach = 0;
+            
         }
-        else
-        {
-            animator.SetBool("Run", false);
-            timeAproach = 3;
-        }
+        
     }
 
     void PunchTranslate()
     {
-        
         if (attack) transform.Translate(-direccion * 0.5f * Time.deltaTime, Space.World);
     }
 
@@ -172,13 +166,14 @@ public class SoundNinja : MonoBehaviour
 
     public void OnDamage()
     {
+        timeBreak = 1f;
         damage = true;
         lockAnim = true;
+        NoAttack();
     }
     public void OffDamage()
     {
         damage = false;
-        
     }
     public void UnlockAnimation()
     {
@@ -187,6 +182,7 @@ public class SoundNinja : MonoBehaviour
     public void Attack()
     {
         attack = true;
+        timeBreak = 0.5f;
     }
     public void NoAttack()
     {

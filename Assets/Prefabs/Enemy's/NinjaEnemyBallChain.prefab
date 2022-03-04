@@ -155,17 +155,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3579803f3046b44aae71c7fe7ca77c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Naruto: {fileID: 0}
   rangeOfVision: 2
   rangeOfAttack: 1.5
   Health: 100
-  direccion: {x: 0, y: 0}
-  player: {fileID: 0}
   KnockBackTranslate: 0
-  Player: {fileID: 0}
+  damage: 0
   KnockBack: 0
   Hit: 0
   TranslateBool: 0
+  Naruto: {fileID: 0}
+  Player: {fileID: 0}
+  direccion: {x: 0, y: 0}
+  player: {fileID: 0}
 --- !u!1 &234259739352324138
 GameObject:
   m_ObjectHideFlags: 0

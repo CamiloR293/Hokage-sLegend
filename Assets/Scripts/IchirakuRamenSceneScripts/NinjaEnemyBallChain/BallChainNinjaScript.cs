@@ -4,24 +4,28 @@ using UnityEngine;
 
 public class BallChainNinjaScript : MonoBehaviour
 {
-    public NarutoMovement Naruto = new NarutoMovement();
+    
 
     public float rangeOfVision;
     public float rangeOfAttack;
     public float Health = 50.0f;
-    public Vector2 direccion;
-    public Transform player;
     public float KnockBackTranslate;
-    float Cronometro = 3;
-
-    private Rigidbody2D Rigidbody2D;
-    private Animator Animator;
-    public GameObject Player;
+    private float Cronometro = 3;
     private float playerDistance;
-    private bool Locked;
+    private float upTranslate;
+    
+    public bool damage;
     public bool KnockBack;
     public bool Hit;
     public bool TranslateBool;
+    private bool Locked;
+
+    public NarutoMovement Naruto;
+    private Rigidbody2D Rigidbody2D;
+    private Animator Animator;
+    public GameObject Player;
+    public Vector2 direccion;
+    public Transform player;
 
 
     void Start()
@@ -36,17 +40,10 @@ public class BallChainNinjaScript : MonoBehaviour
     //Start Update
     void Update()
     {
-        Damage();
         Translate();
-        UpTranslate();
-        HealthEnemy();
-
-
         if (Health > 0)
         {
             playerDistance = Vector2.Distance(player.position, Rigidbody2D.position);
-
-
             Animator.SetBool("PreparingAttack", playerDistance <= rangeOfVision);
             Animator.SetBool("Attack", playerDistance <= rangeOfAttack);
 
@@ -55,66 +52,57 @@ public class BallChainNinjaScript : MonoBehaviour
                 if (player.position.x < Rigidbody2D.position.x)
                 {
                     transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
-                    this.direccion.x = -1;
+                    this.direccion.x = 1;
                 }
                 else
                 {
                     transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
-                    this.direccion.x = 1;
+                    this.direccion.x = -1;
                 }
             }
         }
         else if (Animator.GetBool("Grounded"))
         {
-            if (Animator.GetBool("Death"))
+            Animator.SetBool("Death", true);
+            Rigidbody2D.velocity = new Vector3(0, 0, 0);
+            Cronometro -= Time.deltaTime;
+            if (Cronometro <= 0)
             {
-                Rigidbody2D.velocity = new Vector3(0, 0, 0);
-                Cronometro -= Time.deltaTime;
-                if (Cronometro <= 0)
-                {
-                    Destroy(gameObject);
-                }
+                Destroy(gameObject);
             }
         }
-        
     }
     //End Update
 
-    
-
-    //Bloqueo al atacar
-    public void Lock()
+    //=====================================================================================
+    //                                FUNCIONES ENEMIGO
+    //=====================================================================================
+    public void Translate()
     {
-        Locked = true;
+        if (damage && Naruto.GetComponent<NarutoMovement>().KnockBackHit)
+        {
+            transform.Translate(direccion * 1.5f * Time.deltaTime, Space.World);
+            transform.Translate(Vector2.up * upTranslate * Time.deltaTime, Space.World);
+
+        }
+        else if (damage)
+        {
+            transform.Translate(direccion * 0.3f * Time.deltaTime, Space.World);
+        }
     }
-    public void Unlock()
-    {
-        Locked = false;
-    }
-    //===================
+    //=====================================================================================
+    //                             TRIGGERS / COLISIONES
+    //=====================================================================================
 
 
-
-    public void HealthEnemy()
-    {
-        if (Health <= 0) Animator.SetBool("Death", true);
-    }
-
-    public void Damage()
-    {
-        if (Health > 0) KnockBackTranslate = -1;    
-    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag("Player"))
         {
-            Hit = true;
-            
             if (Player.GetComponent<NarutoMovement>().KnockBackHit)
             {
-                KnockBackTranslate = -1.5f;
+                upTranslate = 1.5f;
                 Animator.SetTrigger("KnockBack");
                 Animator.SetBool("Falling", true);
             }
@@ -131,11 +119,9 @@ public class BallChainNinjaScript : MonoBehaviour
     {
         if (collision.CompareTag("SpecialHit"))
         {
-            Hit = true;
-            KnockBackTranslate = -0.2f;
             if (Player.GetComponent<NarutoMovement>().KnockBackHit)
             {
-                KnockBackTranslate = -2;
+                upTranslate = 2f;
                 Animator.SetTrigger("KnockBack");
                 Animator.SetBool("Falling", true);
             }
@@ -148,40 +134,13 @@ public class BallChainNinjaScript : MonoBehaviour
         }
     }
 
-    public void Translate()
-    {
-        if (Hit)
-        {
-            Vector3 direccion = new Vector3(this.direccion.x, 0, 0);
-            transform.Translate(direccion * KnockBackTranslate * Time.deltaTime, Space.World);
-        }
-    }
-
-    public void TrueTranslate()
-    {
-        TranslateBool = true;
-    }
-
-    public void EndTranslate()
-    {
-        TranslateBool = false;
-    }
-
-    public void UpTranslate()
-    {
-        if(TranslateBool) transform.Translate(Vector3.up * Naruto.UpForce, Space.World);
-    }
-    
-    public void Bounce()
-    {
-        Naruto.UpForce = 0.02f;
-    }
-
-
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground") Animator.SetBool("Grounded", true);
-        Animator.SetBool("Falling", false);
+        if (collision.gameObject.tag == "Ground")
+        {
+            Animator.SetBool("Grounded", true);
+            Animator.SetBool("Falling", false);
+        }
     }
 
     public void OnCollisionExit2D(Collision2D collision)
@@ -190,12 +149,28 @@ public class BallChainNinjaScript : MonoBehaviour
         
     }
 
-    public void FinishDamage()
+    //=====================================================================================
+    //                                LLAMADAS IN-GAME
+    //=====================================================================================
+    //Bloqueo al atacar
+    public void Lock()
     {
-        
-        Hit = false;
+        Locked = true;
     }
+    public void Unlock()
+    {
+        Locked = false;
+    }
+    //===================
 
-
-
+    //Activa/Apaga el daño para activar el retroceso por golpe
+    public void OnDamage()
+    {
+        damage = true;       
+    }
+    public void OffDamage()
+    {
+        damage = false;
+    }
+    //Fin Daño
 }

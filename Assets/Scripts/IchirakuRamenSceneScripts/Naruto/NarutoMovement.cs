@@ -83,7 +83,7 @@ public class NarutoMovement : MonoBehaviour
 
                 if (!Animator.GetBool("Uppercut")) Animator.SetBool("Crouch", Input.GetKey(KeyCode.S));
 
-
+                PunchTranslate();
                 //===========================================================================================
                 //                                      RASENGAN
                 //===========================================================================================
@@ -119,7 +119,7 @@ public class NarutoMovement : MonoBehaviour
                     }
                 }
 
-                if (Input.GetKeyDown(KeyCode.F))
+                if (Input.GetKeyDown(KeyCode.L) && !Animator.GetBool("Crouch") && !Animator.GetBool("Animating_Something"))
                 {
                     Animator.SetTrigger("Throw");
                     Throw();
@@ -275,37 +275,40 @@ public class NarutoMovement : MonoBehaviour
     public void Punch1()
     {
         SoundController.Hit1.Play();
-        hitTranslate = 1.5f;
+        hitTranslate = 1.2f;
         Moving = true;
-        PunchTranslate();
+        
     }
     public void Punch2()
     {
         SoundController.Hit2.Play();
-        hitTranslate = 1.5f;
+        hitTranslate = 1f;
         Moving = true;
-        PunchTranslate();
     }
     public void Punch3()
     {
         SoundController.Hit3.Play();
         KnockBackHit = true;
+        hitTranslate = 2f;
         Moving = true;
-        hitTranslate = 4;
-        UpForce = 0.02f;
-        PunchTranslate();
-        
     }
 
     public void Uppercut()
     {
         SoundController.Uppercut.Play();
         KnockBackHit = true;
-        Moving = true;
-        hitTranslate = 15;
-        UpForce = 0.2f;
-        PunchTranslate();
+        
+        hitTranslate = 4;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Moving = false;
+        }
+    }
+
     public void EndUppercut()
     {
         Animator.SetBool("Uppercut", false);
@@ -322,8 +325,12 @@ public class NarutoMovement : MonoBehaviour
         }
     }
 
-    
+
     //Fin desplazamiento por golpe
+    public void StartMoving()
+    {
+        Moving = true;
+    }
     public void FinishMoving()
     {
         Moving = false;
@@ -400,6 +407,10 @@ public class NarutoMovement : MonoBehaviour
     {
         Rigidbody2D.velocity = new Vector2(0, 0);
     }
+
+
+
+
     //=====================================================================================
     //                                      RASENGAN
     //=====================================================================================
@@ -441,7 +452,7 @@ public class NarutoMovement : MonoBehaviour
     public float Timer()
     {
         this.timeRasengan -= Time.deltaTime;
-        Debug.Log(timeRasengan);
+        
         return timeRasengan;
     }
     //===============================================================

@@ -11170,8 +11170,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1015790939
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
   m_Color: {r: 0.9811321, g: 0, b: 0, a: 1}
@@ -11192,7 +11192,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732672258}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.274, y: -1.8216, z: 0}
+  m_LocalPosition: {x: -2.838, y: -1.8216, z: 0}
   m_LocalScale: {x: 1.6845037, y: 1.4944468, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11288,8 +11288,8 @@ GameObject:
   - component: {fileID: 763846818}
   - component: {fileID: 763846817}
   - component: {fileID: 763846821}
-  - component: {fileID: 763846820}
   - component: {fileID: 763846819}
+  - component: {fileID: 763846820}
   m_Layer: 6
   m_Name: Building3
   m_TagString: Ground
@@ -11382,8 +11382,8 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!68 &763846820
-EdgeCollider2D:
+--- !u!61 &763846820
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -11395,15 +11395,19 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0119662285, y: 1.4554362}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.52, y: 2.99}
+    newSize: {x: 3.52, y: 2.99}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.4590254, y: 0.07912731}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.1945479, y: 1.469872}
-  - {x: 1.2416694, y: 1.468605}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!50 &763846821
 Rigidbody2D:
   serializedVersion: 4
@@ -12979,8 +12983,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1518719059}
-  - component: {fileID: 1518719061}
   - component: {fileID: 1518719060}
+  - component: {fileID: 1518719061}
   m_Layer: 6
   m_Name: 2ndFloor
   m_TagString: Untagged
@@ -13021,8 +13025,8 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
---- !u!68 &1518719061
-EdgeCollider2D:
+--- !u!61 &1518719061
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -13034,15 +13038,19 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.016843319, y: -0.004210651}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.0379171, y: 0.098937154}
   m_EdgeRadius: 0
-  m_Points:
-  - {x: -1.5131016, y: -0.007853389}
-  - {x: 1.5423422, y: -0.005680084}
-  m_AdjacentStartPoint: {x: 0, y: 0}
-  m_AdjacentEndPoint: {x: 0, y: 0}
-  m_UseAdjacentStartPoint: 0
-  m_UseAdjacentEndPoint: 0
 --- !u!1 &1521880611
 GameObject:
   m_ObjectHideFlags: 0
@@ -13128,7 +13136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1603641189}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.2, y: -1.8216, z: 0}
+  m_LocalPosition: {x: -2.785, y: -1.8216, z: 0}
   m_LocalScale: {x: 1.6845037, y: 1.4944468, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -13214,6 +13222,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 331079035}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1691752835
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1691752837}
+  - component: {fileID: 1691752836}
+  m_Layer: 0
+  m_Name: SpawnParticles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!95 &1691752836
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691752835}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4dfbf33a051fe3448bfc16a543944c75, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!4 &1691752837
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1691752835}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.9290133, y: -2.2555852, z: -0.39413887}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1737011468
 GameObject:
@@ -14122,17 +14180,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: NinjaEnemyBallChain
       objectReference: {fileID: 0}
+    - target: {fileID: 234259737731452795, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 234259737731452799, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 234259737731452799, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.9
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 234259737731452799, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.9
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 234259737731452799, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -14181,7 +14243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209220801866905490, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.472
+      value: -2.106
       objectReference: {fileID: 0}
     - target: {fileID: 4209220801866905490, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14232,6 +14294,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 323026595, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1071849751, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_TagString
+      value: SpecialHit
+      objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789112, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: Bar
       value: 
@@ -14283,6 +14353,18 @@ PrefabInstance:
     - target: {fileID: 5423323777060789123, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_Name
       value: Naruto
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423323777606044871, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_Size.x
+      value: 0.33723235
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423323777606044871, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5423323777606044871, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.246642
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
@@ -14398,25 +14480,9 @@ PrefabInstance:
       propertyPath: playerPosition
       value: 
       objectReference: {fileID: 123795840}
-    - target: {fileID: 931588098409100980, guid: 2b1e35816df2f074eaac0ccb9f01c4c2, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6940305200997255025, guid: 2b1e35816df2f074eaac0ccb9f01c4c2, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7338624501611033535, guid: 2b1e35816df2f074eaac0ccb9f01c4c2, type: 3}
-      propertyPath: m_Layer
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 8875328726077770433, guid: 2b1e35816df2f074eaac0ccb9f01c4c2, type: 3}
       propertyPath: m_Name
       value: Kakashi
-      objectReference: {fileID: 0}
-    - target: {fileID: 8875328726077770433, guid: 2b1e35816df2f074eaac0ccb9f01c4c2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8875328726077770434, guid: 2b1e35816df2f074eaac0ccb9f01c4c2, type: 3}
       propertyPath: m_RootOrder

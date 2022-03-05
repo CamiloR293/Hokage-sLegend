@@ -403,7 +403,8 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.05, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2067159672}
   m_Father: {fileID: 1590670872}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -460,6 +461,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3646730036202927256, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
   m_PrefabInstance: {fileID: 5916915503527745421}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &730822093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730822086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 949470f1d741bab4aa5f1876ea2b5f50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenBar: {fileID: 2067159673}
+  sasuke: {fileID: 730822086}
 --- !u!1 &785685981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,7 +1060,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1590670872}
   - component: {fileID: 1590670874}
-  - component: {fileID: 1590670873}
   m_Layer: 5
   m_Name: HealtBoss
   m_TagString: Untagged
@@ -1065,7 +1079,6 @@ RectTransform:
   m_LocalScale: {x: 4.248131, y: 1.3959007, z: 4.2519684}
   m_Children:
   - {fileID: 698072219}
-  - {fileID: 2067159672}
   m_Father: {fileID: 133936517478129154}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1074,18 +1087,6 @@ RectTransform:
   m_AnchoredPosition: {x: 937, y: 443.8}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1590670873
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1590670871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a269cf66b6f963f4fbca32739a2c8b71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1590670874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1466,16 +1467,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067159671}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3017025, y: 0.124368146, z: 0.4554}
+  m_LocalScale: {x: 0.30170253, y: 0.11844584, z: 0.45540002}
   m_Children: []
-  m_Father: {fileID: 1590670872}
-  m_RootOrder: 1
+  m_Father: {fileID: 698072219}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -12.660801, y: 32.561783}
+  m_AnchoredPosition: {x: -12.660801, y: 31.011278}
   m_SizeDelta: {x: 76.7509, y: 34.0172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2067159673
@@ -4524,7 +4525,7 @@ PrefabInstance:
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: healthB
       value: 
-      objectReference: {fileID: 1590670873}
+      objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: maxLife
       value: 100
@@ -4559,7 +4560,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927256, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.7
+      value: 10.63
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927256, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: m_LocalPosition.y

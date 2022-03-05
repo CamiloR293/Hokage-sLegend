@@ -25,10 +25,10 @@ public class MovimientoSasuke : MonoBehaviour
 
     public Transform sensor;
 
-    [SerializeField] private float Life;
-    [SerializeField] private float maxLife =100;
-    [SerializeField] private HealthBar healthB;
-    [SerializeField]private GameObject HealtHUD;
+    [SerializeField] public float Life;
+    [SerializeField] public float maxLife =100;
+    //[SerializeField] private HealthBar healthB;
+    //[SerializeField]private GameObject HealtHUD;
 
     public float Cooldown;
     public float TimeDestroy;
@@ -51,7 +51,7 @@ public class MovimientoSasuke : MonoBehaviour
         Animator = GetComponent<Animator>();
 
         Life = maxLife;
-        healthB.LifeInit(Life);
+        //healthB.LifeInit(Life);
         sensor.parent = null;
     }
 
@@ -65,8 +65,8 @@ public class MovimientoSasuke : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
         if (Life > 0 && NarutoLife > 0)
         {
-            if (distance < 5.5) HealtHUD.SetActive(true);
-            else HealtHUD.SetActive(false);
+        //    if (distance < 5.5) HealtHUD.SetActive(true);
+        //   else HealtHUD.SetActive(false);
 
             if (distance < 5 && distance > 0.1) {
 
@@ -187,7 +187,7 @@ public class MovimientoSasuke : MonoBehaviour
     }
     public void InitialLife(float life)
     {
-        healthB.ChangeActLife(life);
+    //    healthB.ChangeActLife(life);
     }
     public void YOUWIN()
     {
@@ -236,7 +236,7 @@ public class MovimientoSasuke : MonoBehaviour
             {
                 AudioGetHit();
                 Life -= player.GetComponent<NarutoMovement>().hitDamage;
-                healthB.ChangeActLife(Life);
+        //        healthB.ChangeActLife(Life);
                 Animator.SetTrigger("GetGolpe");
             }
             if (Life <= 0)
@@ -272,7 +272,7 @@ public class MovimientoSasuke : MonoBehaviour
                 AudioGetSpecialHit();
                 Animator.SetTrigger("GetSpecialHit");
                 Life -= Player.GetComponent<NarutoMovement>().hitDamage;
-                healthB.ChangeActLife(Life);
+                //healthB.ChangeActLife(Life);
                 if (transform.position.x > collision.transform.position.x)
                 {
                     transform.Translate(Vector3.right * 10 * Time.deltaTime,Space.World);

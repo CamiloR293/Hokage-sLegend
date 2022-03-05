@@ -4530,6 +4530,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
+      propertyPath: Cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: HealtHUD
       value: 
       objectReference: {fileID: 1590670871}

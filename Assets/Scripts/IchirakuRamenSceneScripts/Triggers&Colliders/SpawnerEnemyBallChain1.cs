@@ -12,6 +12,7 @@ public class SpawnerEnemyBallChain1 : MonoBehaviour
     public GameObject position4;
     public GameObject position5;
     public GameObject position6;
+    public GameObject SpawnEffect;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Vector3 positionSpawn1 = position1.transform.position;
@@ -25,16 +26,28 @@ public class SpawnerEnemyBallChain1 : MonoBehaviour
         {
             GameObject NinjaEnemy = Instantiate(NinjaEnemyBallChain, positionSpawn1, Quaternion.identity);
             NinjaEnemy.SetActive(true);
+            GameObject Spawn1 = Instantiate(SpawnEffect, positionSpawn1, Quaternion.identity);
+            Spawn1.SetActive(true);
             GameObject SoundNinja = Instantiate(this.SoundNinja, positionSpawn2, Quaternion.identity);
             SoundNinja.SetActive(true);
+            GameObject Spawn2 = Instantiate(SpawnEffect, positionSpawn2, Quaternion.identity);
+            Spawn2.SetActive(true);
             GameObject SoundNinja1 = Instantiate(this.SoundNinja, positionSpawn3, Quaternion.identity);
             SoundNinja1.SetActive(true);
+            GameObject Spawn3 = Instantiate(SpawnEffect, positionSpawn3, Quaternion.identity);
+            Spawn3.SetActive(true);
             GameObject NinjaEnemy1 = Instantiate(NinjaEnemyBallChain, positionSpawn6, Quaternion.identity);
             NinjaEnemy1.SetActive(true);
+            GameObject Spawn4 = Instantiate(SpawnEffect, positionSpawn6, Quaternion.identity);
+            Spawn4.SetActive(true);
             GameObject NinjaEnemy2 = Instantiate(NinjaEnemyBallChain, positionSpawn5, Quaternion.identity);
             NinjaEnemy2.SetActive(true);
+            GameObject Spawn5 = Instantiate(SpawnEffect, positionSpawn5, Quaternion.identity);
+            Spawn5.SetActive(true);
             GameObject SoundNinja3 = Instantiate(this.SoundNinja, positionSpawn4, Quaternion.identity);
             SoundNinja3.SetActive(true);
+            GameObject Spawn6 = Instantiate(SpawnEffect, positionSpawn4, Quaternion.identity);
+            Spawn6.SetActive(true);
 
 
             Destroy(gameObject);

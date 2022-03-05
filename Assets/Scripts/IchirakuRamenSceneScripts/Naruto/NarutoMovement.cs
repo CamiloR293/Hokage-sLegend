@@ -12,6 +12,7 @@ public class NarutoMovement : MonoBehaviour
     public NarutoMovement player;
     public GameObject RasenganCollider;
     public GameObject RasenganColliderAttack;
+    public GameObject spawnEffect;
     private NarutoSoundController SoundController;
     
 
@@ -91,7 +92,7 @@ public class NarutoMovement : MonoBehaviour
 
                 RasenganTranslate();
 
-                if (Animator.GetBool("Crouch") && Input.GetKeyDown(KeyCode.L) && !Attacking)
+                if (Animator.GetBool("Crouch") && Input.GetKeyDown(KeyCode.L) && !Attacking && !Animator.GetBool("Jumping"))
                 {
                     SoundController.Clone.Play();
                     timeRasengan = 0.19f;
@@ -447,6 +448,22 @@ public class NarutoMovement : MonoBehaviour
         Moving = true;
         hitTranslate = 15;
         UpForce = 0.2f;
+    }
+
+    public void SpawnEffect()
+    {
+        GameObject Spawn;
+        Vector3 spawnPos;
+        if (direccion > 0)
+        {
+            spawnPos = new Vector3(transform.position.x - 0.33f, transform.position.y, transform.position.z);
+        }
+        else
+        {
+            spawnPos = new Vector3(transform.position.x + 0.33f, transform.position.y, transform.position.z);
+        }
+        Spawn = Instantiate(spawnEffect, spawnPos, Quaternion.identity );
+        Spawn.SetActive(true);
     }
 
     public float Timer()

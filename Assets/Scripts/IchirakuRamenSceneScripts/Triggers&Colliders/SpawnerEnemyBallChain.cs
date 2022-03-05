@@ -9,6 +9,7 @@ public class SpawnerEnemyBallChain : MonoBehaviour
     public GameObject position1;
     public GameObject position2;
     public GameObject position3;
+    public GameObject SpawnEffect;
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,10 +22,17 @@ public class SpawnerEnemyBallChain : MonoBehaviour
         {
             GameObject NinjaEnemy = Instantiate(NinjaEnemyBallChain, positionSpawn1, Quaternion.identity);
             NinjaEnemy.SetActive(true);
+            GameObject Spawn1 = Instantiate(SpawnEffect, positionSpawn1, Quaternion.identity);
+            Spawn1.SetActive(true);
             GameObject SoundNinja = Instantiate(this.SoundNinja, positionSpawn2, Quaternion.identity);
             SoundNinja.SetActive(true);
+            GameObject Spawn2 = Instantiate(SpawnEffect, positionSpawn2, Quaternion.identity);
+            Spawn2.SetActive(true);
             GameObject SoundNinja1 = Instantiate(this.SoundNinja, positionSpawn3, Quaternion.identity);
             SoundNinja1.SetActive(true);
+            GameObject Spawn3 = Instantiate(SpawnEffect, positionSpawn3, Quaternion.identity);
+            Spawn3.SetActive(true);
+
             Destroy(gameObject);
         }
     }

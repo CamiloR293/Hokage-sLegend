@@ -9,14 +9,14 @@ public class BarLife1 : MonoBehaviour
 
     public GameObject sasuke;
 
-    private float actualLife;
+    public float actualLife;
     
-    private float MaxLife;
+    public float MaxLife;
 
     // Update is called once per frame
     void Update()
     {
-        
+        actualLife = sasuke.GetComponent<MovimientoSasuke>().Life;        
         MaxLife = sasuke.GetComponent<MovimientoSasuke>().maxLife;
         greenBar.fillAmount = actualLife / MaxLife;
         

@@ -475,6 +475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   greenBar: {fileID: 2067159673}
   sasuke: {fileID: 730822086}
+  actualLife: 0
+  MaxLife: 200
 --- !u!1 &785685981
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,7 +4502,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: Life
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: Defeat
@@ -4528,7 +4530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: maxLife
-      value: 100
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3646730036202927252, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: Cooldown

@@ -28,7 +28,7 @@ public class MovimientoSasuke : MonoBehaviour
     [SerializeField] public float Life;
     [SerializeField] public float maxLife =100;
     //[SerializeField] private HealthBar healthB;
-    //[SerializeField]private GameObject HealtHUD;
+    [SerializeField]private GameObject HealtHUD;
 
     public float Cooldown;
     public float TimeDestroy;
@@ -65,8 +65,8 @@ public class MovimientoSasuke : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
         if (Life > 0 && NarutoLife > 0)
         {
-        //    if (distance < 5.5) HealtHUD.SetActive(true);
-        //   else HealtHUD.SetActive(false);
+            if (distance < 5.5) HealtHUD.SetActive(true);
+            else HealtHUD.SetActive(false);
 
             if (distance < 5 && distance > 0.1) {
 

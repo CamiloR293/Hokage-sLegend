@@ -9,9 +9,9 @@ public class BarLife1 : MonoBehaviour
 
     public GameObject sasuke;
 
-    public float actualLife;
+    private float actualLife;
     
-    public float MaxLife;
+    private float MaxLife;
 
     // Update is called once per frame
     void Update()

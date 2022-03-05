@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
 
         //Hit
-        if (distance < distancia && Time.time > lastShoot + 2.77f && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
+        if (distance < distancia && Time.time > lastShoot + 2.55f && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
         {            
             Anim.SetTrigger("Hit");
             Instantiate(Hit);
@@ -129,7 +129,7 @@ public class EnemyController : MonoBehaviour
 
                 Life -= player.GetComponent<NarutoMovement>().hitDamage;
                 Anim.SetTrigger("Hurt");;
-                Instantiate(GetHit);
+                GetHitSound();
                 if (Life < 0)
                 {
                     Anim.SetBool("Die", true);
@@ -139,5 +139,14 @@ public class EnemyController : MonoBehaviour
             }
             
         } 
+    }
+    private int nRandom;
+    public void GetHitSound()
+    {
+        nRandom = Random.Range(1, 3);
+        if (nRandom == 1)
+        {
+            Instantiate(GetHit);
+        }
     }
 }

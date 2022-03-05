@@ -84,7 +84,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1844324172338390026}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1844324172547965540
 Transform:
   m_ObjectHideFlags: 0
@@ -211,13 +211,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21b5a23f56ac2974d9a7872cf509b730, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0.55
+  moveSpeed: 0.65
   leftPoint: {fileID: 1844324173263161679}
   rightPoint: {fileID: 1844324172338390026}
   movingright: 0
   moveTime: 2.35
   waitTime: 0.95
-  Life: 50
+  Life: 100
   player: {fileID: 0}
   distancia: 0.5
   theSR: {fileID: 1844324172849621152}
@@ -234,7 +234,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1844324172849621153}
   - component: {fileID: 1844324172849621152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: F sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1844324173263161679}
-  m_Layer: 6
+  m_Layer: 8
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}

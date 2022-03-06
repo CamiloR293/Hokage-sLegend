@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f4ace143934d748aa67bd85807aae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitDamage: 5
+  hitDamage: 3
 --- !u!1 &5467677844855734222
 GameObject:
   m_ObjectHideFlags: 0
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Naruto: {fileID: 0}
-  Health: 50
+  Health: 15
   Naruto1: {fileID: 0}
   Player: {fileID: 0}
   Ninja: {fileID: 5467677844539959690}

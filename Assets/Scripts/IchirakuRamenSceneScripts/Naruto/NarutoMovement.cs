@@ -12,35 +12,35 @@ public class NarutoMovement : MonoBehaviour
     public NarutoMovement player;
     public GameObject RasenganCollider;
     public GameObject RasenganColliderAttack;
-    public GameObject spawnEffect;
-    private NarutoSoundController SoundController;
     
+    private NarutoSoundController SoundController;
+    private Rigidbody2D Rigidbody2D;
+    private float Horizontal;
+    private bool Grounded;
+    public Animator Animator;
 
     [Header("Movement")]
     public float SpeedRunning;
     public float SpeedWalking;
     public float JumpForce;
     public float hitDamage;
-    public float hitTranslate;
+    private float hitTranslate;
     private bool JumpAgain;
     private bool isCrouch;
     private int Combo;
-    public bool Attacking;
+    private bool Attacking;
     public bool KnockBackHit;
-    public float UpForce;
-    public int direccion;
-    public bool Moving;
+    private float UpForce;
+    private int direccion;
+    private bool Moving;
     protected bool Flag;
     public bool Rasengan;
     public bool MoveRasengan = false;
     public float timeRasengan;
     int i = 0;
 
-    [Header("Components")]
-    private Rigidbody2D Rigidbody2D;
-    private float Horizontal;       
-    private bool Grounded;         
-    public Animator Animator;
+    [Header("Particles")]
+    public GameObject spawnEffect;
 
 
     void Start()
@@ -96,9 +96,11 @@ public class NarutoMovement : MonoBehaviour
                 {
                     SoundController.Clone.Play();
                     timeRasengan = 0.19f;
+                    hitDamage = 3;
                     Rasengan = true;
                     Attacking = true;
                 }
+                
 
                 if (Rasengan) SpecialAttack.RasenganCharge(Animator, player);
 
@@ -268,23 +270,26 @@ public class NarutoMovement : MonoBehaviour
     public void AirPunch1()
     {
         SoundController.Hit1.Play();
+        hitDamage = 3;
     }
     public void AirPunch2()
     {
         SoundController.Hit2.Play();
+        hitDamage = 5;
     }
     public void Punch1()
     {
         SoundController.Hit1.Play();
         hitTranslate = 1.2f;
         Moving = true;
-        
+        hitDamage = 5;
     }
     public void Punch2()
     {
         SoundController.Hit2.Play();
         hitTranslate = 1f;
         Moving = true;
+        hitDamage = 5;
     }
     public void Punch3()
     {
@@ -292,13 +297,14 @@ public class NarutoMovement : MonoBehaviour
         KnockBackHit = true;
         hitTranslate = 2f;
         Moving = true;
+        hitDamage = 7;
     }
 
     public void Uppercut()
     {
         SoundController.Uppercut.Play();
         KnockBackHit = true;
-        
+        hitDamage = 10;
         hitTranslate = 4;
     }
 
@@ -365,6 +371,7 @@ public class NarutoMovement : MonoBehaviour
     //Aparicion de prefab de lanzamiento
     private void Throw()
     {
+        hitDamage = 1;
         SoundController.Throw.Play();
         Vector3 direccion;
         if (transform.localScale.x == 1.0f) direccion = Vector3.right;

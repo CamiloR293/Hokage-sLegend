@@ -217,7 +217,7 @@ public class MovimientoSasuke : MonoBehaviour
         if (transform.localScale.x == 1.0f) direction = Vector3.left;
         else direction = Vector3.right;
 
-       GameObject Fuego = Instantiate(BolaFuegoPrefab, transform.position + direction *0.2f, Quaternion.identity);
+       GameObject Fuego = Instantiate(BolaFuegoPrefab, transform.position + direction * 0.2f * Time.deltaTime, Quaternion.identity);
         Fuego.GetComponent<ShurikenScript>().SetDirection(direction);
 
     }

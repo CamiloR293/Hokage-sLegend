@@ -1560,14 +1560,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NinjaEnemyBallChain
       objectReference: {fileID: 0}
-    - target: {fileID: 234259737731452795, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 234259737731452796, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
-      propertyPath: m_SortingOrder
-      value: 200
-      objectReference: {fileID: 0}
     - target: {fileID: 234259737731452799, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4065,10 +4057,6 @@ PrefabInstance:
     - target: {fileID: 1844324172547965540, guid: 061a31d7e98342b42ae3bbd8fa7b3398, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1844324172547965543, guid: 061a31d7e98342b42ae3bbd8fa7b3398, type: 3}
-      propertyPath: Life
-      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1844324172547965543, guid: 061a31d7e98342b42ae3bbd8fa7b3398, type: 3}
       propertyPath: player

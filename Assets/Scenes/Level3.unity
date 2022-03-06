@@ -700,8 +700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438513103fddfae408f2cdaf14872a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 250
-  MaxHealth: 250
+  Health: 200
+  MaxHealth: 200
   HealtHUD: {fileID: 115355458}
 --- !u!50 &256877222
 Rigidbody2D:
@@ -2222,7 +2222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Naruto: {fileID: 296568715}
-  Health: 250
+  Health: 200
   Naruto1: {fileID: 296568716}
   Player: {fileID: 296568714}
   boss: {fileID: 256877219}

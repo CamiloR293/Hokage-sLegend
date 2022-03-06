@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f4ace143934d748aa67bd85807aae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitDamage: 5
+  hitDamage: 4
 --- !u!114 &256877221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -700,8 +700,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 438513103fddfae408f2cdaf14872a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Health: 200
-  MaxHealth: 200
+  Health: 150
+  MaxHealth: 150
   HealtHUD: {fileID: 115355458}
 --- !u!50 &256877222
 Rigidbody2D:
@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Naruto: {fileID: 296568715}
-  Health: 200
+  Health: 150
   Naruto1: {fileID: 296568716}
   Player: {fileID: 296568714}
   boss: {fileID: 256877219}

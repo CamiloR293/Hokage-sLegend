@@ -64,6 +64,7 @@ public class NinjaEnemy : MonoBehaviour
    public void Dead(float HealthUdapte)
    {
        // Al morir deja una pocion 
+       animator.SetTrigger("Die Animation Ninja");
        Clip1.Play();
        if (HealthUdapte<= 0)
        {

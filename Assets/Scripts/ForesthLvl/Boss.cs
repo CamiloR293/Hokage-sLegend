@@ -69,7 +69,7 @@ public class Boss : MonoBehaviour
     {
         healthHUD.Health = damage;
         DeadSound.Play();
-    
+        animator.SetTrigger("Dead");
         if (healthHUD.Health <= 0)
 
         {

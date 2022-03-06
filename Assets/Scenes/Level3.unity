@@ -687,7 +687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21f4ace143934d748aa67bd85807aae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitDamage: 1
+  hitDamage: 5
 --- !u!114 &256877221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -844,11 +844,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.39
+      value: 61.68
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.81
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -882,6 +882,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5423323777060789118, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: spawnEffect
+      value: 
+      objectReference: {fileID: 6927524075595878682, guid: 373d82210d5cc4346988ea31815d8ce8, type: 3}
     - target: {fileID: 5423323777060789123, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_Name
       value: Naruto
@@ -2218,7 +2222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Naruto: {fileID: 296568715}
-  Health: 200
+  Health: 250
   Naruto1: {fileID: 296568716}
   Player: {fileID: 296568714}
   boss: {fileID: 256877219}
@@ -3971,42 +3975,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3685000343655924501, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 3685000343655924501, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.073
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844539959688, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_Size.x
-      value: 0.032779932
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844539959688, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.01484859
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844539959688, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.40558714
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844539959688, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.4426294
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844539959688, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.52
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844539959688, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844539959689, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
     - target: {fileID: 5467677844539959690, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
       propertyPath: Naruto
       value: 
@@ -4066,10 +4034,6 @@ PrefabInstance:
     - target: {fileID: 5467677844539959694, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
       propertyPath: m_Name
       value: 'Enemy Ninja '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5467677844790005380, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 5467677844916921752, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
       propertyPath: Naruto

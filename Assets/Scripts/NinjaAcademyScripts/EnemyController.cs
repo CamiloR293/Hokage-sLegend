@@ -58,7 +58,8 @@ public class EnemyController : MonoBehaviour
             Instantiate(Hit);
             lastShoot = Time.time;
         }
-        if (!Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_hit") && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
+        if (!Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_hit") && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death")
+            && !Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Hurt"))
         {
             //Movimiento y pausas
             if (moveCount > 0)
@@ -122,6 +123,7 @@ public class EnemyController : MonoBehaviour
     //Recibir daño
     private void OnTriggerEnter2D(Collider2D ColDaño)
     {
+        
         if (ColDaño.CompareTag("Player"))
         {
             if (!Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))

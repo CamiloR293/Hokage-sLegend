@@ -10,6 +10,8 @@ public class PauseManager : MonoBehaviour
     
     [SerializeField] private GameObject Pausemenu;
 
+    public AudioSource audioSource;
+
 
     void Start()
     {
@@ -27,6 +29,7 @@ public class PauseManager : MonoBehaviour
         Time.timeScale =0f;
         pause.SetActive(false);
         Pausemenu.SetActive(true);
+        audioSource.Pause();
 
     }
 // El siguiente metodo vuelve hacer que el juego continue
@@ -34,6 +37,7 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
          pause.SetActive(true);
         Pausemenu.SetActive(false);
+         audioSource.Play();
 
     }
 // Reinicia el nivel en el cual se esta jugando

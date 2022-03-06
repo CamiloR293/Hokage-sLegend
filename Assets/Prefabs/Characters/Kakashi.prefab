@@ -741,7 +741,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8704c48d6b67c874d848771bc2723ddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 200
+  MinHealth: 200
   raikiri: 0
   raikiriCollider: {fileID: 544906686}
   playerPosition: {fileID: 0}
   Naruto: {fileID: 0}
+  Bar: {fileID: 0}

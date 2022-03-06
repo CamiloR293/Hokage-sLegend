@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class KakashiMovement : MonoBehaviour
 {
     
     private float playerDistance;
-    protected float health = 200;
+    public float health = 200;
+    public float MinHealth = 200;
     private float timerRun = 3;
     private float timeAproach = 3;
     private float timeRaikiri = 1;
@@ -31,6 +33,10 @@ public class KakashiMovement : MonoBehaviour
     public Transform playerPosition;
     private Animator animator;
     public GameObject Naruto;
+    public GameObject NextLevel;
+    public GameObject nextLvlPos;
+    public Image Bar;
+    
 
 
     void Start()
@@ -42,6 +48,7 @@ public class KakashiMovement : MonoBehaviour
 
     void Update()
     {
+        Bar.fillAmount = health / MinHealth;
         if (health > 0) {
             if (!Naruto.GetComponent<NarutoMovement>().Animator.GetBool("Death"))
             {
@@ -98,6 +105,9 @@ public class KakashiMovement : MonoBehaviour
             {
                 i++;
                 animator.SetTrigger("Damage");
+                NextLevel.GetComponent<ChangeScene>().isLevel1 = true;
+                GameObject Nextlvl = Instantiate(NextLevel, nextLvlPos.transform.position, Quaternion.identity);
+                Nextlvl.SetActive(true);
             }
             
             animator.SetBool("Death", true);

@@ -6,10 +6,7 @@ public class SpawnBoss : MonoBehaviour
 {
     public GameObject Kakashi;
     public Transform position;
-    private void Awake()
-    {
-        Kakashi = GameObject.Find("Kakashi");
-    }
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Vector3 positionS = position.transform.position;

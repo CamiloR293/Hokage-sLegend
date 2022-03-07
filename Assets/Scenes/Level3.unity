@@ -452,7 +452,7 @@ GameObject:
   - component: {fileID: 256877219}
   - component: {fileID: 256877218}
   - component: {fileID: 256877217}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -926,7 +926,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 392043615}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2091,7 +2091,7 @@ GameObject:
   - component: {fileID: 1883053704}
   - component: {fileID: 1883053706}
   - component: {fileID: 1883053705}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4074,7 +4074,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2095089590590500119, guid: c4d8300511815c84ab28abae69a1b4bf, type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4d8300511815c84ab28abae69a1b4bf, type: 3}

@@ -6,34 +6,21 @@ public class MovimientoSasuke : MonoBehaviour
 {
     private Rigidbody2D Rigidbody2D;
     public GameObject BolaFuegoPrefab;
-    public GameObject player;
-    
+    public GameObject player;    
     private float lastShoot;
-
-    //private float Horizontal = 1f;
-    //public float JumpForce;
-    public float Speed;
-    //private bool attacking;
+    public float Speed;    
     public float distancia;
     private Animator Animator;
-
-    public Vector2 direccion;
-    public Transform Player;
-
-    //private bool Grounded;
+    private Vector2 direccion;
+    public Transform Player;    
     private float cont = 1f;
-
     public Transform sensor;
-
     [SerializeField] public float Life;
-    [SerializeField] public float maxLife;
-    //[SerializeField] private HealthBar healthB;
+    [SerializeField] public float maxLife;    
     [SerializeField]private GameObject HealtHUD;
-
     public float Cooldown;
     public float TimeDestroy;
     public float TimeAtack;
-
     [Header("Sounds")]
     public GameObject Chidori;
     public GameObject ChidoriHit;
@@ -44,34 +31,30 @@ public class MovimientoSasuke : MonoBehaviour
     public GameObject Death;
     public GameObject GetHit;
     public GameObject Defeat;
-    public GameObject YouWin;
-    
+    public GameObject YouWin;    
+    private int randomN;
+    private int i = 0;
+    private int j = 0;
     void Start()
     {
         Rigidbody2D = GetComponent<Rigidbody2D>();
         Animator = GetComponent<Animator>();
-
-        Life = maxLife;
-        //healthB.LifeInit(Life);
+        Life = maxLife;        
         sensor.parent = null;
     }
-
-
-    // Update is called once per frame
     void Update()
     {
-
         float NarutoLife = player.GetComponent<PlayerHealthController>().MinHealth;
-
         float distance = Mathf.Abs(player.transform.position.x - transform.position.x);
+
         if (Life > 0 && NarutoLife > 0)
         {
+            //Activar/Desactivar Barra de vida
             if (distance < 5.5) HealtHUD.SetActive(true);
             else HealtHUD.SetActive(false);
-
-            if (distance < 5 && distance > 0.1) {
-
-
+            //Acercarse al Jugador
+            if (distance < 5.5 && distance > 0.15) 
+            {
                 TimeAtack -= Time.deltaTime;
                 if (TimeAtack <= 0
                     && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Sasuke_Golpe")
@@ -98,7 +81,7 @@ public class MovimientoSasuke : MonoBehaviour
                 }
 
             }
-
+            //Mirar al Jugador
             if (Player.position.x < Rigidbody2D.position.x)
             {
                 transform.localScale = new Vector3(1.0f, 1.0f, 1.0f);
@@ -109,18 +92,17 @@ public class MovimientoSasuke : MonoBehaviour
                 transform.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
                 this.direccion.x = 1;
             }
-            if (distance <= 0.359)
+            //Variacion de Ataques
+            if (distance <= 0.359 && !Animator.GetCurrentAnimatorStateInfo(0).IsName("Winner"))
             {
                 if (Time.time > lastShoot + Cooldown && cont == 1f)
                 {
-                    //Sound, Ready
                     Animator.SetTrigger("Golpe4");
                     Animator.SetBool("Run", false);
                     transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     lastShoot = Time.time;
                     cont = 2f;
                 }
-
                 if (Time.time > lastShoot + Cooldown && cont == 4f)
                 {
                     Instantiate(Hit1);
@@ -141,7 +123,6 @@ public class MovimientoSasuke : MonoBehaviour
                 }
                 if (Time.time > lastShoot + Cooldown && cont == 2f)
                 {
-
                     Instantiate(Hit1);
                     Animator.SetTrigger("Golpe3");
                     Animator.SetBool("Run", false);
@@ -167,33 +148,31 @@ public class MovimientoSasuke : MonoBehaviour
                     transform.Translate(direccion * 0f * Time.deltaTime, Space.World);
                     lastShoot = Time.time;
                     cont = 0f;
-
-
-
                 }
             }
         }
-
-        if (NarutoLife <= 0 && Life > 0) Animator.SetBool("Win", true);
-        
+        //Animacion Jefe Gana
+        if (NarutoLife <= 0 && Life > 0)
+        {
+            Animator.SetBool("Win", true);
+            Animator.SetBool("Run", false);
+        }
+            //Acciones Player gana
         if (Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath") && Life <= 0)
         {
-
             Animator.SetBool("Die", true);
             Animator.SetBool("Run", false);
             TimeDestroy -= Time.deltaTime;
             if (TimeDestroy <= 0) Destroy(gameObject);
-
         }
     }
-    public void InitialLife(float life)
-    {
-    //    healthB.ChangeActLife(life);
-    }
+    //public void InitialLife(float life)
+    //{        
+    //}
+    //Sonidos
     public void YOUWIN()
     {
         Instantiate(YouWin);
-
     }
     public void DEFEAT()
     {
@@ -210,23 +189,26 @@ public class MovimientoSasuke : MonoBehaviour
     {
         Instantiate(Hit1);
     }
-    private void Shoot()
+    public void SoundDie()
     {
-        
+        if (i % 3 == 0 || i == 0)
+        {
+            Instantiate(Death);
+            i++;
+        }
+    }
+    //Metdo Bola de fuego
+    private void Shoot()
+    {        
         Vector3 direction;
         if (transform.localScale.x == 1.0f) direction = Vector3.left;
         else direction = Vector3.right;
-
        GameObject Fuego = Instantiate(BolaFuegoPrefab, transform.position + direction * 0.2f * Time.deltaTime, Quaternion.identity);
         Fuego.GetComponent<ShurikenScript>().SetDirection(direction);
-
     }
-
-
-    //Recibir daño. (Cuando guardia)
+    //Metodos Recibir daño. 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-
         if (collision.CompareTag("Player"))
         {
             if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath")
@@ -235,53 +217,31 @@ public class MovimientoSasuke : MonoBehaviour
             {
                 AudioGetHit();
                 Life -= player.GetComponent<NarutoMovement>().hitDamage;
-        //        healthB.ChangeActLife(Life);
                 Animator.SetTrigger("GetGolpe");
             }
             if (Life <= 0)
             {
-                //Sound, Ready
                 Animator.SetBool("Die", true);
-                soundDie();
+                SoundDie();
             }
         }
-    }
-
-    private int i = 0;
-    public void soundDie()
-    {
-        if (i%3== 0||i==0)
-        {
-            Instantiate(Death);
-            i++;
-            //Debug.Log("==sound==");
-        }
-        
-    }
-
-    private int randomN;
+    }    
     public void AudioGetHit()
     {
         randomN = Random.Range(1, 3);
         if (randomN == 1)
         {
             Instantiate(GetHit);
-            //Debug.Log(("Golpe"));
-
         }
     }
-
     public void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.CompareTag("SpecialHit"))
         {
             if (!Animator.GetCurrentAnimatorStateInfo(0).IsName("SasukeDeath"))
             {
-                //Debug.Log("*****************Recibe Rasengan***********");
-                //Animar daño y caida
-                settingsGetSpecialHit();
+                SettingsGetSpecialHit();
                 Life -= Player.GetComponent<NarutoMovement>().hitDamage;
-                //healthB.ChangeActLife(Life);
                 if (transform.position.x > collision.transform.position.x)
                 {
                     transform.Translate(Vector3.right * 10 * Time.deltaTime,Space.World);
@@ -292,23 +252,18 @@ public class MovimientoSasuke : MonoBehaviour
                 }
                 if (Life <= 0)
                 {
-                    //Sound, Ready
                     Animator.SetBool("Die", true);
-                    soundDie();
+                    SoundDie();
                 }
-
             }
-        }
-
-           
+        }           
     }
-    private int j = 0;
-    private void settingsGetSpecialHit()
+    
+    private void SettingsGetSpecialHit()
     {
         randomN = Random.Range(1, 8);
         if (randomN == 1)
         {
-            //Debug.Log("*****************Recibe Rasengan***********");
             Instantiate(GetSpecialHit);
         }
         

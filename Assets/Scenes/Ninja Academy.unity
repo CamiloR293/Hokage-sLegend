@@ -156,11 +156,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.58
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.307
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 5423323777060789117, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_LocalPosition.z
@@ -251,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 234259737731452799, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 53.27
+      value: 52.51
       objectReference: {fileID: 0}
     - target: {fileID: 234259737731452799, guid: 586e6fc2f042b1545b0cfb5bb77c588f, type: 3}
       propertyPath: m_LocalPosition.y
@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4209220801866905490, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 65.65
+      value: 60.09
       objectReference: {fileID: 0}
     - target: {fileID: 4209220801866905490, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4180,7 +4180,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eccc5e916cc5965468fbd53e46d392f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -9754,10 +9754,6 @@ PrefabInstance:
       propertyPath: HealtHUD
       value: 
       objectReference: {fileID: 1590670871}
-    - target: {fileID: 2209478003835850608, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
-      propertyPath: TimeAtack
-      value: 2.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2209478003835850610, guid: 1170e90c0f381244cbca6771b5c01f27, type: 3}
       propertyPath: m_Name
       value: Sasuke

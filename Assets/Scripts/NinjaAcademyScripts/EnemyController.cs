@@ -6,30 +6,20 @@ public class EnemyController : MonoBehaviour
 {
     public float moveSpeed;
     public Transform leftPoint, rightPoint;
-    public bool movingright;
-    private bool Atack;
-
+    private bool movingright;    
     public float moveTime, waitTime;
     private float moveCount, waitCount;
-
     public float Life;
-
     public GameObject player;
-    public float distancia;
-
-    private Collider2D Collider2D;
+    public float distancia;    
     private Rigidbody2D theRB;
     public SpriteRenderer theSR;
     private Animator Anim;
-
-
     private float lastShoot;
-
     [Header("Sounds")]
     public GameObject Death;
     public GameObject Hit;
-    public GameObject GetHit;
-    // Start is called before the first frame update
+    public GameObject GetHit;    
     void Start()
     {
 

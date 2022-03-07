@@ -214,7 +214,6 @@ MonoBehaviour:
   moveSpeed: 0.65
   leftPoint: {fileID: 1844324173263161679}
   rightPoint: {fileID: 1844324172338390026}
-  movingright: 0
   moveTime: 2.35
   waitTime: 0.95
   Life: 100

@@ -165,7 +165,6 @@ MonoBehaviour:
   player: {fileID: 0}
   Speed: 2
   distancia: 0.4
-  direccion: {x: 0, y: 0}
   Player: {fileID: 0}
   sensor: {fileID: 9092616333748113227}
   Life: 0
@@ -173,7 +172,7 @@ MonoBehaviour:
   HealtHUD: {fileID: 0}
   Cooldown: 1
   TimeDestroy: 5
-  TimeAtack: 20
+  TimeAtack: 2.1
   Chidori: {fileID: 727817390374385278, guid: c5e7ed8d97008bf4bb8423379e5e8164, type: 3}
   ChidoriHit: {fileID: 7776022344269183168, guid: 23b1ebd8220c847499c9455f54f68e8c, type: 3}
   GetSpecialHit: {fileID: 7830533884371054806, guid: 51f6d00a24653bc418473ccbe84e3aeb, type: 3}
@@ -695,4 +694,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Sasuke: {fileID: 2209478003835850610}
   StamceEnd: {fileID: 6117393733882194999, guid: 3aca62a66c6a3e1459a9ed0c29b810e5, type: 3}
-  InitLife: 100

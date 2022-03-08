@@ -159,7 +159,6 @@ MonoBehaviour:
   Clip1: {fileID: 5467677844790005380}
   Player: {fileID: 0}
   pos: {fileID: 3685000343655924501}
-  Collectible: {fileID: 8654769096061218325, guid: b68b405f3193f9840bfe2872212b9642, type: 3}
   Naruto1: {fileID: 0}
   ControllerAttack: {fileID: 5467677844855734223}
   RangeAttack: 1

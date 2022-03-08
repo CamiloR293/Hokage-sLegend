@@ -220,6 +220,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+--- !u!114 &13727849 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5423323777060789118, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+  m_PrefabInstance: {fileID: 13727848}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5423323777057563627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 315d9d19bf426c9498575090ab312ad0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &16921817 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4315627301652322308, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
@@ -298,6 +309,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5467677844539959690, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
+      propertyPath: Naruto
+      value: 
+      objectReference: {fileID: 13727849}
+    - target: {fileID: 5467677844539959690, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 5423323777057563413}
+    - target: {fileID: 5467677844539959690, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
+      propertyPath: Naruto1
+      value: 
+      objectReference: {fileID: 5423323777057563627}
     - target: {fileID: 5467677844539959693, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -2566,6 +2589,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5467677844539959690, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
+      propertyPath: Naruto
+      value: 
+      objectReference: {fileID: 13727849}
+    - target: {fileID: 5467677844539959690, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 5423323777057563413}
+    - target: {fileID: 5467677844539959690, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
+      propertyPath: Naruto1
+      value: 
+      objectReference: {fileID: 5423323777057563627}
     - target: {fileID: 5467677844539959693, guid: cc3e3899b15ad174381a210055320fe2, type: 3}
       propertyPath: m_RootOrder
       value: 14

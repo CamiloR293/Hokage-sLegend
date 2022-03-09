@@ -13012,7 +13012,12 @@ PrefabInstance:
       propertyPath: Pausemenu
       value: 
       objectReference: {fileID: 1809037651}
-    m_RemovedComponents: []
+    - target: {fileID: 6214915550506377503, guid: acbd089a6d7dfd148a7ffd47c5507066, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 519420033}
+    m_RemovedComponents:
+    - {fileID: 1540805926, guid: acbd089a6d7dfd148a7ffd47c5507066, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: acbd089a6d7dfd148a7ffd47c5507066, type: 3}
 --- !u!4 &1328445733 stripped
 Transform:

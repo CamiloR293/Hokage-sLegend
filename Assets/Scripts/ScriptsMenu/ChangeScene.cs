@@ -18,7 +18,7 @@ public class ChangeScene : MonoBehaviour
         }
         if (collision.gameObject.tag == "PlayerHitBox" && isLevel1)
         {
-            SceneManager.LoadScene(7);
+            SceneManager.LoadScene(2);
         }
         if (collision.gameObject.tag == "PlayerHitBox" && isLevel2)
         {

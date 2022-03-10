@@ -132,6 +132,27 @@ public class EnemyController : MonoBehaviour
             
         } 
     }
+    private void OnTriggerStay2D(Collider2D ColDaño)
+    {
+
+        if (ColDaño.CompareTag("SpecialHit"))
+        {
+            if (!Anim.GetCurrentAnimatorStateInfo(0).IsName("Fat_Death"))
+            {
+
+                Life -= player.GetComponent<NarutoMovement>().hitDamage;
+                Anim.SetTrigger("Hurt"); ;
+                GetHitSound();
+                if (Life < 0)
+                {
+                    Anim.SetBool("Die", true);
+                    Instantiate(Death);
+                    moveSpeed = 0;
+                }
+            }
+
+        }
+    }
     private int nRandom;
     public void GetHitSound()
     {

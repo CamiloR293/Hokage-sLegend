@@ -16,6 +16,7 @@ public class NarutoMovement : MonoBehaviour
     private NarutoSoundController SoundController;
     private Rigidbody2D Rigidbody2D;
     private float Horizontal;
+    private float timeRestart = 4;
     private bool Grounded;
     public Animator Animator;
 
@@ -132,10 +133,16 @@ public class NarutoMovement : MonoBehaviour
         else
         {   
             Animator.SetBool("Death", true);
+            timeRestart -= Time.deltaTime;
             if (i == 0)
             {
                 i = 1;
                 Animator.SetTrigger("KnockBack");
+            }
+            if(timeRestart <= 0)
+            {
+                PauseManager restartLevel = new PauseManager();
+                restartLevel.Reset();
             }
         }
     }
@@ -295,7 +302,7 @@ public class NarutoMovement : MonoBehaviour
     {
         SoundController.Hit3.Play();
         KnockBackHit = true;
-        hitTranslate = 2f;
+        hitTranslate = 1.2f;
         Moving = true;
         hitDamage = 7;
     }

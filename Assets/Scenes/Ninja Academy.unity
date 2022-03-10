@@ -3040,19 +3040,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3528866770875812370, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 51.0121
+      value: 40.8694
       objectReference: {fileID: 0}
     - target: {fileID: 3528866770875812370, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 55.9367
+      value: 56.782
       objectReference: {fileID: 0}
     - target: {fileID: 3528866770875812370, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000014305
+      value: -0.0000054836
       objectReference: {fileID: 0}
     - target: {fileID: 3528866770875812370, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 8
+      value: 3.4095
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_Pivot.x
@@ -3084,11 +3084,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 112.9109
+      value: 92.6253
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 116.0813
+      value: 94.9504
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3120,11 +3120,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0.0000038147
+      value: -0.000018597
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 454
+      value: 467.1
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4639,7 +4639,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: eccc5e916cc5965468fbd53e46d392f3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

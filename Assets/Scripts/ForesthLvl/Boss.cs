@@ -73,7 +73,7 @@ public class Boss : MonoBehaviour
         if (healthHUD.Health <= 0)
 
         {
-            
+            DeadSound.Play();
             animator.SetTrigger("Dead");
             Destroy(gameObject);
             Destroy(healthHUD);

@@ -216,7 +216,7 @@ MonoBehaviour:
   rightPoint: {fileID: 1844324172338390026}
   moveTime: 2.35
   waitTime: 0.95
-  Life: 100
+  Life: 70
   player: {fileID: 0}
   distancia: 0.5
   theSR: {fileID: 1844324172849621152}

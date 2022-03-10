@@ -194,6 +194,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5423323777060789118, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
+      propertyPath: spawnEffect
+      value: 
+      objectReference: {fileID: 6927524075595878682, guid: 373d82210d5cc4346988ea31815d8ce8, type: 3}
     - target: {fileID: 5423323777060789123, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
       propertyPath: m_Name
       value: Naruto
@@ -2011,7 +2015,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226678681}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8, y: -239, z: 0}
+  m_LocalPosition: {x: -24, y: -211, z: 0}
   m_LocalScale: {x: 1.8145775, y: 1.8145775, z: 1.2097182}
   m_Children:
   - {fileID: 133936518828685572}
@@ -2890,7 +2894,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 807, y: 363}
+  m_AnchoredPosition: {x: 787, y: 460}
   m_SizeDelta: {x: 233.5189, y: 219.9108}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590670874
@@ -3084,11 +3088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 112.9109
+      value: 88.8566
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 116.0813
+      value: 110.0677
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3120,11 +3124,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.5
+      value: 0.000021935
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 353
+      value: 444
       objectReference: {fileID: 0}
     - target: {fileID: 3528866772206804280, guid: 8456499fedd4bc8429b61cd450fa503e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4247,7 +4251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1741, y: 1248}
+  m_AnchoredPosition: {x: -1741, y: 1390}
   m_SizeDelta: {x: 463.118, y: 54.291}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133936518314851162
@@ -4341,7 +4345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1851, y: 1155}
+  m_AnchoredPosition: {x: -1851, y: 1297}
   m_SizeDelta: {x: 872.81, y: 389.351}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133936518584431969

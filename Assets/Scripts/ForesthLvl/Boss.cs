@@ -23,7 +23,7 @@ public class Boss : MonoBehaviour
 
     private bool Rigth = true;
 
-    [SerializeField] private GameObject ByujiDama;
+   
 
  
     [Header("Attack")]
@@ -32,7 +32,7 @@ public class Boss : MonoBehaviour
 
     [SerializeField] private float RangeAttack;
 
-    [SerializeField] private float AttackDamage;
+   
 
     void Start()
     {

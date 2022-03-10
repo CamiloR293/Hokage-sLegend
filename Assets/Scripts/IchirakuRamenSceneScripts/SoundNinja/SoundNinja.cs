@@ -23,6 +23,7 @@ public class SoundNinja : MonoBehaviour
     public GameObject Naruto;
     private Rigidbody2D Rigidbody2D;
     private Animator animator;
+
     private float playerDistance;
 
 
@@ -192,6 +193,7 @@ public class SoundNinja : MonoBehaviour
     public void Destruir()
     {
         Destroy(gameObject);
+     
     }
     //=====================================================================================
     //                                  CRONOMETROS

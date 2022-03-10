@@ -23,7 +23,7 @@ public class NinjaEnemy : MonoBehaviour
 
     private bool SeeRigth = true;
 
-  
+    public GameObject Potion;
 
     public GameObject Naruto1;
 
@@ -70,7 +70,7 @@ public class NinjaEnemy : MonoBehaviour
        {
            Clip1.Play();
            animator.SetTrigger("Die Animation Ninja");
-   
+           Instantiate(Potion, pos.position , pos.rotation);
            Destroy(gameObject);
        }
       

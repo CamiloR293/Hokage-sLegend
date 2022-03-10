@@ -132,19 +132,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7109600116065459310, guid: c004ab328402c554fb4a34841a353b93, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 226.6458
+      value: 227.1333
       objectReference: {fileID: 0}
     - target: {fileID: 7109600116065459310, guid: c004ab328402c554fb4a34841a353b93, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 30.9079
+      value: 27.0082
       objectReference: {fileID: 0}
     - target: {fileID: 7109600116065459310, guid: c004ab328402c554fb4a34841a353b93, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -574.38873
+      value: -574.63245
       objectReference: {fileID: 0}
     - target: {fileID: 7109600116065459310, guid: c004ab328402c554fb4a34841a353b93, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 489.24207
+      value: 487.29224
       objectReference: {fileID: 0}
     - target: {fileID: 7109600116179327220, guid: c004ab328402c554fb4a34841a353b93, type: 3}
       propertyPath: m_Name
@@ -671,10 +671,8 @@ MonoBehaviour:
   DeadSound: {fileID: 256877218}
   body: {fileID: 256877222}
   Player: {fileID: 296568714}
-  ByujiDama: {fileID: 134115540023137296, guid: e015f08c1841d1d4296d1f37876b3069, type: 3}
   ControllerAttack: {fileID: 392043615}
   RangeAttack: 0.3
-  AttackDamage: 1
 --- !u!114 &256877220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2205,9 +2203,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4209220801866905503, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
+      propertyPath: pos
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4209220801866905503, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
       propertyPath: Naruto
       value: 
       objectReference: {fileID: 296568716}
+    - target: {fileID: 4209220801866905503, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
+      propertyPath: Potion
+      value: 
+      objectReference: {fileID: 8654769096061218325, guid: b68b405f3193f9840bfe2872212b9642, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4dd66674956bf0442a5bb3ebdad19ed1, type: 3}
 --- !u!1 &1969861917

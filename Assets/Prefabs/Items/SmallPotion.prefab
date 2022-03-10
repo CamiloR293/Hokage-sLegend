@@ -96,10 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abe41f5e7d92c94ca254861ba385dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  issmallHeal: 1
+  isSmallHeal: 1
   isPotion: 0
   isKunai: 0
-  Naruto: {fileID: 5423323777060789118, guid: bb874841fa6666b46bce15069e2f99f2, type: 3}
 --- !u!58 &-5583397600840968447
 CircleCollider2D:
   m_ObjectHideFlags: 0

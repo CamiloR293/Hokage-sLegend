@@ -168,7 +168,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   sensor: {fileID: 9092616333748113227}
   Life: 0
-  maxLife: 200
+  maxLife: 120
   HealtHUD: {fileID: 0}
   Cooldown: 1
   TimeDestroy: 5
@@ -181,8 +181,6 @@ MonoBehaviour:
   BolaFuego: {fileID: 1569495240392782654, guid: 3120eab7b814c6d4381d05b3260373fb, type: 3}
   Death: {fileID: 6746321933578201462, guid: caa1f18649888924fbe800410c1edcff, type: 3}
   GetHit: {fileID: 6521072404365593860, guid: 23cde59778471354fbd3c2f3d7ae405c, type: 3}
-  Defeat: {fileID: 2135911327640074632, guid: 9909b5fd4707bc94bba594f636f386b7, type: 3}
-  YouWin: {fileID: 9129099482624910113, guid: 252bef43d49f6d14bac7469e272c9af9, type: 3}
 --- !u!114 &9092616332749904292
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -30,8 +30,6 @@ public class MovimientoSasuke : MonoBehaviour
     public GameObject BolaFuego;
     public GameObject Death;
     public GameObject GetHit;
-    public GameObject Defeat;
-    public GameObject YouWin;    
     private int randomN;
     private int i = 0;
     private int j = 0;
@@ -166,18 +164,9 @@ public class MovimientoSasuke : MonoBehaviour
             if (TimeDestroy <= 0) Destroy(gameObject);
         }
     }
-    //public void InitialLife(float life)
-    //{        
-    //}
+    
     //Sonidos
-    public void YOUWIN()
-    {
-        Instantiate(YouWin);
-    }
-    public void DEFEAT()
-    {
-        Instantiate(Defeat);
-    }
+    
     public void Die()
     {
     }

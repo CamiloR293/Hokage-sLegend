@@ -13692,6 +13692,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 369645078}
     m_Modifications:
+    - target: {fileID: 4315627300127659361, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 93.7907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627300127659361, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 43.2244
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627300127659361, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000066757
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627300127659361, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 56
+      objectReference: {fileID: 0}
     - target: {fileID: 4315627300127659362, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -13699,6 +13715,38 @@ PrefabInstance:
     - target: {fileID: 4315627300127659362, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Resume
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627300618123733, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 144.9206
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627300618123733, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 184.4306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627300618123733, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.6046
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627300618123733, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12.3041
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301469217858, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 88.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301469217858, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 37.161
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301469217858, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -2.4101
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301469217858, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -52.3951
       objectReference: {fileID: 0}
     - target: {fileID: 4315627301469217859, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -13807,6 +13855,22 @@ PrefabInstance:
     - target: {fileID: 4315627301652322309, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301952884792, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 93.7907
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301952884792, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 43.5805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301952884792, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000016212
+      objectReference: {fileID: 0}
+    - target: {fileID: 4315627301952884792, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.000002861
       objectReference: {fileID: 0}
     - target: {fileID: 4315627301952884793, guid: dd5fcc4d5e8b6ec4bb675d2371c42ede, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
